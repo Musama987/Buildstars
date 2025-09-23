@@ -178,61 +178,61 @@ const database = {
     {
       children: [
         {
-          name: "Slider Header",
+          name: "Slider Koptekst",
           url: "/",
         },
         {
-          name: "Paralax Image",
+          name: "Parallax Afbeelding",
           url: "/home-paralax",
         },
         {
-          name: "Video Background",
+          name: "Video Achtergrond",
           url: "/home-video",
         },
       ],
-      name: "Home",
+      name: "Startpagina",
       url: "/",
     },
     {
-      name: "About us",
+      name: "Over ons",
       url: "/about-us",
     },
     {
-      name: "Services",
+      name: "Diensten",
       url: "/services",
     },
     {
-      name: "Portfolio",
+      name: "Portfolio projecten",
       url: "/portfolio",
     },
     {
       children: [
         {
-          name: "Grid Left Sidebar",
+          name: "Raster Links Zijbalk",
           url: "/blog-grid-left-sidebar",
         },
         {
-          name: "List Left Sidebar",
+          name: "Lijst Links Zijbalk",
           url: "/blog-list-left-sidebar",
         },
         {
-          name: "Grid Right Sidebar",
+          name: "Raster Rechts Zijbalk",
           url: "/blog-grid-right-sidebar",
         },
         {
-          name: "List Right Sidebar",
+          name: "Lijst Rechts Zijbalk",
           url: "/blog-list-right-sidebar",
         },
         {
-          name: "Grid No Sidebar",
+          name: "Raster Geen Zijbalk",
           url: "blog-grid-without-sidebar",
         },
       ],
-      name: "Blog",
+      name: "Blog & nieuws",
       url: "/blog-grid-left-sidebar",
     },
     {
-      name: "Contacts",
+      name: "Contacten",
       url: "/contacts",
     },
   ],

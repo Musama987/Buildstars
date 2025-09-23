@@ -9,18 +9,37 @@ export default ({ data = [] }) => {
   const [sticky, setSticky] = useState(false);
   const actions = useCustomState()[1];
 
-  const handleResize = () => {
-    setSticky(window.pageYOffset > 200 ? true : false);
-  };
+  // Dutch translations fallback (if data is not loaded from mock.js)
+  const dutchMenu = [
+    {
+      name: "Startpagina",
+      url: "/",
+      children: [
+        { name: "Slider Koptekst", url: "/" },
+        { name: "Parallax Afbeelding", url: "/home-paralax" },
+        { name: "Video Achtergrond", url: "/home-video" },
+      ],
+    },
+    { name: "Over ons", url: "/about-us" },
+    { name: "Diensten", url: "/services" },
+    { name: "Portefeuille", url: "/portfolio" },
+    {
+      name: "Bloggen",
+      url: "/blog-grid-left-sidebar",
+      children: [
+        { name: "Raster Links Zijbalk", url: "/blog-grid-left-sidebar" },
+        { name: "Lijst Links Zijbalk", url: "/blog-list-left-sidebar" },
+        { name: "Raster Rechts Zijbalk", url: "/blog-grid-right-sidebar" },
+        { name: "Lijst Rechts Zijbalk", url: "/blog-list-right-sidebar" },
+        { name: "Raster Geen Zijbalk", url: "blog-grid-without-sidebar" },
+      ],
+    },
+    { name: "Contacten", url: "/contacts" },
+  ];
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleResize);
-    return () => {
-      window.removeEventListener("scroll", handleResize);
-    };
-  }, []);
+  const menuData = data.length > 0 ? data : dutchMenu;
 
-  const menu = data.map((item, index) => {
+  const menu = menuData.map((item, index) => {
     if (!item.children) {
       return (
         <li key={index}>
@@ -68,16 +87,13 @@ export default ({ data = [] }) => {
             Get Quote
           </Button> */}
           <Button
-  after="&#xf107;"
-  // 1. Changed type to use the theme's primary color
-  type="outline-white-tw" 
-  // 2. You might want to update the hover type as well
-  hoverType="solid-white-tb"
-  click={() => actions.toogleModal()}
->
-  {/* 3. Translated "Get Quote" to Dutch */}
-  Offerte aanvragen
-</Button>
+            after="&#xf107;"
+            type="outline-white-tw"
+            hoverType="solid-white-tb"
+            click={() => actions.toogleModal()}
+          >
+            Offerte aanvragen
+          </Button>
         </div>
 
         <div
