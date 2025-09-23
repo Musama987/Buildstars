@@ -1,3 +1,14 @@
+.btn_desktop button {
+  color: #F57C00 !important;
+  border: 2px solid #F57C00 !important;
+  background: transparent;
+  transition: all 0.3s;
+}
+.btn_desktop button:hover {
+  color: #fff !important;
+  background: #F57C00 !important;
+  border-color: #F57C00 !important;
+}
 // Add a class for navigation links to ensure specificity
 .menuLink {
   color: #F57C00;

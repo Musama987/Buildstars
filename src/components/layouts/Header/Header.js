@@ -88,8 +88,8 @@ export default ({ data = [] }) => {
           </Button> */}
           <Button
             after="&#xf107;"
-            type="outline-white-tw"
-            hoverType="solid-white-tb"
+            type="outline-color-tw"
+            hoverType="solid-color-tw"
             click={() => actions.toogleModal()}
           >
             Offerte aanvragen
