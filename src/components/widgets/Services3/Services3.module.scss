@@ -219,3 +219,30 @@ p {
   font-size: 1.2rem; // Increased paragraph font size
   line-height: 1.7;
 }
+
+/* =================================== */
+/* ==  MOBILE RESPONSIVE STYLES  == */
+/* =================================== */
+
+@media (max-width: 768px) {
+  .slider_container {
+    // REDUCED overlap for mobile to look cleaner
+    margin-top: -50px;
+  }
+
+  .card {
+    // SMALLER card for mobile screens
+    min-height: 320px;
+    padding: 30px 25px;
+  }
+
+  h3 {
+    // SMALLER heading for mobile
+    font-size: 1.6rem;
+  }
+
+  p {
+    // SMALLER paragraph text for mobile
+    font-size: 1rem;
+  }
+}

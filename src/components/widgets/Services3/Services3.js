@@ -141,7 +141,7 @@ const Services3 = () => {
   const cardData = [
     {
       title: "wat ons onderscheidt",
-      text: "This is a placeholder text for the first card.",
+      // text: "This is a placeholder text for the first card.",
       icon: "/assets/placeholders/icon.svg",
     },
     {
@@ -150,23 +150,28 @@ const Services3 = () => {
       icon: "/assets/placeholders/icon.svg",
     },
     {
-      title: "Card 3 Title",
-      text: "Placeholder text for the third card.",
+      title: "Alleen betrouwbare vakmensen",
+      text: "Meer dan 15 jaar ervaring, sterke referenties en bewezen vaardigheden.",
       icon: "/assets/placeholders/icon.svg",
     },
     {
-      title: "Card 4 Title",
-      text: "Placeholder text for the fourth card.",
+      title: "3-5 kandidaten binnen 48 uur",
+      text: "Duidelijke profielen, meteen inzetbare mensen..",
       icon: "/assets/placeholders/icon.svg",
     },
     {
-      title: "Card 5 Title",
-      text: "Placeholder text for the fifth card.",
+      title: "Team klaar in 5 dagen",
+      text: "Van jouw telefoontje tot de eerste werkdag op de bouw.",
       icon: "/assets/placeholders/icon.svg",
     },
     {
-      title: "Card 6 Title",
-      text: "Placeholder text for the sixth card.",
+      title: "Probleem? Oplossing binnen 2-3 dagen",
+      text: "Ziek? Conflict? Onverwachte situatie? Wij staan 24/7 voor je klaar.",
+      icon: "/assets/placeholders/icon.svg",
+    },
+     {
+      title: "Geen gedoe met woonruimte",
+      text: "Onze mensen wonen in onze panden. Geen stress, geen verrassingen.",
       icon: "/assets/placeholders/icon.svg",
     },
   ];
