@@ -1,8 +1,8 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, Fragment } from "react";
 import styles from "./Header.module.scss";
 import Layout from "../Layout/Layout";
 import { Button, Link, Logo } from "../../elements";
-import THEME from "../../../state/theme";
+// import THEME from "../../../state/theme";
 import { useCustomState } from "../../../state/state";
 
 export default ({ data = [] }) => {
@@ -102,8 +102,8 @@ export default ({ data = [] }) => {
         >
           <Button
             after="&#xf0c9;"
-            type="outline-white-tw"
-            hoverType="solid-white-tb"
+            type="outline-color-tw"
+            hoverType="solid-color-tw"
           />
         </div>
       </div>
