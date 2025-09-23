@@ -24,7 +24,7 @@ export default ({ data = [] }) => {
     if (!item.children) {
       return (
         <li key={index}>
-          <Link url={item.url} hoverStyle={{ color: THEME.color }}>
+          <Link url={item.url} className={styles.menuLink}>
             {item.name}
           </Link>
         </li>
@@ -33,7 +33,7 @@ export default ({ data = [] }) => {
       return (
         <li key={index}>
           <span>
-            <Link url={item.url} hoverStyle={{ color: THEME.color }}>
+            <Link url={item.url} className={styles.menuLink}>
               {item.name}
             </Link>
           </span>

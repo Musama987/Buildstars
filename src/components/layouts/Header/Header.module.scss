@@ -1,3 +1,16 @@
+// Add a class for navigation links to ensure specificity
+.menuLink {
+  color: #F57C00;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  padding: 4rem 2rem;
+  display: block;
+  transition: all 0.3s ease;
+}
+.menuLink:hover,
+.menuLink.active {
+  color: #fff !important;
+}
 .wrapper {
   position: absolute;
   z-index: 100;
@@ -35,11 +48,16 @@
     & > a,
     & span > a {
       display: block;
-      color: #fff;
-      font-size: 1.3rem;
-      line-height: 1.4;
-      padding: 4rem 2rem;
-      transition: all 0.3s ease;
+        color: #F57C00; /* dark orange */
+        font-size: 1.3rem;
+        line-height: 1.4;
+        padding: 4rem 2rem;
+        transition: all 0.3s ease;
+      }
+
+      & > a:hover,
+      & span > a:hover {
+        color: #ffffff; /* white on hover */
     }
 
     & > span > a:after {
