@@ -82,8 +82,8 @@
 // }
 
 // Slider.module.scss
-$navbar-height: 80px;        // set your actual navbar height
-$top-gap-mobile: 1opx;
+$navbar-height: 100px;        // set your actual navbar height
+$top-gap-mobile: 10px;
 $slide-h-mobile: 20vh;      // height of slider on mobile
 $top-gap-tablet: 24px;
 $slide-h-tablet: 50vh;      // height on tablet
@@ -97,7 +97,7 @@ $slide-h-desktop: 40vh;     // height on desktop
   // background-color: #000;         // black background
   padding-top: $top-gap-mobile;
   overflow: hidden;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 /* each slick slide wrapper */
@@ -130,10 +130,10 @@ $slide-h-desktop: 40vh;     // height on desktop
 
   i {
     font-size: 2rem;
-    color: white;
+    color: black;
     padding: 12px;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.3);
+    // background-color: rgba(116, 109, 109, 0.3);
     transition: background-color 0.2s ease;
   }
 }

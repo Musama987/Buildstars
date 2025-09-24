@@ -14,7 +14,7 @@ export default () => {
 
   return (
     <Fragment>
-      <Header img={state.data.header_bgs.about}>About company</Header>
+      <Header/>
       <TextBlock />
       <Process data={state.data.process} />
       <Facts2 data={state.data.facts2} />

@@ -77,10 +77,8 @@ export default ({ data = [] }) => {
 
         <ul className={styles.menu}>{menu}</ul>
 
-        <div 
-        //  style={{ color: "#ff6600" }}
-          className={styles.btn_desktop}>
-          {/* <Button
+
+        {/* <Button
             after="&#xf107;"
             type="outline-white-tw"
             hoverType="solid-white-tb"
@@ -88,19 +86,21 @@ export default ({ data = [] }) => {
           >
             Get Quote
           </Button> */}
+     
+        <div className={styles.btn_desktop}>
           <Button
             after="&#xf107;"
-            type="outline-color-tw"
-            hoverType="solid-color-tw"
+            // ✅ Use the new types we just created
+            type="outline-orange-ot"      // This is our new default style
+            hoverType="solid-orange-wt"  // This is our new hover style
             click={() => actions.toogleModal()}
-            //  style={{ color: "#ff6600", borderColor: "#ff6600" }}
           >
             Offerte aanvragen
           </Button>
         </div>
 
-        <div 
-        // style={{ color: "#000000" }}
+        <div
+          // style={{ color: "#000000" }}
           className={styles.btn_mobile}
           onClick={() => actions.toogleSidebar()}
         >
@@ -108,7 +108,7 @@ export default ({ data = [] }) => {
             after="&#xf0c9;"
             type="outline-color-tw"
             hoverType="solid-color-tw"
-              //  style={{ color: "#000000", borderColor: "#000000" }}
+          //  style={{ color: "#000000", borderColor: "#000000" }}
           />
         </div>
       </div>

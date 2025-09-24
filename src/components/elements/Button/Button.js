@@ -4,6 +4,7 @@ import styles from "./Button.module.scss";
 import THEME from "../../../state/theme";
 
 const BUTTON_TYPES = {
+  // --- All the old styles are still here ---
   solid_color_tb: {
     background: THEME.color,
     borderColor: THEME.color,
@@ -64,6 +65,17 @@ const BUTTON_TYPES = {
     borderColor: "#e6e6e6",
     color: "#000",
   },
+  // ✅ --- ADDING THE NEW STYLES HERE --- ✅
+  "outline-orange-ot": { // Orange Text, Orange Border
+    background: "transparent",
+    borderColor: THEME.color,
+    color: THEME.color, 
+  },
+  "solid-orange-wt": { // White Text, Orange Background
+    background: THEME.color,
+    borderColor: THEME.color,
+    color: "#181717ff",
+  },
 };
 
 export default ({
@@ -82,51 +94,22 @@ export default ({
   const [styleHover, setStyleHover] = useState(null);
 
   useEffect(() => {
-    setStyleStatic(setStyle(type));
-    setStyleHover(setStyle(hoverType));
+    setStyleStatic(BUTTON_TYPES[type] || BUTTON_TYPES.solid_color_tb);
+    setStyleHover(BUTTON_TYPES[hoverType] || BUTTON_TYPES.solid_color_tb);
   }, [type, hoverType]);
-
-  const setStyle = (buttonState) => {
-    switch (buttonState) {
-      case "solid-color-tb":
-        return BUTTON_TYPES.solid_color_tb;
-      case "solid-color-tw":
-        return BUTTON_TYPES.solid_color_tw;
-      case "solid-black-tw":
-        return BUTTON_TYPES.solid_black_tw;
-      case "solid-white-tb":
-        return BUTTON_TYPES.solid_white_tb;
-      case "solid-gray-tb":
-        return BUTTON_TYPES.solid_gray_tb;
-      case "outline-color-tb":
-        return BUTTON_TYPES.outline_color_tb;
-      case "outline-color-tw":
-        return BUTTON_TYPES.outline_color_tw;
-      case "outline-black-tb":
-        return BUTTON_TYPES.outline_black_tb;
-      case "outline-black-tc":
-        return BUTTON_TYPES.outline_black_tc;
-      case "outline-white-tw":
-        return BUTTON_TYPES.outline_white_tw;
-      case "outline-white-tc":
-        return BUTTON_TYPES.outline_white_tc;
-      case "outline-gray-tb":
-        return BUTTON_TYPES.outline_white_tb;
-      default:
-        return BUTTON_TYPES.solid_color_tb;
-    }
-  };
 
   return (
     <Link
-      onMouseEnter={() => setHover(!hover)}
-      onMouseLeave={() => setHover(!hover)}
+      onMouseEnter={() => setHover(true)} // Corrected hover logic
+      onMouseLeave={() => setHover(false)} // Corrected hover logic
       className={[
         styles.button,
         children ? styles.text : styles.icon,
         round && styles.round,
         small && styles.small,
-      ].join(" ")}
+      ]
+        .filter(Boolean)
+        .join(" ")}
       data-after={after}
       data-before={before}
       style={hover ? styleHover : styleStatic}
