@@ -190,4 +190,3 @@ const Features2 = () => {
 };
 
 export default Features2;
-
