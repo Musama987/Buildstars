@@ -172,28 +172,28 @@
 
 .slider_container {
   // This negative margin pulls the entire slider section up
-  margin-top: -150px;
+  // margin-top: -150px;
   // We add padding at the bottom so content below doesn't get overlapped
   padding-bottom: 50px;
 }
 
 .wrapper {
-  padding: 20px;
+  padding: 15px;
 }
 
 .card {
   background: #ffffff;
-  padding: 50px 40px; // Increased vertical padding for a larger card
+  padding: 41px 25px; // Increased vertical padding for a larger card
   border-radius: 10px;
   text-align: center;
   transition: all 0.3s ease-in-out;
   color: #333;
   border: 1px solid #e0e0e0;
-  min-height: 380px; // Increased card height
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  min-height: 315px; // Increased card height
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 
   &:hover {
-    background: #ffa500;
+    background: #F57C00;
     color: #fff;
     cursor: pointer;
     transform: translateY(-5px);

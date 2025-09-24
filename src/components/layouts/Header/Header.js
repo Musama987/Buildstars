@@ -77,7 +77,9 @@ export default ({ data = [] }) => {
 
         <ul className={styles.menu}>{menu}</ul>
 
-        <div className={styles.btn_desktop}>
+        <div 
+        //  style={{ color: "#ff6600" }}
+          className={styles.btn_desktop}>
           {/* <Button
             after="&#xf107;"
             type="outline-white-tw"
@@ -91,12 +93,14 @@ export default ({ data = [] }) => {
             type="outline-color-tw"
             hoverType="solid-color-tw"
             click={() => actions.toogleModal()}
+            //  style={{ color: "#ff6600", borderColor: "#ff6600" }}
           >
             Offerte aanvragen
           </Button>
         </div>
 
-        <div
+        <div 
+        // style={{ color: "#000000" }}
           className={styles.btn_mobile}
           onClick={() => actions.toogleSidebar()}
         >
@@ -104,6 +108,7 @@ export default ({ data = [] }) => {
             after="&#xf0c9;"
             type="outline-color-tw"
             hoverType="solid-color-tw"
+              //  style={{ color: "#000000", borderColor: "#000000" }}
           />
         </div>
       </div>

@@ -1,15 +1,28 @@
-.btn_desktop button {
-  color: #F57C00 !important;
-  border: 2px solid #F57C00 !important;
+// Outline button style
+.btn.outline-color-tw {
+  border: 2px solid #ff6600;   // orange border
+  color: #ff6600;              // ✅ orange text by default
   background: transparent;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #ff6600;       // orange background
+    color: #ffffff;            // ✅ white text on hover
+  }
 }
-.btn_desktop button:hover {
-  color: #fff !important;
-  background: #F57C00 !important;
-  border-color: #F57C00 !important;
+// Solid button style (for hoverType="solid-color-tw")
+.btn.solid-color-tw {
+  background: #ff6600;         // orange background
+  color: #ffffff;              // white text
+  border: 2px solid #ff6600;
+
+  &:hover {
+    background: #ffffff;       // ✅ on hover → white background
+    color: #000000;            // ✅ black text
+    border-color: #ff6600;
+  }
 }
-// Add a class for navigation links to ensure specificity
+Add a class for navigation links to ensure specificity
 .menuLink {
   color: #F57C00;
   font-size: 1.3rem;
@@ -20,7 +33,7 @@
 }
 .menuLink:hover,
 .menuLink.active {
-  color: #fff !important;
+  color: black !important;
 }
 .wrapper {
   position: absolute;
@@ -31,7 +44,6 @@
   transition: all 1s ease;
 }
 
-.jhjghh {}
 
 .header {
   display: flex;

@@ -107,6 +107,97 @@
 //   );
 // };
 
+// import React from "react";
+// import Slider from "react-slick";
+// import styles from "./Services3.module.scss";
+
+// // Import slick carousel styles
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+
+// const Services3 = () => {
+//   const settings = {
+//     dots: false, // Slider dots are now hidden
+//     infinite: true,
+//     speed: 500,
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     responsive: [
+//       {
+//         breakpoint: 1024,
+//         settings: {
+//           slidesToShow: 2,
+//         },
+//       },
+//       {
+//         breakpoint: 600,
+//         settings: {
+//           slidesToShow: 1,
+//         },
+//       },
+//     ],
+//   };
+
+//   const cardData = [
+//     {
+//       title: "wat ons onderscheidt",
+//       // text: "This is a placeholder text for the first card.",
+//       icon: "/assets/placeholders/icon.svg",
+//     },
+//     {
+//       title: "Antwoord binnen 24 uur",
+//       text: "Geen weken wachten. Jij belt – wij handelen direct.",
+//       icon: "/assets/placeholders/icon.svg",
+//     },
+//     {
+//       title: "Alleen betrouwbare vakmensen",
+//       text: "Meer dan 15 jaar ervaring, sterke referenties en bewezen vaardigheden.",
+//       icon: "/assets/placeholders/icon.svg",
+//     },
+//     {
+//       title: "3-5 kandidaten binnen 48 uur",
+//       text: "Duidelijke profielen, meteen inzetbare mensen..",
+//       icon: "/assets/placeholders/icon.svg",
+//     },
+//     {
+//       title: "Team klaar in 5 dagen",
+//       text: "Van jouw telefoontje tot de eerste werkdag op de bouw.",
+//       icon: "/assets/placeholders/icon.svg",
+//     },
+//     {
+//       title: "Probleem? Oplossing binnen 2-3 dagen",
+//       text: "Ziek? Conflict? Onverwachte situatie? Wij staan 24/7 voor je klaar.",
+//       icon: "/assets/placeholders/icon.svg",
+//     },
+//      {
+//       title: "Geen gedoe met woonruimte",
+//       text: "Onze mensen wonen in onze panden. Geen stress, geen verrassingen.",
+//       icon: "/assets/placeholders/icon.svg",
+//     },
+//   ];
+
+//   return (
+//     <div className={styles.slider_container}>
+//       <Slider {...settings}>
+//         {cardData.map((card, index) => (
+//           <div key={index} className={styles.wrapper}>
+//             <div className={styles.card}>
+//               <div className={styles.icon}>
+//                 <img src={card.icon} alt="icon" />
+//               </div>
+//               <h3>{card.title}</h3>
+//               <p>{card.text}</p>
+//             </div>
+//           </div>
+//         ))}
+//       </Slider>
+//     </div>
+//   );
+// };
+
+// export default Services3;
+
+
 import React from "react";
 import Slider from "react-slick";
 import styles from "./Services3.module.scss";
@@ -114,6 +205,17 @@ import styles from "./Services3.module.scss";
 // Import slick carousel styles
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+// Import icons from react-icons/fc
+import {
+  FcRight,        // arrow right
+  FcPhone,        // phone
+  FcSearch,       // search
+ FcBusinessman , // person (2 man alternative shown below)
+  FcInTransit,    // airplane / delivery
+  FcApproval,     // shield-like (protect)
+  FcHome,         // home
+} from "react-icons/fc";
 
 const Services3 = () => {
   const settings = {
@@ -141,38 +243,38 @@ const Services3 = () => {
   const cardData = [
     {
       title: "wat ons onderscheidt",
-      // text: "This is a placeholder text for the first card.",
-      icon: "/assets/placeholders/icon.svg",
+      text: "Unieke aanpak voor elk project.",
+      icon: <FcRight size={40} />, // arrow right
     },
     {
       title: "Antwoord binnen 24 uur",
       text: "Geen weken wachten. Jij belt – wij handelen direct.",
-      icon: "/assets/placeholders/icon.svg",
+      icon: <FcPhone size={40} />, // phone
     },
     {
       title: "Alleen betrouwbare vakmensen",
       text: "Meer dan 15 jaar ervaring, sterke referenties en bewezen vaardigheden.",
-      icon: "/assets/placeholders/icon.svg",
+      icon: <FcSearch size={40} />, // search
     },
     {
       title: "3-5 kandidaten binnen 48 uur",
-      text: "Duidelijke profielen, meteen inzetbare mensen..",
-      icon: "/assets/placeholders/icon.svg",
+      text: "Duidelijke profielen, meteen inzetbare mensen.",
+      icon: <FcBusinessman size={40} />,  // person
     },
     {
       title: "Team klaar in 5 dagen",
       text: "Van jouw telefoontje tot de eerste werkdag op de bouw.",
-      icon: "/assets/placeholders/icon.svg",
+      icon: <FcInTransit size={40} />, // airplane / in transit
     },
     {
       title: "Probleem? Oplossing binnen 2-3 dagen",
       text: "Ziek? Conflict? Onverwachte situatie? Wij staan 24/7 voor je klaar.",
-      icon: "/assets/placeholders/icon.svg",
+      icon: <FcApproval size={40} />, // shield/approval
     },
-     {
+    {
       title: "Geen gedoe met woonruimte",
       text: "Onze mensen wonen in onze panden. Geen stress, geen verrassingen.",
-      icon: "/assets/placeholders/icon.svg",
+      icon: <FcHome size={40} />, // home
     },
   ];
 
@@ -182,9 +284,7 @@ const Services3 = () => {
         {cardData.map((card, index) => (
           <div key={index} className={styles.wrapper}>
             <div className={styles.card}>
-              <div className={styles.icon}>
-                <img src={card.icon} alt="icon" />
-              </div>
+              <div className={styles.icon}>{card.icon}</div>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
             </div>
@@ -196,3 +296,4 @@ const Services3 = () => {
 };
 
 export default Services3;
+

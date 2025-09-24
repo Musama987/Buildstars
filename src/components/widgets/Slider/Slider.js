@@ -1,55 +1,110 @@
+// import React, { useRef } from "react";
+// import Slider from "react-slick";
+// import styles from "./Slider.module.scss";
+// import Layout from "../../layouts/Layout/Layout";
+// import { Button } from "../../elements";
+
+// export default ({ data = [] }) => {
+//   let sliderRef = useRef(null);
+
+//   const settings = {
+//     dots: false,
+//     arrows: false,
+//     infinite: true,
+//     speed: 1000,
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//   };
+
+//   const slideList = data.map((item, index) => (
+//     <article key={index}>
+//       <Layout
+//         style={{
+//           background: "url(" + item.image + ") center/cover",
+//         }}
+//         col="1"
+//         mode="dark"
+//       >
+//         <div className={styles.slide}>
+//           <i
+//             className={"las la-long-arrow-alt-left"}
+//             onClick={() => sliderRef.slickPrev()}
+//           />
+
+//           <div className={styles.intro}>
+//             <h1>{item.title}</h1>
+//             <p>{item.short}</p>
+//             <Button to={"/blog/" + item.id} hoverType="solid-white-tb">
+//               Read more
+//             </Button>
+//           </div>
+//           <i
+//             className={"las la-long-arrow-alt-right"}
+//             onClick={() => sliderRef.slickNext()}
+//           />
+//         </div>
+//       </Layout>
+//     </article>
+//   ));
+
+//   return (
+//     <Slider ref={(slider) => (sliderRef = slider)} {...settings}>
+//       {slideList}
+//     </Slider>
+//   );
+// };
+
 import React, { useRef } from "react";
 import Slider from "react-slick";
 import styles from "./Slider.module.scss";
-import Layout from "../../layouts/Layout/Layout";
-import { Button } from "../../elements";
 
-export default ({ data = [] }) => {
-  let sliderRef = useRef(null);
+import homeSlider1 from "../../../assets/placeholders/homeslider 1.jpeg";
+import homeSlider2 from "../../../assets/placeholders/homeslider 2.jpeg";
+
+export default function HomeSlider() {
+  const sliderRef = useRef(null);
 
   const settings = {
     dots: false,
-    arrows: false,
     infinite: true,
-    speed: 1000,
+    speed: 600,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
   };
 
-  const slideList = data.map((item, index) => (
-    <article key={index}>
-      <Layout
-        style={{
-          background: "url(" + item.image + ") center/cover",
-        }}
-        col="1"
-        mode="dark"
-      >
-        <div className={styles.slide}>
-          <i
-            className={"las la-long-arrow-alt-left"}
-            onClick={() => sliderRef.slickPrev()}
-          />
+  const slideImages = [homeSlider1, homeSlider2];
 
-          <div className={styles.intro}>
-            <h1>{item.title}</h1>
-            <p>{item.short}</p>
-            <Button to={"/blog/" + item.id} hoverType="solid-white-tb">
-              Read more
-            </Button>
-          </div>
-          <i
-            className={"las la-long-arrow-alt-right"}
-            onClick={() => sliderRef.slickNext()}
-          />
-        </div>
-      </Layout>
-    </article>
-  ));
+  const Arrow = ({ onClick, icon, arrowClass }) => (
+    <div className={`${styles.arrow} ${arrowClass}`} onClick={onClick}>
+      <i className={icon} />
+    </div>
+  );
 
   return (
-    <Slider ref={(slider) => (sliderRef = slider)} {...settings}>
-      {slideList}
-    </Slider>
+    <div className={styles.slider_container}>
+      <Slider ref={sliderRef} {...settings}>
+        {slideImages.map((img, index) => (
+          <div key={index} className={styles.slide_wrapper}>
+            <img src={img} alt={`Slide ${index}`} className={styles.slide_img} />
+          </div>
+        ))}
+      </Slider>
+
+      {/* --- Arrows --- */}
+      <Arrow
+        onClick={() => sliderRef.current.slickPrev()}
+        icon="las la-angle-left"
+        arrowClass={styles.prev_arrow}
+      />
+      <Arrow
+        onClick={() => sliderRef.current.slickNext()}
+        icon="las la-angle-right"
+        arrowClass={styles.next_arrow}
+      />
+    </div>
   );
-};
+}

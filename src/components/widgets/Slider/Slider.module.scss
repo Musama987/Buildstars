@@ -1,82 +1,160 @@
-.slide {
+// .slide {
+//   width: 100%;
+//   color: #fff;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   text-align: center;
+//   height: 800px;
+//   transform: translateY(-60px);
+
+//   & i {
+//     font-size: 3rem;
+//     line-height: 0;
+//     cursor: pointer;
+//     color: #fff;
+//   }
+// }
+
+// .intro {
+//   max-width: 700px;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+
+//   & h1 {
+//     font-size: 4.5rem;
+//     font-weight: 200;
+//     line-height: 1.4;
+//     margin-bottom: 2rem;
+//     width: 100%;
+//   }
+
+//   & p {
+//     margin-bottom: 8rem;
+//     line-height: 2.2;
+//     width: 100%;
+//   }
+// }
+
+// @media (max-width: 992px) {
+//   .slide {
+//     height: 700px;
+//     transform: translateY(20px);
+//   }
+
+//   .intro {
+//     max-width: 500px;
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   .slide {
+//     height: 600px;
+//   }
+
+//   .intro {
+//     max-width: 400px;
+
+//     & h1 {
+//       font-size: 3rem;
+//       font-weight: 300;
+//     }
+
+//     & p {
+//       margin-bottom: 3rem;
+//     }
+//   }
+// }
+
+// @media (max-width: 576px) {
+//   .slide {
+//     height: 500px;
+
+//     & i {
+//       display: none;
+//     }
+//   }
+
+//   .intro {
+//     max-width: 100%;
+//   }
+// }
+
+// Slider.module.scss
+$navbar-height: 80px;        // set your actual navbar height
+$top-gap-mobile: 1opx;
+$slide-h-mobile: 20vh;      // height of slider on mobile
+$top-gap-tablet: 24px;
+$slide-h-tablet: 50vh;      // height on tablet
+$top-gap-desktop: 32px;
+$slide-h-desktop: 40vh;     // height on desktop
+
+.slider_container {
+  position: relative;
   width: 100%;
-  color: #fff;
+  margin-top: $navbar-height;     // push slider below nav
+  // background-color: #000;         // black background
+  padding-top: $top-gap-mobile;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+/* each slick slide wrapper */
+.slide_wrapper {
+  width: 100%;
+  height: $slide-h-mobile;
+  min-height: 240px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-  height: 800px;
-  transform: translateY(-60px);
+  // background-color: #000;   // ensures black behind image
+}
 
-  & i {
-    font-size: 3rem;
-    line-height: 0;
-    cursor: pointer;
-    color: #fff;
+/* the image itself */
+.slide_img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;       // ✅ shows full image without cutting
+  display: block;
+  margin: 0 auto;
+}
+
+/* arrows */
+.arrow {
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+
+  i {
+    font-size: 2rem;
+    color: white;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: background-color 0.2s ease;
   }
 }
 
-.intro {
-  max-width: 700px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.prev_arrow { left: 16px; }
+.next_arrow { right: 16px; }
 
-  & h1 {
-    font-size: 4.5rem;
-    font-weight: 200;
-    line-height: 1.4;
-    margin-bottom: 2rem;
-    width: 100%;
-  }
-
-  & p {
-    margin-bottom: 8rem;
-    line-height: 2.2;
-    width: 100%;
-  }
+/* Tablet */
+@media (min-width: 768px) {
+  .slider_container { padding-top: $top-gap-tablet; }
+  .slide_wrapper { height: $slide-h-tablet; min-height: 150px; }
+  .arrow i { font-size: 2.2rem; padding: 14px; }
+  .prev_arrow { left: 24px; }
+  .next_arrow { right: 24px; }
 }
 
-@media (max-width: 992px) {
-  .slide {
-    height: 700px;
-    transform: translateY(20px);
-  }
-
-  .intro {
-    max-width: 500px;
-  }
-}
-
-@media (max-width: 768px) {
-  .slide {
-    height: 600px;
-  }
-
-  .intro {
-    max-width: 400px;
-
-    & h1 {
-      font-size: 3rem;
-      font-weight: 300;
-    }
-
-    & p {
-      margin-bottom: 3rem;
-    }
-  }
-}
-
-@media (max-width: 576px) {
-  .slide {
-    height: 500px;
-
-    & i {
-      display: none;
-    }
-  }
-
-  .intro {
-    max-width: 100%;
-  }
+/* Desktop */
+@media (min-width: 1200px) {
+  .slider_container { padding-top: $top-gap-desktop; }
+  .slide_wrapper { height: $slide-h-desktop; min-height: 200px; }
+  .arrow i { font-size: 2.6rem; padding: 16px; }
+  .prev_arrow { left: 40px; }
+  .next_arrow { right: 40px; }
 }
