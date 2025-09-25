@@ -105,7 +105,7 @@ export default ({ sidebar = "left", layout = "grid", title = "title" }) => {
 
   return (
     <Fragment>
-      <Header img={state.data.header_bgs.blog}>{pageTitle}</Header>
+      {/* <Header img={state.data.header_bgs.blog}>{pageTitle}</Header> */}
       <section
         className={[
           styles.wrapper,

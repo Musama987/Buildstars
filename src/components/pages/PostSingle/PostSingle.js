@@ -57,7 +57,7 @@ export default () => {
 
   return (
     <Fragment>
-      <Header img={post.image}>{post.title}</Header>
+      {/* <Header img={post.image}>{post.title}</Header> */}
 
       <Layout col="1">
         <div className={styles.breadcrumbs} style={{ color: THEME.color }}>

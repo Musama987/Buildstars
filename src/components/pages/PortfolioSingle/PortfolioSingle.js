@@ -13,7 +13,7 @@ export default () => {
 
   return (
     <Fragment>
-      <Header img={state.data.header_bgs.portfolio}>Project description</Header>
+      {/* <Header img={state.data.header_bgs.portfolio}>Project description</Header> */}
       <Project
         data={state.data.portfolio}
         clients={state.data.reviews}
