@@ -1,86 +1,163 @@
-.card {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 4rem 3rem;
-    margin-bottom: 5rem;
-    border: 1px solid #ccc;
-    transition: all .3s ease;
+// .card {
+//     text-align: center;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     padding: 4rem 3rem;
+//     margin-bottom: 5rem;
+//     border: 1px solid #ccc;
+//     transition: all .3s ease;
 
-    &:hover {
-        border-color: rgb(245, 245, 245);
-        box-shadow: 0 0.2rem 0.8rem rgba(36, 36, 36, 0.15);
-        transform: translateY(-1rem);
-    }
+//     &:hover {
+//         border-color: rgb(245, 245, 245);
+//         box-shadow: 0 0.2rem 0.8rem rgba(36, 36, 36, 0.15);
+//         transform: translateY(-1rem);
+//     }
 
-    & figure {
-        width: 4rem;
-        margin-bottom: 1rem;
+//     & figure {
+//         width: 4rem;
+//         margin-bottom: 1rem;
 
-        & img {
-            width: 4rem;
-        }
-    }
+//         & img {
+//             width: 4rem;
+//         }
+//     }
 
-    & h2 {
-        margin-bottom: 1rem;
-        font-size: 5rem;
-        font-weight: 300;
-        transition: all .3s ease;
-    }
+//     & h2 {
+//         margin-bottom: 1rem;
+//         font-size: 5rem;
+//         font-weight: 300;
+//         transition: all .3s ease;
+//     }
 
-    & span {
-        text-transform: uppercase;
-        font-size: 1.1rem;
-        font-weight: 500;
-        margin-bottom: 1rem;
-    }
+//     & span {
+//         text-transform: uppercase;
+//         font-size: 1.1rem;
+//         font-weight: 500;
+//         margin-bottom: 1rem;
+//     }
 
-    & p {
-        width: 100%;
-    }
+//     & p {
+//         width: 100%;
+//     }
+// }
+
+// .footer {
+//     color: #fff;
+//     padding: 6rem 3rem;
+//     transform: translateY(7rem);
+//     margin-top: -7rem;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     text-align: center;
+
+//     & h2 {
+//         font-weight: 200;
+//         max-width: 50rem;
+//         line-height: 1.5;
+
+//         & b {
+//             font-weight: 500;
+//         }
+//     }
+// }
+
+// .header {
+//     margin-top: 8rem;
+// }
+
+// @media(max-width:768px) {
+
+//     .wrapper:not(:last-of-type) .card {
+//         margin-bottom: 0;
+//     }
+
+// }
+
+// @media (max-width: 576px) {
+//     .wrapper:last-of-type .card {
+//         margin-bottom: 1.5rem;
+//     }
+
+//     .footer {
+//         padding: 3rem;
+//     }
+// }
+
+
+
+//icons left right 
+// .slider_section_wrapper {
+//   padding: 7rem 0 5rem 0;
+//   background: rgb(245, 245, 245);
+// }
+
+/* This new container centers the slider correctly */
+.slider_container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.footer {
+.wrapper {
+    margin-top: 11px;
+  padding: 0 15px;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: #ffffff;
+  padding: 40px 25px;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  border: 1px solid #e0e0e0;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: #F57C00;
     color: #fff;
-    padding: 6rem 3rem;
-    transform: translateY(7rem);
-    margin-top: -7rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    cursor: pointer;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 
-    & h2 {
-        font-weight: 200;
-        max-width: 50rem;
-        line-height: 1.5;
-
-        & b {
-            font-weight: 500;
-        }
+    & h2, & p {
+      color: #ffffff;
     }
+  }
+}
+
+.icon {
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #222;
+  transition: color 0.4s ease;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  transition: color 0.4s ease;
 }
 
 .header {
-    margin-top: 8rem;
-}
-
-@media(max-width:768px) {
-
-    .wrapper:not(:last-of-type) .card {
-        margin-bottom: 0;
-    }
-
+  margin-top: 60px;
+  padding-bottom: 3rem;
 }
 
 @media (max-width: 576px) {
-    .wrapper:last-of-type .card {
-        margin-bottom: 1.5rem;
-    }
-
-    .footer {
-        padding: 3rem;
-    }
+.header{
+    margin-top: 50px;
 }
+}
+

@@ -147,6 +147,7 @@ import emailjs from "emailjs-com";
 import styles from "./ContactForm.module.scss";
 import { CardButton } from "../../ui";
 import { Spinner } from "../../elements";
+import nodemailer from "nodemailer";
 
 export default ({ style }) => {
   const [sending, setSending] = useState(false);
@@ -168,7 +169,7 @@ export default ({ style }) => {
     startdatum,
   };
 
-  const onSubmit = () => {
+  const onSubmit = async () => {
     if (name === "") {
       setStatus("Vul je naam of bedrijfsnaam in");
       setError(true);
@@ -188,20 +189,42 @@ export default ({ style }) => {
     }
 
     setSending(true);
-    emailjs
-      .send("SERVICE ID", "TEMPLATE ID", templateParams, "USER ID")
-      .then(
-        () => {
-          setSending(false);
-          setError(false);
-          setStatus("Je aanvraag is verzonden!");
-        },
-        (err) => {
-          setSending(false);
-          setError(true);
-          setStatus("Sorry, er ging iets mis: " + err.text);
-        }
-      );
+    // emailjs
+    //   .send("SERVICE ID", "TEMPLATE ID", templateParams, "USER ID")
+    //   .then(
+    //     () => {
+    //       setSending(false);
+    //       setError(false);
+    //       setStatus("Je aanvraag is verzonden!");
+    //     },
+    //     (err) => {
+    //       setSending(false);
+    //       setError(true);
+    //       setStatus("Sorry, er ging iets mis: " + err.text);
+    //     }
+    //   );
+
+    console.log("Chalta hy ya ni?");
+    const transporter = nodemailer.createTransport({
+    host: 'smtp.ethereal.email',
+    port: 587,
+    auth: {
+        user: 'alisa.roberts@ethereal.email',
+        pass: 'uRrv6FGYFJYSM2ndQz'
+    }
+});
+
+
+const info = await transporter.sendMail({
+    from: '"Maddison Foo Koch" <maddison53@ethereal.email>',
+    to: "bar@example.com, baz@example.com",
+    subject: "Hello ✔",
+    text: "Hello world?", // plain‑text body
+    html: "<b>Hello world?</b>", // HTML body
+  });
+
+
+  console.log("Messege sent");
     resetForm();
   };
 
