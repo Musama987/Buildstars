@@ -81,21 +81,103 @@
 //   }
 // }
 
+// // Slider.module.scss
+// $navbar-height: 100px;        // set your actual navbar height
+// $top-gap-mobile: 10px;
+// $slide-h-mobile: 20vh;      // height of slider on mobile
+// $top-gap-tablet: 24px;
+// $slide-h-tablet: 50vh;      // height on tablet
+// $top-gap-desktop: 32px;
+// $slide-h-desktop: 40vh;     // height on desktop
+
+// .slider_container {
+//   position: relative;
+//   width: 100%;
+//   margin-top: $navbar-height;     // push slider below nav
+//   // background-color: #000;         // black background
+//   padding-top: $top-gap-mobile;
+//   overflow: hidden;
+//   margin-bottom: 20px;
+// }
+
+// /* each slick slide wrapper */
+// .slide_wrapper {
+//   width: 100%;
+//   height: $slide-h-mobile;
+//   min-height: 240px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   // background-color: #000;   // ensures black behind image
+// }
+
+// /* the image itself */
+// .slide_img {
+//   width: 100%;
+//   height: auto;            // ✅ allows natural height scaling
+//   max-height: 50vh;        // ✅ fills most of screen height
+//   object-fit: contain;       // ✅ show full image without cutting
+//   border-radius: 10px;
+//   padding: 10px;             // ✅ small space around image
+//   background: #f9f9f9;       // optional (so empty area looks clean)
+// }
+
+// /* arrows */
+// .arrow {
+//   position: absolute;
+//   z-index: 10;
+//   cursor: pointer;
+//   top: 50%;
+//   transform: translateY(-50%);
+
+//   i {
+//     font-size: 2rem;
+//     color: black;
+//     padding: 12px;
+//     border-radius: 50%;
+//     // background-color: rgba(116, 109, 109, 0.3);
+//     transition: background-color 0.2s ease;
+//   }
+// }
+
+// .prev_arrow { left: 16px; }
+// .next_arrow { right: 16px; }
+
+// /* Tablet */
+// @media (min-width: 768px) {
+//   .slider_container { padding-top: $top-gap-tablet; }
+//   .slide_wrapper { height: $slide-h-tablet; min-height: 150px; }
+//   .arrow i { font-size: 2.2rem; padding: 14px; }
+//   .prev_arrow { left: 24px; }
+//   .next_arrow { right: 24px; }
+// }
+
+// /* Desktop */
+// @media (min-width: 1200px) {
+//   .slider_container { padding-top: $top-gap-desktop; }
+//   .slide_wrapper { height: $slide-h-desktop; min-height: 200px; }
+//   .arrow i { font-size: 2.6rem; padding: 16px; }
+//   .prev_arrow { left: 40px; }
+//   .next_arrow { right: 40px; }
+// }
+
+
+
+///image adjustmen then this code
+
+
 // Slider.module.scss
-$navbar-height: 100px;        // set your actual navbar height
+$navbar-height: 100px;
+
+// Responsive top gaps
 $top-gap-mobile: 10px;
-$slide-h-mobile: 20vh;      // height of slider on mobile
 $top-gap-tablet: 24px;
-$slide-h-tablet: 50vh;      // height on tablet
 $top-gap-desktop: 32px;
-$slide-h-desktop: 40vh;     // height on desktop
 
 .slider_container {
   position: relative;
   width: 100%;
-  margin-top: $navbar-height;     // push slider below nav
-  // background-color: #000;         // black background
-  padding-top: $top-gap-mobile;
+  margin-top: $navbar-height; // push below navbar
   overflow: hidden;
   margin-bottom: 20px;
 }
@@ -103,21 +185,20 @@ $slide-h-desktop: 40vh;     // height on desktop
 /* each slick slide wrapper */
 .slide_wrapper {
   width: 100%;
-  height: $slide-h-mobile;
-  min-height: 240px;
+  height: 100vh;              // ✅ full viewport height
   display: flex;
   justify-content: center;
   align-items: center;
-  // background-color: #000;   // ensures black behind image
+  background: #000;           // black background behind image
 }
 
-/* the image itself */
+/* image */
 .slide_img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;       // ✅ shows full image without cutting
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          // ✅ fill entire screen, no distortion
+  border-radius: 0;           // remove radius for fullscreen
   display: block;
-  margin: 0 auto;
 }
 
 /* arrows */
@@ -127,34 +208,36 @@ $slide-h-desktop: 40vh;     // height on desktop
   cursor: pointer;
   top: 50%;
   transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
 
   i {
     font-size: 2rem;
-    color: black;
+    color: #000;
     padding: 12px;
-    border-radius: 50%;
-    // background-color: rgba(116, 109, 109, 0.3);
-    transition: background-color 0.2s ease;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.9);
   }
 }
 
-.prev_arrow { left: 16px; }
-.next_arrow { right: 16px; }
+.prev_arrow { left: 20px; }
+.next_arrow { right: 20px; }
 
 /* Tablet */
 @media (min-width: 768px) {
-  .slider_container { padding-top: $top-gap-tablet; }
-  .slide_wrapper { height: $slide-h-tablet; min-height: 150px; }
-  .arrow i { font-size: 2.2rem; padding: 14px; }
-  .prev_arrow { left: 24px; }
-  .next_arrow { right: 24px; }
+  .slide_wrapper {
+    height: 80vh;            // ✅ slightly smaller on tablet
+  }
+  .arrow i { font-size: 2.2rem; }
 }
 
 /* Desktop */
 @media (min-width: 1200px) {
-  .slider_container { padding-top: $top-gap-desktop; }
-  .slide_wrapper { height: $slide-h-desktop; min-height: 200px; }
-  .arrow i { font-size: 2.6rem; padding: 16px; }
-  .prev_arrow { left: 40px; }
-  .next_arrow { right: 40px; }
+  .slide_wrapper {
+    height: 90vh;            // ✅ large hero height on desktop
+  }
+  .arrow i { font-size: 2.6rem; }
 }

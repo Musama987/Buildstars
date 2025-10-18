@@ -34,13 +34,13 @@ export default () => {
           text="admin@mail.com"
         />
         <AddressBox
-          icon="la la-home"
-          title="Visit Us"
+          icon="las la-comments"
+          title="Free Consultation"
           text="Otaki, 32 Wilson Street"
         />
         <AddressBox
           icon="las la-comment"
-          title="Support"
+          title="SFree "
           text="Live chart 24/7"
         />
         <span className={styles.divider} style={{ borderColor: THEME.color }} />

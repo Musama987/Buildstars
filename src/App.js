@@ -39,7 +39,8 @@ export default () => {
           <Header data={state.data.menu} />
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/home-paralax" exact component={HomeParalax} />
+             <Route path="/about-us" exact component={About} />
+            {/* <Route path="/home-paralax" exact component={HomeParalax} /> */}
             <Route path="/home-video" exact component={HomeVideo} />
             <Route path="/about-us" exact component={About} />
             <Route path="/services" exact component={Services} />

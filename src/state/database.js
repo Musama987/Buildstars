@@ -177,62 +177,107 @@ const database = {
   menu: [
     {
       children: [
+        // {
+        //   name: "Slider Header",
+        //   url: "/",
+        // },
         {
-          name: "Slider Koptekst",
-          url: "/",
+          name: "About us",
+          url: "/about-us",
         },
         {
-          name: "Parallax Afbeelding",
-          url: "/home-paralax",
+          name: "How We Work",
+          url: "/services",
+        },
+        // {
+        //   name: "Parallax Image",
+        //   url: "/home-paralax",
+        // },
+        // {
+        //   name: "Video Background",
+        //   url: "/home-video",
+        // },
+        {
+          name: "Start Working With Us",
+          url: "/services",
         },
         {
-          name: "Video Achtergrond",
-          url: "/home-video",
+          name: "Why Us",
+          url: "/services",
+        },
+        {
+          name: "Get Consultation",
+          url: "/services",
         },
       ],
-      name: "Startpagina",
+      name: "Home page",
       url: "/",
     },
     {
-      name: "Over ons",
+      children: [
+        {
+          name: "How We Work",
+          url: "/services",
+        },
+         {
+          name: "Start Working With Us",
+          url: "/services",
+        },
+        {
+          name: "Why Us",
+          url: "/services",
+        },
+        {
+          name: "Get Consultation",
+          url: "/services",
+        },
+      ],
+      name: "About us",
       url: "/about-us",
     },
     {
-      name: "Diensten",
+      name: "Services",
       url: "/services",
     },
     {
-      name: "Portfolio projecten",
+      name: "Portfolio projects",
       url: "/portfolio",
     },
     {
       children: [
         {
-          name: "Raster Links Zijbalk",
+          name: "Grid Left Sidebar",
           url: "/blog-grid-left-sidebar",
         },
         {
-          name: "Lijst Links Zijbalk",
+          name: "List Links Sidebar",
           url: "/blog-list-left-sidebar",
         },
         {
-          name: "Raster Rechts Zijbalk",
+          name: "Grid Right Sidebar",
           url: "/blog-grid-right-sidebar",
         },
         {
-          name: "Lijst Rechts Zijbalk",
+          name: "List Right Sidebar",
           url: "/blog-list-right-sidebar",
         },
         {
-          name: "Raster Geen Zijbalk",
+          name: "Grid No Sidebar",
           url: "blog-grid-without-sidebar",
         },
       ],
-      name: "Blog & nieuws",
+      name: "Blog & news",
       url: "/blog-grid-left-sidebar",
     },
     {
-      name: "Contacten",
+       children: [
+        {
+          name: "Schedule a Consultation",
+          url: "/contacts",
+        },
+      ],
+
+      name: "Contacts",
       url: "/contacts",
     },
   ],

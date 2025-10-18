@@ -12,29 +12,30 @@ export default ({ data = [] }) => {
   // Dutch translations fallback (if data is not loaded from mock.js)
   const dutchMenu = [
     {
-      name: "Startpagina",
+      name: "Home page",
       url: "/",
       children: [
-        { name: "Slider Koptekst", url: "/" },
-        { name: "Parallax Afbeelding", url: "/home-paralax" },
-        { name: "Video Achtergrond", url: "/home-video" },
+        { name: "Slider Header", url: "/" },
+        // { name: "Parallax Image", url: "/home-paralax" },
+          { name: "About us", url: "/about-us" },
+        { name: "Video Background", url: "/home-video" },
       ],
     },
-    { name: "Over ons", url: "/about-us" },
-    { name: "Diensten", url: "/services" },
-    { name: "Portefeuille", url: "/portfolio" },
+    { name: "About us", url: "/about-us" },
+    { name: "Services", url: "/services" },
+    { name: "Portfolio", url: "/portfolio" },
     {
-      name: "Bloggen",
+      name: "Blogging",
       url: "/blog-grid-left-sidebar",
       children: [
-        { name: "Raster Links Zijbalk", url: "/blog-grid-left-sidebar" },
-        { name: "Lijst Links Zijbalk", url: "/blog-list-left-sidebar" },
-        { name: "Raster Rechts Zijbalk", url: "/blog-grid-right-sidebar" },
-        { name: "Lijst Rechts Zijbalk", url: "/blog-list-right-sidebar" },
-        { name: "Raster Geen Zijbalk", url: "blog-grid-without-sidebar" },
+        { name: "Grid Left Sidebar", url: "/blog-grid-left-sidebar" },
+        { name: "List Links Sidebar", url: "/blog-list-left-sidebar" },
+        { name: "Grid Right Sidebar", url: "/blog-grid-right-sidebar" },
+        { name: "List Right Sidebar", url: "/blog-list-right-sidebar" },
+        { name: "Grid No Sidebar", url: "blog-grid-without-sidebar" },
       ],
     },
-    { name: "Contacten", url: "/contacts" },
+    { name: "Contacts", url: "/contacts" },
   ];
 
   const menuData = data.length > 0 ? data : dutchMenu;

@@ -58,8 +58,12 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import styles from "./Slider.module.scss";
 
-import homeSlider1 from "../../../assets/placeholders/homeslider 1.jpeg";
-import homeSlider2 from "../../../assets/placeholders/homeslider 2.jpeg";
+import homeSlider1 from "../../../assets/placeholders/first_home.png";
+import homeSlider2 from "../../../assets/placeholders/second_home.png";
+import homeSlider3 from "../../../assets/placeholders/third_home.png";
+import homeSlider4 from "../../../assets/placeholders/fourth_home.png";
+import homeSlider5 from "../../../assets/placeholders/fifth_home.png";
+
 
 export default function HomeSlider() {
   const sliderRef = useRef(null);
@@ -76,7 +80,7 @@ export default function HomeSlider() {
     pauseOnHover: true,
   };
 
-  const slideImages = [homeSlider1, homeSlider2];
+  const slideImages = [homeSlider1, homeSlider2, homeSlider3, homeSlider4, homeSlider5];
 
   const Arrow = ({ onClick, icon, arrowClass }) => (
     <div className={`${styles.arrow} ${arrowClass}`} onClick={onClick}>
