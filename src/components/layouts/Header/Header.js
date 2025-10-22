@@ -17,7 +17,7 @@ export default ({ data = [] }) => {
       children: [
         { name: "Slider Header", url: "/" },
         // { name: "Parallax Image", url: "/home-paralax" },
-          { name: "About us", url: "/about-us" },
+        { name: "About us", url: "/about-us" },
         { name: "Video Background", url: "/home-video" },
       ],
     },
@@ -35,7 +35,13 @@ export default ({ data = [] }) => {
         { name: "Grid No Sidebar", url: "blog-grid-without-sidebar" },
       ],
     },
-    { name: "Contacts", url: "/contacts" },
+    {
+      name: "Contacts", url: "/contacts",
+      children:
+        [
+          { name: "consultation", url: "/consultation" },
+        ]
+    },
   ];
 
   const menuData = data.length > 0 ? data : dutchMenu;
@@ -87,7 +93,7 @@ export default ({ data = [] }) => {
           >
             Get Quote
           </Button> */}
-     
+
         <div className={styles.btn_desktop}>
           <Button
             after="&#xf107;"

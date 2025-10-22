@@ -5,6 +5,7 @@ import About from "./About/About";
 import Services from "./Services/Services";
 import Portfolio from "./Portfolio/Portfolio";
 import Contacts from "./Contacts/Contacts";
+import Calendly from "./Contacts/Calendly";
 import Blog from "./Blog/Blog";
 import PostSingle from "./PostSingle/PostSingle";
 import ServiceSingle from "./ServiceSingle/ServiceSingle";
@@ -19,6 +20,7 @@ export {
   Services,
   Portfolio,
   Contacts,
+  Calendly,
   Blog,
   PostSingle,
   ServiceSingle,

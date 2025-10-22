@@ -1,12 +1,12 @@
-import React from "react";
-import styles from "./Team.module.scss";
-import Layout from "../../layouts/Layout/Layout";
-import { CardImage } from "../../ui";
-import { Button } from "../../elements";
-import THEME from "../../../state/theme";
-import { useCustomState } from "../../../state/state";
+// import React from "react";
+// import styles from "./Team.module.scss";
+// import Layout from "../../layouts/Layout/Layout";
+// import { CardImage } from "../../ui";
+// import { Button } from "../../elements";
+// import THEME from "../../../state/theme";
+// import { useCustomState } from "../../../state/state";
 
-export default () => {
+// export default () => {
 // ({ data = [] }) => {
 //   const [state, actions] = useCustomState();
 
@@ -70,5 +70,5 @@ export default () => {
 //     </Layout>
 //   );
 // };
- return null
-};
+//  return null
+// };

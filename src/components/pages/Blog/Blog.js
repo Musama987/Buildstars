@@ -12,7 +12,7 @@ import {
   BlogSearch,
 } from "./components";
 
-import { Header } from "../../widgets";
+// import { Header } from "../../widgets";
 
 export default ({ sidebar = "left", layout = "grid", title = "title" }) => {
   const state = useCustomState()[0];
