@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Header, Contacts2 } from "../../widgets";
+import { Contacts2 } from "../../widgets";
 import { useCustomState } from "../../../state/state";
 
 export default () => {

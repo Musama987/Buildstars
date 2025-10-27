@@ -132,7 +132,7 @@ export default () => {
     <Layout col="4" padding mode="dark" style={{ background: "rgb(40,40,50)" }}>
       <div className={"layout-header"}>
         <span className="subtitle" style={{ color: THEME.color }}>
-          Voor bouwbedrijven 🏗️
+          Voor bouwbedrijven 
         </span>
         <h2 style={{ color: "#fff" }}>
           Hoe wij te werk gaan – stap voor stap

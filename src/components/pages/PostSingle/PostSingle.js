@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import styles from "./PostSingle.module.scss";
-import { Header } from "../../widgets";
+// import { Header } from "../../widgets";
 import { useParams } from "react-router-dom";
 import { useCustomState } from "../../../state/state";
 import Layout from "../../layouts/Layout/Layout";

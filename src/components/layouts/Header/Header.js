@@ -6,7 +6,7 @@ import { Button, Link, Logo } from "../../elements";
 import { useCustomState } from "../../../state/state";
 
 export default ({ data = [] }) => {
-  const [sticky, setSticky] = useState(false);
+  const [sticky, setSticky] = useState(true);
   const actions = useCustomState()[1];
 
   // Dutch translations fallback (if data is not loaded from mock.js)
@@ -39,7 +39,7 @@ export default ({ data = [] }) => {
       name: "Contacts", url: "/contacts",
       children:
         [
-          { name: "consultation", url: "/consultation" },
+          { name: "Consultation", url: "/consultation" },
         ]
     },
   ];

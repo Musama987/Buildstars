@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Header, Project, Numbers } from "../../widgets";
+import { Project, Numbers } from "../../widgets";
 import { useParams } from "react-router-dom";
 import { useCustomState } from "../../../state/state";
 

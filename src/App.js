@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 
 import {
   Home,
-  HomeParalax,
+  // HomeParalax,
   HomeVideo,
   About,
   Services,
@@ -16,6 +16,7 @@ import {
   MemberCard,
   PortfolioSingle
 } from "./components/pages";
+// import Calendly from "./components/pages/Contacts/Calendly";
 import { Header, Sidebar, Footer } from "./components/layouts";
 import { ModalForm, ModalVideo, RequestForm } from "./components/ui";
 import { Spinner } from "./components/elements";
