@@ -32,7 +32,7 @@ export default () => {
       <div className={styles.footer}>
         <div className={styles.logo_area}>
           <Logo dark />
-          <p>
+          <p className="footerwhite">
             Efficiently productivate adaptive testing after strategic
             experiences dramatically through client-centric potentialities.
           </p>

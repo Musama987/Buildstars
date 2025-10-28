@@ -32,6 +32,7 @@
 export { default as Home } from "./Home/Home";
 export { default as HomeParalax } from "./Home/HomeParalax";
 export { default as HomeVideo } from "./Home/HomeVideo";
+export { default as WhyUs } from './Home/Whyus'; // Added this line
 export { default as About } from "./About/About";
 export { default as Services } from "./Services/Services";
 export { default as Portfolio } from "./Portfolio/Portfolio";

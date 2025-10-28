@@ -181,10 +181,10 @@ const database = {
         //   name: "Slider Header",
         //   url: "/",
         // },
-        {
-          name: "About us",
-          url: "/about-us",
-        },
+        // {
+        //   name: "About us",
+        //   url: "/about-us",
+        // },
         {
           name: "How We Work",
           url: "/services",
@@ -203,11 +203,11 @@ const database = {
         },
         {
           name: "Why Us",
-          url: "/services",
+          url: "/why-us",
         },
         {
           name: "Get Consultation",
-          url: "/services",
+          url: "/consultation",
         },
       ],
       name: "Home page",
@@ -225,11 +225,11 @@ const database = {
         },
         {
           name: "Why Us",
-          url: "/services",
+          url: "/why-us",
         },
         {
           name: "Get Consultation",
-          url: "/services",
+          url: "/consultation",
         },
       ],
       name: "About us",

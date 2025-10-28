@@ -4,7 +4,7 @@ import {
   Features2,
   Subscribe,
   Services,
-  Team,
+  // Team,
   Services3,
   Contacts,
   Slider,
@@ -22,13 +22,13 @@ export default () => {
           <Slider data={state.data.posts} />
           <Services3 data={state.data.services} />
           <Features2 data={state.data.features2} />
-          <Team data={state.data.team} />
+           {/* <Team data={state.data.team} /> */}
           <Facts data={state.data.facts} />
           <Services data={state.data.services} />
           <Features data={state.data.features} />
           <Subscribe />
           <Reviews data={state.data.reviews} />
-          <Contacts />
+          <Contacts /> 
     </Fragment>
   );
 };

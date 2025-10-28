@@ -1,0 +1,220 @@
+// Using variables from the main theme (assuming --orange is defined in :root or index.scss)
+// e.g. :root { --orange: #F57C00; }
+
+.why_us_page {
+  padding: 120px 20px 80px 20px; // Increased top padding for navbar
+  background-color: #f9f9f9;
+  min-height: 80vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main_heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.feature_card {
+  background: #ffffff;
+  // Added a light orange border for the "relax" mode
+  border: 1px solid rgba(245, 124, 0, 0.3);
+  border-radius: 10px;
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, border-color 0.3s ease,
+    box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
+  // Child elements also need transition
+  & * {
+    transition: color 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    border-color: #f57c00; // Use theme color for border
+    background-color: #f57c00; // Apply theme background color on hover
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+    // Change text and icon colors to white for contrast
+    .card_icon {
+      color: #ffffff;
+    }
+    .card_title {
+      color: #ffffff;
+    }
+    .card_description {
+      color: #ffffff;
+    }
+  }
+}
+
+.card_icon {
+  color: var(--orange, #f57c00); // Use user-specified color as fallback
+  margin-bottom: 20px;
+
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.card_title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.card_description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* --- Styles for Why Choose Us Section --- */
+
+.why_choose_us_section {
+  margin-top: 100px; // Space between the two sections
+}
+
+.secondary_heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.why_card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  text-align: left;
+}
+
+.why_card {
+  background: #ffffff;
+  border: 1px solid rgba(245, 124, 0, 0.3); // Changed border to light orange
+  border-radius: 10px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.why_card_title {
+  font-size: 1.6rem; // Increased font size
+  font-weight: 600;
+  color: var(--orange, #f57c00);
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.check_icon {
+  color: var(--orange, #f57c00);
+  margin-right: 12px;
+  flex-shrink: 0; // Prevent icon from shrinking
+}
+
+.why_card_description {
+  font-size: 1.1rem; // Increased font size
+  color: #555;
+  line-height: 1.6;
+  padding-left: 32px; // Align with title text
+}
+
+.why_card_list {
+  font-size: 1.1rem; // Increased font size
+  color: #555;
+  line-height: 1.7;
+  list-style-type: none;
+  padding-left: 32px; // Align with title text
+  margin: 0;
+
+  li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+
+    &::before {
+      content: '–'; // Dash bullet
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--orange, #f57c00);
+      font-weight: 700;
+    }
+  }
+}
+
+/* --- New Styles for Team Section --- */
+
+.team_section {
+  margin-top: 100px; // Space between sections
+}
+
+.team_card_container {
+  display: grid;
+  // Make the columns 50/50 on larger screens
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  text-align: left;
+  
+  // Center the two cards on larger screens if there's space
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.team_card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.team_card_name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--orange, #f57c00);
+  margin-bottom: 5px;
+}
+
+.team_card_title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.team_card_description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
