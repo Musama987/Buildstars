@@ -1,0 +1,124 @@
+// Assuming --orange: #F57C00; is defined in a global file like index.scss
+
+.how_we_work_page {
+  padding: 120px 20px 80px 20px; // Top padding for navbar
+  background-color: #f9f9f9;
+  min-height: 80vh;
+  display: block; // Ensure content is visible
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main_heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+// Grid layout for the cards
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+// Card styles (similar to WhyUs section 1)
+.step_card {
+  background: #ffffff;
+  border: 1px solid rgba(245, 124, 0, 0.3); // Default orange border
+  border-radius: 10px;
+  padding: 35px 30px;
+  text-align: center; // Center icon and title
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, border-color 0.3s ease,
+    box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
+  // Child elements also need transition
+  & * {
+    transition: color 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    border-color: var(--orange, #f57c00); // Use theme color for border
+    background-color: var(--orange, #f57c00); // Apply theme background color on hover
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+    // Change text and icon colors to white for contrast
+    .card_icon {
+      color: #ffffff;
+    }
+    .card_title {
+      color: #ffffff;
+    }
+    .card_list {
+      color: #ffffff;
+
+      // Make checkmarks white too
+      li::before {
+        color: #ffffff;
+      }
+      li{
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.card_icon {
+  color: var(--orange, #f57c00); // Use theme color
+  margin-bottom: 25px;
+
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.card_title {
+  font-size: 1.7rem; // Consistent font size
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+// List styles inside the card
+.card_list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  text-align: left; // Align list items to the left
+  color: #555; // Default text color for list items
+
+  li {
+    font-size: 1.2rem; // Consistent font size
+    line-height: 1.7;
+    position: relative;
+    padding-left: 25px; // Space for the checkmark
+    margin-bottom: 10px;
+
+    &::before {
+      content: '✓'; // Checkmark
+      position: absolute;
+      left: 0;
+      top: 2px;
+      color: var(--orange, #f57c00); // Theme color checkmark
+      font-weight: 700;
+      transition: color 0.3s ease; // Add transition for hover
+    }
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .card_container {
+    // Stack cards on smaller screens
+    grid-template-columns: 1fr;
+  }
+}

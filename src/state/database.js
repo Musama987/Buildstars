@@ -187,7 +187,7 @@ const database = {
         // },
         {
           name: "How We Work",
-          url: "/services",
+          url: "/how-we-work",
         },
         // {
         //   name: "Parallax Image",
@@ -217,7 +217,7 @@ const database = {
       children: [
         {
           name: "How We Work",
-          url: "/services",
+          url: "/how-we-work",
         },
          {
           name: "Start Working With Us",

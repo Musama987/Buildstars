@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import {
   Home,
   WhyUs,
+  HowWeWork,
   // HomeParalax,
   HomeVideo,
   About,
@@ -43,6 +44,7 @@ export default () => {
           <Switch>
             <Route path="/" exact component={Home} />
              <Route path="/why-us" exact component={WhyUs} /> {/* Added this route */}
+              <Route path="/how-we-work" exact component={HowWeWork} /> 
              <Route path="/about-us" exact component={About} />
             {/* <Route path="/home-paralax" exact component={HomeParalax} /> */}
             <Route path="/home-video" exact component={HomeVideo} />

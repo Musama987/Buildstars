@@ -91,8 +91,9 @@ const features = [
 const whyChooseUsData = [
   {
     title: '5 Jaar Ervaring',
-    description:
+    description:[
       'We hebben met succes honderden gekwalificeerde werknemers geplaatst in Nederlandse bouwprojecten.',
+      ],
   },
   {
     title: 'Geverifieerde Professionals',
@@ -112,8 +113,9 @@ const whyChooseUsData = [
   },
   {
     title: '24/7 Probleemoplossing',
-    description:
+    description:[
       "Als er om 6 uur 's ochtends een probleem op de bouwplaats is, nemen wij de telefoon op en lossen het op.",
+      ],
   },
   {
     title: 'Branche-specialisatie',
@@ -135,8 +137,9 @@ const whyChooseUsData = [
   },
   {
     title: 'Menselijke Maat in Digitale Tijden',
-    description:
+    description:[
       'Waar anderen vertrouwen op kunstmatige intelligentie en automatisering, bouwen wij aan echte relaties. We kennen onze medewerkers persoonlijk en begrijpen de behoeften van jouw bedrijf.',
+      ],
   },
 ];
 
