@@ -5,6 +5,13 @@ import { Logo, Link, Subscribe } from "../../elements";
 import THEME from "../../../state/theme";
 import { useCustomState } from "../../../state/state";
 
+
+// --- Import your 4 social images ---
+import social1 from "../../../assets/placeholders/footer1.jpeg";
+import social2 from "../../../assets/placeholders/footer2.jpeg";
+import social3 from "../../../assets/placeholders/footer3.jpeg";
+import social4 from "../../../assets/placeholders/footer4.jpeg";
+
 export default () => {
   const state = useCustomState()[0];
 
@@ -37,9 +44,14 @@ export default () => {
             experiences dramatically through client-centric potentialities.
           </p>
           <div className={styles.social}>
-            <i className="lab la-facebook-f" />
+            {/* <i className="lab la-facebook-f" />
             <i className="lab la-twitter" />
-            <i className="lab la-linkedin-in" />
+            <i className="lab la-linkedin-in" /> */}
+             {/* --- New Social Images (40x40) --- */}
+            <img src={social1} alt="social-1" />
+            <img src={social2} alt="social-2" />
+            <img src={social3} alt="social-3" />
+            <img src={social4} alt="social-4" />
           </div>
         </div>
 

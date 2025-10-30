@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import styles from './WhyUs.module.scss';
+import HowWeWork from './HowWeWork';
 
 // Data for the feature cards (first section)
 const features = [
@@ -142,6 +143,59 @@ const whyChooseUsData = [
       ],
   },
 ];
+// --- Data for HowWeWork section ---
+const stepsData = [
+  {
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+        <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+        <path d="M9 9h6" />
+        <path d="M9 13h6" />
+        <path d="M9 17h4" />
+      </svg>
+    ),
+    title: '1. Begrip van jouw behoeften (24 uur)',
+    items: [
+      'We analyseren jouw specifieke eisen',
+      'We beoordelen benodigde vaardigheden en certificaten',
+      'We leren de projectplanning en het budget kennen',
+    ],
+  },
+  {
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+    ),
+    title: '2. Gerichte werving (2–3 dagen)',
+    items: [
+      'We maken gebruik van ons netwerk van geverifieerde bouwspecialisten',
+      'We selecteren kandidaten vooraf op vaardigheden en certificaten',
+      'We controleren werkvergunningen en documenten',
+    ],
+  },
+  {
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 16.899A2 2 0 0 1 2 15V7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-6l-4 4zM12 11h.01" />
+        <path d="M8 11h.01" />
+        <path d="M16 11h.01" />
+      </svg>
+    ),
+    title: '3. Soepele integratie (doorlopende samenwerking)',
+    items: [
+      'We regelen alle formaliteiten en documentatie',
+      'We organiseren huisvesting en vervoer',
+      'We bieden 24/7 ondersteuning gedurende het hele project',
+      'We beheren salarissen en wettelijke naleving',
+    ],
+  },
+];
+
 
 // Data for the new "Team" section
 const teamData = [
@@ -223,7 +277,7 @@ const WhyUs = () => {
               ))}
             </div>
           </div>
-
+<HowWeWork steps={stepsData} />
           {/* --- Third Section (Team) --- */}
           {/* <div className={styles.team_section}>
             <h2 className={styles.secondary_heading}>Ons Team</h2>

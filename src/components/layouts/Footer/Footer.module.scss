@@ -39,18 +39,32 @@
     display: flex;
     margin: 0 -0.8rem;
 
-    & i {
-      width: 2.8rem;
-      height: 2.8rem;
+    // & i {
+    //   width: 2.8rem;
+    //   height: 2.8rem;
+    //   border-radius: 50%;
+    //   background: #fff;
+    //   color: #000;
+    //   margin: 0 0.8rem;
+    //   cursor: pointer;
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   font-size: 1.3rem;
+    // }
+     & img {
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      background: #fff;
-      color: #000;
+      background: #fff; /* optional, if your image has transparent bg */
       margin: 0 0.8rem;
+      object-fit: contain;
       cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.3rem;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 }
