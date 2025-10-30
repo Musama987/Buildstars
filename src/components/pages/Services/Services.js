@@ -8,7 +8,7 @@ export default () => {
   return (
     <Fragment>
       {/* <Header img={state.data.header_bgs.services}>Our services</Header> */}
-      <ListBlock data={state.data.choose} />
+      {/* <ListBlock data={state.data.choose} /> */}
       <Services2 data={state.data.services} />
       <Pricing data={state.data.pricing} />
     </Fragment>

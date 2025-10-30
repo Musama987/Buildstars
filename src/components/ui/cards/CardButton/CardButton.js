@@ -40,17 +40,20 @@ export default ({
       }}
     >
       {children}
-      <Button
-        type={btn_type}
-        hoverType={btn_hoverType}
-        round={btn_round}
-        after={btn_after}
-        before={btn_before}
-        to={to}
-        click={click}
-      >
-        {btn_text}
-      </Button>
+      {/* ✅ Hide button completely if no text or link provided */}
+{(btn_text || btn_after || btn_before) && (
+  <Button
+    type={btn_type}
+    hoverType={btn_hoverType}
+    round={btn_round}
+    after={btn_after}
+    before={btn_before}
+    to={to}
+    click={click}
+  >
+    {btn_text}
+  </Button>
+)}
     </div>
   </CardBase>
 );

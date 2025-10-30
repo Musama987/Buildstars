@@ -122,44 +122,44 @@ const database = {
       icon: icon,
       id: "post_0",
       text:
-        "Globally leverage existing error-free models and B2B products. Professionally productize interdependent value without bricks-and-clicks niches. ",
-      title: "How to make your product the ferrari of business",
+        "Ararat Bouw levert snel, flexibel en met kwaliteitsgarantie gekwalificeerd bouwpersoneel. Wij nemen alle administratie uit handen, zodat u zich volledig op de bouw kunt richten.",
+      title: "DE SNELLE DIENSTVERLENING",
     },
     {
       icon: icon,
       id: "post_1",
       text:
-        "Globally leverage existing error-free models and B2B products. Professionally productize interdependent value without bricks-and-clicks niches. Globally leverage existing error-free models",
-      title: "Believe in your business skills but never stop improving",
+      "De juiste vakman op uw bouwplaats binnen 72 uur. We analyseren uw eisen, selecteren uit ons gescreende netwerk en zorgen voor een probleemloze integratie.",
+      title: "HET GETESTE PROCES (3 STAPPEN)",
     },
     {
       icon: icon,
       id: "post_2",
       text:
-        "Globally leverage existing error-free models and B2B products. Professionally productize interdependent",
-      title: "Create a business your parents would be proud of",
+      "Wij vormen de brug tussen Poolse specialisten en Nederlandse bedrijven. Wij zorgen voor eigen huisvesting, transport, loonbeheer en lossen onverwachte situaties snel op.",
+      title: "VOLLEDIGE LOGISTIEKE ZORG",
     },
   ],
-  features2: [
-    {
-      icon: "las la-archive",
-      text:
-        "Globally leverage existing error-free models and B2B products. Professionally productize interdependent value without bricks-and-clicks niches.",
-      title: "#1 Solidity",
-    },
-    {
-      icon: "las la-business-time",
-      text:
-        "Continually synthesize impactful web services after wireless users. Efficiently deliver excellent users through world-class core competencies. Efficiently enhance ubiquitous outsourcing.",
-      title: "#2 Assurance",
-    },
-    {
-      icon: "las la-file-invoice-dollar",
-      text:
-        "Synergistically streamline market-driven scenarios before synergistic alignments. Efficiently engage wireless e-services for cross-platform quality vectors. ",
-      title: "#3 Liability",
-    },
-  ],
+  // features2: [
+  //   {
+  //     icon: "las la-archive",
+  //     text:
+  //       "Globally leverage existing error-free models and B2B products. Professionally productize interdependent value without bricks-and-clicks niches.",
+  //     title: "#1 Solidity",
+  //   },
+  //   {
+  //     icon: "las la-business-time",
+  //     text:
+  //       "Continually synthesize impactful web services after wireless users. Efficiently deliver excellent users through world-class core competencies. Efficiently enhance ubiquitous outsourcing.",
+  //     title: "#2 Assurance",
+  //   },
+  //   {
+  //     icon: "las la-file-invoice-dollar",
+  //     text:
+  //       "Synergistically streamline market-driven scenarios before synergistic alignments. Efficiently engage wireless e-services for cross-platform quality vectors. ",
+  //     title: "#3 Liability",
+  //   },
+  // ],
   header_bgs: {
     about: photo,
     about_video_poster: photo,
@@ -1116,8 +1116,8 @@ const database = {
       ],
       subtitle: "Handling of construction materials",
       text:
-        "Globally leverage existing error-free models and B2B products. Professionally productize interdependent value without bricks-and-clicks niches.",
-      title: "Construction",
+      "Ararat Bouw levert snel, flexibel en met kwaliteitsgarantie gekwalificeerd bouwpersoneel. Wij nemen alle administratie uit handen, zodat u zich volledig op de bouw kunt richten.",
+      title: "DE SNELLE DIENSTVERLENING",
     },
     {
       featured: "yes",
@@ -1145,8 +1145,8 @@ const database = {
       ],
       subtitle: "Making planning for ptoject",
       text:
-        "Globally leverage existing error-free models and B2B products. Professionally productize interdependent value without bricks-and-clicks niches.",
-      title: "Loghistic",
+      "De juiste vakman op uw bouwplaats binnen 72 uur. We analyseren uw eisen, selecteren uit ons ges",
+      title: "HET GETESTE PROCES (3 STAPPEN)",
     },
     {
       full:
@@ -1173,8 +1173,8 @@ const database = {
       ],
       subtitle: "Create value for future product",
       text:
-        "Globally leverage existing error-free models and B2B products. Professionally productize interdependent value without bricks-and-clicks niches.",
-      title: "Manufacture",
+      "Wij vormen de brug tussen Poolse specialisten en Nederlandse bedrijven. Wij zorgen voor eigen huisvesting, transport, loonbeheer en lossen onverwachte situaties snel op.",
+      title: "VOLLEDIGE LOGISTIEKE ZORG",
     },
     {
       full:
