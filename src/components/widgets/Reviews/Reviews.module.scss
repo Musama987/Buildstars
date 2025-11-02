@@ -109,3 +109,103 @@
     }
   }
 }
+
+/* ==== Full Width Wrapper ==== */
+.standardsWrapper {
+  grid-column: 1 / -1; /* spans across both layout columns */
+  width: 100%;
+}
+
+/* ==== Section Styling ==== */
+.standardsSection {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding: 2rem 5rem;
+}
+
+.standardsTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+/* ==== Grid - 4 Columns ==== */
+.standardsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem; /* spacing between cards */
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.standardCard {
+  background: #fff;
+  border: 2px solid rgba(255, 140, 0, 0.3);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: left;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+  }
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 1200px) {
+  .standardsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .standardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .standardsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .standardCard {
+    text-align: center;
+
+    img {
+      margin: 0 auto 1rem;
+    }
+
+    h4 {
+      text-align: center;
+    }
+  }
+}
+
