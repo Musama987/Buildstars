@@ -26,17 +26,17 @@ export default () => {
         <AddressBox
           icon="las la-phone"
           title="Call Us"
-          text="+987 (077) 456-234"
+          text="+31 6 20 57 68 94"
         />
         <AddressBox
           icon="la la-envelope-open"
           title="Mail Us"
-          text="admin@mail.com"
+          text="info@araratbureau.nl"
         />
         <AddressBox
           icon="las la-comments"
           title="Free Consultation"
-          text="Otaki, 32 Wilson Street"
+          text="Small Haven 54,Eidhoven 5611 EJ"
         />
         <AddressBox
           icon="las la-comment"

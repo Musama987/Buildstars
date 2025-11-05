@@ -12,6 +12,8 @@ import social2 from "../../../assets/placeholders/footer2.jpeg";
 import social3 from "../../../assets/placeholders/footer3.jpeg";
 import social4 from "../../../assets/placeholders/footer4.jpeg";
 
+import { FaFacebookF, FaLinkedinIn, FaTwitter, FaTiktok } from "react-icons/fa";
+
 export default () => {
   const state = useCustomState()[0];
 
@@ -46,8 +48,9 @@ export default () => {
           <div className={styles.social}>
             {/* <i className="lab la-facebook-f" />
             <i className="lab la-twitter" />
-            <i className="lab la-linkedin-in" /> */}
-             {/* --- New Social Images (40x40) --- */}
+            <i className="lab la-linkedin-in" />  */}
+            
+             {/* {/* --- New Social Images (40x40) --- */}
             <img src={social1} alt="social-1" />
             <img src={social2} alt="social-2" />
             <img src={social3} alt="social-3" />
@@ -73,6 +76,37 @@ export default () => {
             Productivate adaptive testing after strategic experiences
             dramatically through.
           </p>
+          {/* ✅ New Social Media Links Section */}
+          <div className={styles.socialMedia}>
+            <a
+              href="https://facebook.com/YOUR_CLIENT_ID"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/eryk-arojan-6a9728224?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedinIn />
+            </a>
+            <a
+              href="https://twitter.com/YOUR_CLIENT_ID"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter />
+            </a>
+            <a
+              href="https://www.tiktok.com/@YOUR_CLIENT_ID"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTiktok />
+            </a>
+          </div>
         </div>
       </div>
     </Layout>
