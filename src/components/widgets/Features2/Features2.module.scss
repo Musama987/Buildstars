@@ -117,24 +117,54 @@
 
 
 
-.features_section {
-  padding: 60px 0;
+
+
+
+
+.section {
+  text-align: center;
+  margin: 80px auto 50px auto;
+  padding: 0 40px;
+  max-width: 1250px;
+}
+
+.header {
+  margin-bottom: 40px;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.slider_container {
+  position: relative;
+  padding-bottom: 50px;
 }
 
 .wrapper {
-  padding: 15px;
+  padding: 10px;
 }
 
 .card {
   background: #ffffff;
-  padding: 40px 25px;
+  padding: 30px 20px;
   border-radius: 10px;
   text-align: center;
   transition: all 0.3s ease-in-out;
   color: #333;
   border: 1px solid #e0e0e0;
-  min-height: 350px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  min-height: 280px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 
   &:hover {
     background: #f57c00;
@@ -159,46 +189,56 @@ h3 {
 }
 
 ul {
+  list-style: none;
   padding: 0;
   margin: 0;
-  list-style: none;
 
   li {
     font-size: 1.1rem;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     line-height: 1.5;
     color: #555;
   }
 }
 
-.header {
-  margin-bottom: 50px;
-  text-align: center;
+/* === Custom Arrows === */
+.arrow_left,
+.arrow_right {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: #fff;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
 
-  .subtitle {
-    font-weight: 600;
-    font-size: 1.1rem;
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  h2 {
-    font-size: 2.4rem;
-    margin-bottom: 15px;
-  }
-
-  p {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 1.2rem;
-    color: #555;
+  &:hover {
+    background: #f57c00;
+    color: #fff;
   }
 }
 
+.arrow_left {
+  left: -40px;
+}
+
+.arrow_right {
+  right: -40px;
+}
+
+/* === Responsive === */
 @media (max-width: 768px) {
+  .section {
+    padding: 0 20px;
+    margin-top: 60px;
+  }
+
   .card {
-    min-height: 320px;
-    padding: 30px 20px;
+    min-height: 300px;
+    padding: 25px 20px;
   }
 
   h3 {
@@ -208,4 +248,17 @@ ul {
   ul li {
     font-size: 1rem;
   }
+
+  .arrow_left {
+    left: 5px;
+  }
+
+  .arrow_right {
+    right: 5px;
+  }
 }
+
+
+
+
+

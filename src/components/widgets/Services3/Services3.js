@@ -198,7 +198,112 @@
 // export default Services3;
 
 
-import React from "react";
+
+
+// import React from "react";
+// import Slider from "react-slick";
+// import styles from "./Services3.module.scss";
+
+// // Import slick carousel styles
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+
+// // Import icons from react-icons/fc
+// import {
+//   FcRight,        // arrow right
+//   FcPhone,        // phone
+//   FcSearch,       // search
+//  FcBusinessman , // person (2 man alternative shown below)
+//   FcInTransit,    // airplane / delivery
+//   FcApproval,     // shield-like (protect)
+//   FcHome,         // home
+// } from "react-icons/fc";
+
+// const Services3 = () => {
+//   const settings = {
+//     dots: false, // Slider dots are now hidden
+//     infinite: true,
+//     speed: 500,
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     responsive: [
+//       {
+//         breakpoint: 1024,
+//         settings: {
+//           slidesToShow: 2,
+//         },
+//       },
+//       {
+//         breakpoint: 600,
+//         settings: {
+//           slidesToShow: 1,
+//         },
+//       },
+//     ],
+//   };
+
+//   const cardData = [
+//     {
+//       title: "wat ons onderscheidt",
+//       text: "Unieke aanpak voor elk project.",
+//       icon: <FcRight size={40} />, // arrow right
+//     },
+//     {
+//       title: "Antwoord binnen 24 uur",
+//       text: "Geen weken wachten. Jij belt – wij handelen direct.",
+//       icon: <FcPhone size={40} />, // phone
+//     },
+//     {
+//       title: "Alleen betrouwbare vakmensen",
+//       text: "Meer dan 15 jaar ervaring, sterke referenties en bewezen vaardigheden.",
+//       icon: <FcSearch size={40} />, // search
+//     },
+//     {
+//       title: "3-5 kandidaten binnen 48 uur",
+//       text: "Duidelijke profielen, meteen inzetbare mensen.",
+//       icon: <FcBusinessman size={40} />,  // person
+//     },
+//     {
+//       title: "Team klaar in 5 dagen",
+//       text: "Van jouw telefoontje tot de eerste werkdag op de bouw.",
+//       icon: <FcInTransit size={40} />, // airplane / in transit
+//     },
+//     {
+//       title: "Probleem? Oplossing binnen 2-3 dagen",
+//       text: "Ziek? Conflict? Onverwachte situatie? Wij staan 24/7 voor je klaar.",
+//       icon: <FcApproval size={40} />, // shield/approval
+//     },
+//     {
+//       title: "Geen gedoe met woonruimte",
+//       text: "Onze mensen wonen in onze panden. Geen stress, geen verrassingen.",
+//       icon: <FcHome size={40} />, // home
+//     },
+//   ];
+
+//   return (
+//     <div className={styles.slider_container}>
+//       <Slider {...settings}>
+//         {cardData.map((card, index) => (
+//           <div key={index} className={styles.wrapper}>
+//             <div className={styles.card}>
+//               <div className={styles.icon}>{card.icon}</div>
+//               <h3>{card.title}</h3>
+//               <p>{card.text}</p>
+//             </div>
+//           </div>
+//         ))}
+//       </Slider>
+//     </div>
+//   );
+// };
+
+// export default Services3;
+
+
+
+
+
+import React, { useRef } from "react";
 import Slider from "react-slick";
 import styles from "./Services3.module.scss";
 
@@ -206,36 +311,38 @@ import styles from "./Services3.module.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// Import icons from react-icons/fc
+// Import icons
 import {
-  FcRight,        // arrow right
-  FcPhone,        // phone
-  FcSearch,       // search
- FcBusinessman , // person (2 man alternative shown below)
-  FcInTransit,    // airplane / delivery
-  FcApproval,     // shield-like (protect)
-  FcHome,         // home
+  FcRight,
+  FcPhone,
+  FcSearch,
+  FcBusinessman,
+  FcInTransit,
+  FcApproval,
+  FcHome,
 } from "react-icons/fc";
 
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // navigation arrows
+
 const Services3 = () => {
+  const sliderRef = useRef(null);
+
   const settings = {
-    dots: false, // Slider dots are now hidden
+    dots: false,
     infinite: true,
-    speed: 500,
+    speed: 600,
     slidesToShow: 3,
     slidesToScroll: 1,
+    arrows: false,
+    autoplaySpeed: 4000, // we'll use custom arrows
     responsive: [
       {
         breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
+        settings: { slidesToShow: 2 },
       },
       {
         breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-        },
+        settings: { slidesToShow: 1 },
       },
     ],
   };
@@ -244,56 +351,73 @@ const Services3 = () => {
     {
       title: "wat ons onderscheidt",
       text: "Unieke aanpak voor elk project.",
-      icon: <FcRight size={40} />, // arrow right
+      icon: <FcRight size={40} />,
     },
     {
       title: "Antwoord binnen 24 uur",
       text: "Geen weken wachten. Jij belt – wij handelen direct.",
-      icon: <FcPhone size={40} />, // phone
+      icon: <FcPhone size={40} />,
     },
     {
       title: "Alleen betrouwbare vakmensen",
       text: "Meer dan 15 jaar ervaring, sterke referenties en bewezen vaardigheden.",
-      icon: <FcSearch size={40} />, // search
+      icon: <FcSearch size={40} />,
     },
     {
       title: "3-5 kandidaten binnen 48 uur",
       text: "Duidelijke profielen, meteen inzetbare mensen.",
-      icon: <FcBusinessman size={40} />,  // person
+      icon: <FcBusinessman size={40} />,
     },
     {
       title: "Team klaar in 5 dagen",
       text: "Van jouw telefoontje tot de eerste werkdag op de bouw.",
-      icon: <FcInTransit size={40} />, // airplane / in transit
+      icon: <FcInTransit size={40} />,
     },
     {
       title: "Probleem? Oplossing binnen 2-3 dagen",
       text: "Ziek? Conflict? Onverwachte situatie? Wij staan 24/7 voor je klaar.",
-      icon: <FcApproval size={40} />, // shield/approval
+      icon: <FcApproval size={40} />,
     },
     {
       title: "Geen gedoe met woonruimte",
       text: "Onze mensen wonen in onze panden. Geen stress, geen verrassingen.",
-      icon: <FcHome size={40} />, // home
+      icon: <FcHome size={40} />,
     },
   ];
 
   return (
-    <div className={styles.slider_container}>
-      <Slider {...settings}>
-        {cardData.map((card, index) => (
-          <div key={index} className={styles.wrapper}>
-            <div className={styles.card}>
-              <div className={styles.icon}>{card.icon}</div>
-              <h3>{card.title}</h3>
-              <p>{card.text}</p>
+    <div className={styles.section}>
+      <div className={styles.header}>
+        <h2>Waarom kiezen voor ons?</h2>
+        <p>
+          Onze aanpak is snel, betrouwbaar en volledig gericht op jouw gemak.
+          Ontdek waarom wij de juiste keuze zijn.
+        </p>
+      </div>
+
+      <div className={styles.slider_container}>
+        {/* Custom navigation arrows */}
+        <div className={styles.arrow_left} onClick={() => sliderRef.current.slickPrev()}>
+          <FaChevronLeft size={28} />
+        </div>
+        <div className={styles.arrow_right} onClick={() => sliderRef.current.slickNext()}>
+          <FaChevronRight size={28} />
+        </div>
+
+        <Slider ref={sliderRef} {...settings}>
+          {cardData.map((card, index) => (
+            <div key={index} className={styles.wrapper}>
+              <div className={styles.card}>
+                <div className={styles.icon}>{card.icon}</div>
+                <h3>{card.title}</h3>
+                <p>{card.text}</p>
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };
 
 export default Services3;
-

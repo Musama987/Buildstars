@@ -64,11 +64,150 @@
 //   );
 // };
 
-import React from "react";
+
+
+
+// import React from "react";
+// import Slider from "react-slick";
+// import styles from "./Features2.module.scss";
+
+// // react-icons
+// import {
+//   FcBarChart,
+//   FcEngineering,
+//   FcHome,
+//   FcConferenceCall,
+//   FcGlobe,
+//   FcBriefcase,
+// } from "react-icons/fc";
+
+// const Features2 = () => {
+//   const settings = {
+//     dots: false,
+//     infinite: true,
+//     speed: 600,
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     arrows: false,
+//     autoplaySpeed: 4000,
+//     responsive: [
+//       { breakpoint: 1024, settings: { slidesToShow: 2 } },
+//       { breakpoint: 600, settings: { slidesToShow: 1 } },
+//     ],
+//   };
+
+//   const cardData = [
+//     {
+//       title: "Belangrijke cijfers",
+//       icon: <FcBarChart size={50} />,
+//       text: [
+//         "Oprichtingsjaar: 2022",
+//         "Specialisatie: Werving van Poolse vakmensen",
+//         "Reactietijd: 2-3 dagen voor oplossingen",
+//         "Beschikbaarheid: 24/7 ondersteuning",
+//       ],
+//     },
+//     {
+//       title: "🏗️ Onze specialisatie",
+//       icon: <FcEngineering size={50} />,
+//       text: [
+//         "Gekwalificeerde bouwvakkers uit Polen",
+//         "Timmerlieden, metselaars, machinebedieners",
+//         "Grondwerkers",
+//         "Beton- en wapeningsspecialisten",
+//         "Montage van stalen constructies",
+//       ],
+//     },
+//     {
+//       title: "🏠 Wat ons onderscheidt",
+//       icon: <FcHome size={50} />,
+//       text: [
+//         "Eigen huisvesting voor werknemers",
+//         "Snelle reactie binnen 2-3 dagen",
+//         "Volledige service – werving, huisvesting, transport",
+//         "Tweetalig team Pools/Nederlands",
+//         "Diepe marktkennis",
+//       ],
+//     },
+//     {
+//       title: "🤝 Waarom Ararat?",
+//       icon: <FcConferenceCall size={50} />,
+//       text: [
+//         "Brug tussen Polen en Nederland",
+//         "Betrouwbare werknemers, gecontroleerde ervaring",
+//         "Langdurige partnerschappen",
+//         "Flexibiliteit per project",
+//         "Transparantie in samenwerking",
+//       ],
+//     },
+//     {
+//       title: "📍 Werkgebied",
+//       icon: <FcGlobe size={50} />,
+//       text: [
+//         "Heel Nederland",
+//         "Specialisatie in grote bouwregio’s",
+//         "Samenwerking met bedrijven van elke omvang",
+//       ],
+//     },
+//     {
+//       title: "💼 Onze waarden",
+//       icon: <FcBriefcase size={50} />,
+//       text: [
+//         "Betrouwbaarheid – afspraken nakomen",
+//         "Snelheid – directe reactie",
+//         "Partnerschap – altijd aanwezig",
+//         "Kwaliteit – alleen bekwame vakmensen",
+//         "Klanttevredenheid: 95%",
+//       ],
+//     },
+//   ];
+
+//   return (
+//     <section className={styles.features_section}>
+//       <div className={["layout-header", styles.header].join(" ")}>
+//         <span className="subtitle" style={{ color: "#F57C00" }}>
+//           Onze diensten
+//         </span>
+//         <h2>Waarom kiezen voor Ararat?</h2>
+//         <p className="parargraph">
+//           Wij bieden betrouwbare Poolse vakmensen voor de Nederlandse bouwsector
+//           met volledige ondersteuning, huisvesting en transparante samenwerking.
+//         </p>
+//       </div>
+
+//       <Slider {...settings}>
+//         {cardData.map((card, index) => (
+//           <div key={index} className={styles.wrapper}>
+//             <div className={styles.card}>
+//               <div className={styles.icon}>{card.icon}</div>
+//               <h3>{card.title}</h3>
+//               <ul>
+//                 {card.text.map((line, i) => (
+//                   <li key={i}>{line}</li>
+//                 ))}
+//               </ul>
+//             </div>
+//           </div>
+//         ))}
+//       </Slider>
+//     </section>
+//   );
+// };
+
+// export default Features2;
+
+
+
+
+import React, { useRef } from "react";
 import Slider from "react-slick";
 import styles from "./Features2.module.scss";
 
-// react-icons
+// Import slick carousel styles
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+// Import icons
 import {
   FcBarChart,
   FcEngineering,
@@ -78,13 +217,20 @@ import {
   FcBriefcase,
 } from "react-icons/fc";
 
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa"; // navigation arrows
+
 const Features2 = () => {
+  const sliderRef = useRef(null);
+
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 600,
     slidesToShow: 3,
     slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
       { breakpoint: 600, settings: { slidesToShow: 1 } },
@@ -103,7 +249,7 @@ const Features2 = () => {
       ],
     },
     {
-      title: "🏗️ Onze specialisatie",
+      title: "Onze specialisatie",
       icon: <FcEngineering size={50} />,
       text: [
         "Gekwalificeerde bouwvakkers uit Polen",
@@ -114,7 +260,7 @@ const Features2 = () => {
       ],
     },
     {
-      title: "🏠 Wat ons onderscheidt",
+      title: "Wat ons onderscheidt",
       icon: <FcHome size={50} />,
       text: [
         "Eigen huisvesting voor werknemers",
@@ -125,7 +271,7 @@ const Features2 = () => {
       ],
     },
     {
-      title: "🤝 Waarom Ararat?",
+      title: "Waarom Ararat?",
       icon: <FcConferenceCall size={50} />,
       text: [
         "Brug tussen Polen en Nederland",
@@ -136,7 +282,7 @@ const Features2 = () => {
       ],
     },
     {
-      title: "📍 Werkgebied",
+      title: "Werkgebied",
       icon: <FcGlobe size={50} />,
       text: [
         "Heel Nederland",
@@ -145,7 +291,7 @@ const Features2 = () => {
       ],
     },
     {
-      title: "💼 Onze waarden",
+      title: "Onze waarden",
       icon: <FcBriefcase size={50} />,
       text: [
         "Betrouwbaarheid – afspraken nakomen",
@@ -158,34 +304,41 @@ const Features2 = () => {
   ];
 
   return (
-    <section className={styles.features_section}>
-      <div className={["layout-header", styles.header].join(" ")}>
-        <span className="subtitle" style={{ color: "#F57C00" }}>
-          Onze diensten
-        </span>
+    <div className={styles.section}>
+      <div className={styles.header}>
         <h2>Waarom kiezen voor Ararat?</h2>
-        <p className="parargraph">
+        <p>
           Wij bieden betrouwbare Poolse vakmensen voor de Nederlandse bouwsector
           met volledige ondersteuning, huisvesting en transparante samenwerking.
         </p>
       </div>
 
-      <Slider {...settings}>
-        {cardData.map((card, index) => (
-          <div key={index} className={styles.wrapper}>
-            <div className={styles.card}>
-              <div className={styles.icon}>{card.icon}</div>
-              <h3>{card.title}</h3>
-              <ul>
-                {card.text.map((line, i) => (
-                  <li key={i}>{line}</li>
-                ))}
-              </ul>
+      <div className={styles.slider_container}>
+        {/* Custom navigation arrows */}
+        <div className={styles.arrow_left} onClick={() => sliderRef.current.slickPrev()}>
+          <FaChevronLeft size={28} />
+        </div>
+        <div className={styles.arrow_right} onClick={() => sliderRef.current.slickNext()}>
+          <FaChevronRight size={28} />
+        </div>
+
+        <Slider ref={sliderRef} {...settings}>
+          {cardData.map((card, index) => (
+            <div key={index} className={styles.wrapper}>
+              <div className={styles.card}>
+                <div className={styles.icon}>{card.icon}</div>
+                <h3>{card.title}</h3>
+                <ul>
+                  {card.text.map((line, i) => (
+                    <li key={i}>{line}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
-    </section>
+          ))}
+        </Slider>
+      </div>
+    </div>
   );
 };
 

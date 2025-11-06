@@ -170,30 +170,136 @@
 // }
 
 
+
+
+// .slider_container {
+//   // This negative margin pulls the entire slider section up
+//   // margin-top: -150px;
+//   // We add padding at the bottom so content below doesn't get overlapped
+//   padding-bottom: 50px;
+// }
+
+// .wrapper {
+//   padding: 15px;
+// }
+
+// .card {
+//   background: #ffffff;
+//   padding: 41px 25px; // Increased vertical padding for a larger card
+//   border-radius: 10px;
+//   text-align: center;
+//   transition: all 0.3s ease-in-out;
+//   color: #333;
+//   border: 1px solid #e0e0e0;
+//   min-height: 315px; // Increased card height
+//   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+//   &:hover {
+//     background: #F57C00;
+//     color: #fff;
+//     cursor: pointer;
+//     transform: translateY(-5px);
+//     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+//   }
+// }
+
+// .icon {
+//   margin-bottom: 25px;
+
+//   img {
+//     width: 60px;
+//     height: 60px;
+//   }
+// }
+
+// h3 {
+//   font-size: 2rem; // Larger heading
+//   margin-bottom: 20px;
+// }
+
+// p {
+//   font-size: 1.2rem; // Increased paragraph font size
+//   line-height: 1.7;
+// }
+
+// /* =================================== */
+// /* ==  MOBILE RESPONSIVE STYLES  == */
+// /* =================================== */
+
+// @media (max-width: 768px) {
+//   .slider_container {
+//     // REDUCED overlap for mobile to look cleaner
+//     margin-top: -50px;
+//   }
+
+//   .card {
+//     // SMALLER card for mobile screens
+//     min-height: 320px;
+//     padding: 30px 25px;
+//   }
+
+//   h3 {
+//     // SMALLER heading for mobile
+//     font-size: 1.6rem;
+//   }
+
+//   p {
+//     // SMALLER paragraph text for mobile
+//     font-size: 1rem;
+//   }
+// }
+
+
+
+
+
+.section {
+  text-align: center;
+  margin: 80px auto 50px auto; // added top margin + balanced bottom
+  padding: 0 40px; // adds left-right spacing for container
+  max-width: 1250px; // prevents it from stretching too wide
+}
+
+.header {
+  margin-bottom: 40px;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
 .slider_container {
-  // This negative margin pulls the entire slider section up
-  // margin-top: -150px;
-  // We add padding at the bottom so content below doesn't get overlapped
+  position: relative;
   padding-bottom: 50px;
 }
 
 .wrapper {
-  padding: 15px;
+  padding: 10px;
 }
 
 .card {
   background: #ffffff;
-  padding: 41px 25px; // Increased vertical padding for a larger card
+  padding: 30px 20px; // reduced padding
   border-radius: 10px;
   text-align: center;
   transition: all 0.3s ease-in-out;
   color: #333;
   border: 1px solid #e0e0e0;
-  min-height: 315px; // Increased card height
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  min-height: 270px; // smaller card height
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 
   &:hover {
-    background: #F57C00;
+    background: #f57c00;
     color: #fff;
     cursor: pointer;
     transform: translateY(-5px);
@@ -202,47 +308,77 @@
 }
 
 .icon {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 
   img {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
   }
 }
 
 h3 {
-  font-size: 2rem; // Larger heading
-  margin-bottom: 20px;
+  font-size: 1.8rem; // slightly smaller
+  margin-bottom: 15px;
 }
 
 p {
-  font-size: 1.2rem; // Increased paragraph font size
-  line-height: 1.7;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
-/* =================================== */
-/* ==  MOBILE RESPONSIVE STYLES  == */
-/* =================================== */
+/* === Custom Arrows === */
+.arrow_left,
+.arrow_right {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: #fff;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
 
+  &:hover {
+    background: #f57c00;
+    color: #fff;
+  }
+}
+
+.arrow_left {
+  left: -40px;
+}
+
+.arrow_right {
+  right: -40px;
+}
+
+/* === Responsive === */
 @media (max-width: 768px) {
-  .slider_container {
-    // REDUCED overlap for mobile to look cleaner
-    margin-top: -50px;
+  .section {
+    padding: 0 20px;
+    margin-top: 60px;
   }
 
   .card {
-    // SMALLER card for mobile screens
-    min-height: 320px;
-    padding: 30px 25px;
+    min-height: 280px;
+    padding: 25px 20px;
   }
 
   h3 {
-    // SMALLER heading for mobile
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
   p {
-    // SMALLER paragraph text for mobile
     font-size: 1rem;
+  }
+
+  .arrow_left {
+    left: 5px;
+  }
+
+  .arrow_right {
+    right: 5px;
   }
 }
