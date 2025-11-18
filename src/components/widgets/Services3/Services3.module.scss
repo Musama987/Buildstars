@@ -253,26 +253,160 @@
 
 
 
+// .section {
+//   text-align: center;
+//   margin: 80px auto 50px auto; // added top margin + balanced bottom
+//   padding: 0 40px; // adds left-right spacing for container
+//   max-width: 1250px; // prevents it from stretching too wide
+// }
+
+// .header {
+//   margin-bottom: 40px;
+
+//   h2 {
+//     font-size: 2.5rem;
+//     font-weight: 700;
+//     color: #333;
+//     margin-bottom: 15px;
+//   }
+
+//   p {
+//     font-size: 1.2rem;
+//     color: #666;
+//     max-width: 700px;
+//     margin: 0 auto;
+//   }
+// }
+
+// .slider_container {
+//   position: relative;
+//   padding-bottom: 50px;
+// }
+
+// .wrapper {
+//   padding: 10px;
+// }
+
+// .card {
+//   background: #ffffff;
+//   padding: 30px 20px; // reduced padding
+//   border-radius: 10px;
+//   text-align: center;
+//   transition: all 0.3s ease-in-out;
+//   color: #333;
+//   border: 1px solid #e0e0e0;
+//   min-height: 270px; // smaller card height
+//   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+//   &:hover {
+//     background: #f57c00;
+//     color: #fff;
+//     cursor: pointer;
+//     transform: translateY(-5px);
+//     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+//   }
+// }
+
+// .icon {
+//   margin-bottom: 20px;
+
+//   img {
+//     width: 55px;
+//     height: 55px;
+//   }
+// }
+
+// h3 {
+//   font-size: 1.8rem; // slightly smaller
+//   margin-bottom: 15px;
+// }
+
+// p {
+//   font-size: 1.1rem;
+//   line-height: 1.6;
+// }
+
+// /* === Custom Arrows === */
+// .arrow_left,
+// .arrow_right {
+//   position: absolute;
+//   top: 45%;
+//   transform: translateY(-50%);
+//   z-index: 10;
+//   background: #fff;
+//   border-radius: 50%;
+//   padding: 8px;
+//   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+//   cursor: pointer;
+//   transition: all 0.3s ease;
+
+//   &:hover {
+//     background: #f57c00;
+//     color: #fff;
+//   }
+// }
+
+// .arrow_left {
+//   left: -40px;
+// }
+
+// .arrow_right {
+//   right: -40px;
+// }
+
+// /* === Responsive === */
+// @media (max-width: 768px) {
+//   .section {
+//     padding: 0 20px;
+//     margin-top: 60px;
+//   }
+
+//   .card {
+//     min-height: 280px;
+//     padding: 25px 20px;
+//   }
+
+//   h3 {
+//     font-size: 1.5rem;
+//   }
+
+//   p {
+//     font-size: 1rem;
+//   }
+
+//   .arrow_left {
+//     left: 5px;
+//   }
+
+//   .arrow_right {
+//     right: 5px;
+//   }
+// }
+
+
+
+
+
 .section {
   text-align: center;
-  margin: 80px auto 50px auto; // added top margin + balanced bottom
-  padding: 0 40px; // adds left-right spacing for container
-  max-width: 1250px; // prevents it from stretching too wide
+  margin: 80px auto 50px auto;
+  padding: 0 40px;
+  max-width: 1250px;
 }
 
 .header {
   margin-bottom: 40px;
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: #333;
     margin-bottom: 15px;
   }
 
   p {
-    font-size: 1.2rem;
-    color: #666;
+    font-size: 1.5rem;
+    color: #333;
     max-width: 700px;
     margin: 0 auto;
   }
@@ -281,6 +415,25 @@
 .slider_container {
   position: relative;
   padding-bottom: 50px;
+
+  /* ✅ Customize Slick Dots */
+  :global(.slick-dots) {
+    bottom: -10px;
+
+    li {
+      margin: 0 5px;
+      
+      button:before {
+        font-size: 12px;
+        color: #ccc;
+        opacity: 1;
+      }
+
+      &.slick-active button:before {
+        color: #f57c00;
+      }
+    }
+  }
 }
 
 .wrapper {
@@ -289,13 +442,13 @@
 
 .card {
   background: #ffffff;
-  padding: 30px 20px; // reduced padding
+  padding: 30px 20px;
   border-radius: 10px;
   text-align: center;
   transition: all 0.3s ease-in-out;
   color: #333;
   border: 1px solid #e0e0e0;
-  min-height: 270px; // smaller card height
+  min-height: 270px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 
   &:hover {
@@ -305,25 +458,34 @@
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
   }
+
+  /* ✅ FIXED: Typography is now NESTED inside .card so it applies correctly */
+  h3 {
+    font-size: 1.5rem; // Upgraded size
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: inherit; // Allows color change on hover
+  }
+
+  p {
+    font-size: 1.3rem; // Upgraded size
+    line-height: 1.6;
+    color: inherit;
+  }
+  
+  /* Support for your specific class names if used (fallback) */
+  .heading {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .para {
+    font-size: 1.5rem;
+  }
 }
 
 .icon {
   margin-bottom: 20px;
-
-  img {
-    width: 55px;
-    height: 55px;
-  }
-}
-
-h3 {
-  font-size: 1.8rem; // slightly smaller
-  margin-bottom: 15px;
-}
-
-p {
-  font-size: 1.1rem;
-  line-height: 1.6;
 }
 
 /* === Custom Arrows === */
@@ -360,25 +522,41 @@ p {
     padding: 0 20px;
     margin-top: 60px;
   }
-
+  /* ✅ HEADER RESPONSIVENESS ADDED HERE */
+  .header {
+    h2 {
+      font-size: 2.5rem; // Reduced from 3.5rem for Mobile
+    }
+    p {
+      font-size: 1.2rem; // Reduced from 1.5rem for Mobile
+    }
+  }
   .card {
     min-height: 280px;
     padding: 25px 20px;
+
+    /* ✅ Mobile Typography overrides inside .card */
+    h3 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
   }
 
-  h3 {
-    font-size: 1.5rem;
+  /* ✅ Mobile specific spacing for Dots */
+  .slider_container {
+    padding-bottom: 80px;
+    
+    :global(.slick-dots) {
+      bottom: -37px;
+    }
   }
 
-  p {
-    font-size: 1rem;
-  }
-
-  .arrow_left {
-    left: 5px;
-  }
-
+  /* ✅ HIDE ARROWS ON MOBILE */
+  .arrow_left,
   .arrow_right {
-    right: 5px;
+    display: none;
   }
 }

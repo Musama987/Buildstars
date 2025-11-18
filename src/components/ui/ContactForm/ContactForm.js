@@ -579,6 +579,9 @@
 
 
 
+
+
+
 // new test
 
 import React, { useState, useEffect } from "react";
@@ -648,6 +651,7 @@ const ContactForm = ({ style }) => {
     aantal,
     startdatum,
   };
+  // console.log("templateParams being sent:", templateParams);
 
   const resetForm = () => {
     setName("");
@@ -680,20 +684,28 @@ const ContactForm = ({ style }) => {
     setError(false);
 
     // Your EmailJS keys
-    const SERVICE_ID = "service_eudtp8u";
-    const TEMPLATE_ID = "template_kg4aalp";
-    const PUBLIC_KEY = "QOxRYmFaF-whMKN5j";
+    // const SERVICE_ID = "service_eudtp8u";
+    // const TEMPLATE_ID = "template_kg4aalp";
+    // const PUBLIC_KEY = "QOxRYmFaF-whMKN5j";
+
+    //eryk
+
+    const SERVICE_ID = "service_8zmylhl";
+    const TEMPLATE_ID = "template_ka3zesf";
+    const PUBLIC_KEY = "a0_JbMQqzTqqtoFg9";
 
     // FIX: Use window.emailjs and move resetForm() to success block
     window.emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
       .then(
         (response) => {
+          //  console.log("✅ Email sent successfully:", response);
           setSending(false);
           setError(false);
           setStatus("Je aanvraag is verzonden!");
           resetForm();
         },
         (err) => {
+          // console.error("❌ Email send failed:", err);
           setSending(false);
           setError(true);
           setStatus("Sorry, er ging iets mis: " + err.text);

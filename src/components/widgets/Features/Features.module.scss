@@ -201,12 +201,35 @@
 
 
 
+
+
+
 .features_section {
   padding: 80px 0;
-  max-width: 1250px; // match other sections
+  max-width: 1250px;
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
+  position: relative; // Needed for positioning dots
+
+  /* ✅ Styling for the Dots (matches your other files) */
+  :global(.slick-dots) {
+    bottom: -30px; // Adjust vertical position
+
+    li {
+      margin: 0 5px;
+      
+      button:before {
+        font-size: 12px; // Dot size
+        color: #ccc;
+        opacity: 1;
+      }
+
+      &.slick-active button:before {
+        color: #f57c00; // Orange active color
+      }
+    }
+  }
 }
 
 .wrapper {
@@ -216,13 +239,13 @@
 /* === CARD STYLE === */
 .card {
   background: #ffffff;
-  padding: 30px 20px; // reduced padding
+  padding: 30px 20px;
   border-radius: 12px;
   text-align: center;
   transition: all 0.3s ease-in-out;
   color: #333;
   border: 1px solid #e0e0e0;
-  min-height: 300px; // smaller height
+  min-height: 300px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
@@ -238,6 +261,12 @@
 
     ul li {
       color: #fff;
+    }
+    
+    // Keep step number white on orange background
+    .stepNumber {
+       background: #fff;
+       color: #f57c00;
     }
   }
 }
@@ -255,6 +284,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 18px;
+  transition: all 0.3s ease;
 }
 
 h3 {
@@ -269,10 +299,10 @@ ul {
   list-style: none;
 
   li {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 8px;
     line-height: 1.5;
-    color: #555;
+    color: #333;
   }
 }
 
@@ -300,7 +330,7 @@ ul {
     max-width: 700px;
     margin: 0 auto;
     font-size: 1.15rem;
-    color: #666;
+    color: #333;
     line-height: 1.6;
   }
 }
@@ -322,7 +352,7 @@ ul {
   }
 
   ul li {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -336,6 +366,12 @@ ul {
   .features_section {
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 60px; // Extra space for dots at bottom
+  }
+  
+  // Position dots nicely on mobile
+  .features_section :global(.slick-dots) {
+    bottom: -34px; 
   }
 
   .card {
@@ -348,7 +384,6 @@ ul {
   }
 
   ul li {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
   }
 }
-

@@ -23,7 +23,8 @@ const Calendly = () => {
 
       <Layout>
         <div style={{ padding: '3rem 0', minHeight: '70vh' }}>
-          <InlineWidget url="https://calendly.com/musamaramzan916/30min" />
+          {/* <InlineWidget url="https://calendly.com/musamaramzan916/30min" /> */}
+           <InlineWidget url="https://calendly.com/araratbureau-info/30min" />
         </div>
       </Layout>
     </div>

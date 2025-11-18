@@ -176,7 +176,7 @@
 
   p {
     font-size: 1.15rem;
-    color: #666;
+    color: #333;
     max-width: 700px;
     margin: 0 auto;
   }
@@ -219,7 +219,7 @@
 }
 
 h3 {
-  font-size: 1.4rem; // slightly smaller
+  font-size: 1.5rem; // slightly smaller
   margin-bottom: 12px;
 }
 
@@ -229,10 +229,10 @@ ul {
   list-style: none;
 
   li {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-bottom: 6px;
     line-height: 1.4;
-    color: #555;
+    color: #333;
   }
 }
 
@@ -252,6 +252,18 @@ ul {
   .container {
     padding: 0 20px;
   }
+  /* ✅ HEADER RESPONSIVENESS ADDED HERE */
+  .header {
+    .subtitle{
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 2.5rem; // Reduced from 3.5rem for Mobile
+    }
+    p {
+      font-size: 1.2rem; // Reduced from 1.5rem for Mobile
+    }
+  }
 
   .grid {
     grid-template-columns: 1fr; // 1 card per row on mobile
@@ -263,10 +275,10 @@ ul {
   }
 
   h3 {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
   }
 
   ul li {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
   }
 }

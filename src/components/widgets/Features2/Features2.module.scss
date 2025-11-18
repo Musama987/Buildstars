@@ -121,6 +121,11 @@
 
 
 
+// 
+
+
+
+
 .section {
   text-align: center;
   margin: 80px auto 50px auto;
@@ -132,15 +137,15 @@
   margin-bottom: 40px;
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: #333;
     margin-bottom: 15px;
   }
 
   p {
-    font-size: 1.2rem;
-    color: #666;
+    font-size: 1.5rem;
+    color: #333;
     max-width: 700px;
     margin: 0 auto;
   }
@@ -149,6 +154,25 @@
 .slider_container {
   position: relative;
   padding-bottom: 50px;
+
+  /* ✅ Styling for the Dots */
+  :global(.slick-dots) {
+    bottom: -10px;
+
+    li {
+      margin: 0 5px;
+      
+      button:before {
+        font-size: 12px;
+        color: #ccc;
+        opacity: 1;
+      }
+
+      &.slick-active button:before {
+        color: #f57c00; // Oranje actieve kleur
+      }
+    }
+  }
 }
 
 .wrapper {
@@ -163,8 +187,11 @@
   transition: all 0.3s ease-in-out;
   color: #333;
   border: 1px solid #e0e0e0;
-  min-height: 280px;
+  min-height: 350px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &:hover {
     background: #f57c00;
@@ -173,32 +200,37 @@
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 
+    /* Ensure list items turn white on hover */
     ul li {
       color: #fff;
+    }
+  }
+
+  /* ✅ TYPOGRAPHY NESTED INSIDE CARD (Matches Services3) */
+  h3 {
+    font-size: 1.5rem; // Upgraded size
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: inherit;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    li {
+      font-size: 1.2rem; // Upgraded size (matches p in Services3)
+      margin-bottom: 8px;
+      line-height: 1.6;
+      color: inherit; // Inherits gray or white (on hover)
     }
   }
 }
 
 .icon {
   margin-bottom: 20px;
-}
-
-h3 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
-  li {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-    line-height: 1.5;
-    color: #555;
-  }
 }
 
 /* === Custom Arrows === */
@@ -235,30 +267,42 @@ ul {
     padding: 0 20px;
     margin-top: 60px;
   }
+  /* ✅ HEADER RESPONSIVENESS ADDED HERE */
+  .header {
+    h2 {
+      font-size: 2.5rem; // Reduced from 3.5rem for Mobile
+    }
+    p {
+      font-size: 1.2rem; // Reduced from 1.5rem for Mobile
+    }
+  }
 
   .card {
-    min-height: 300px;
+    min-height: 320px;
     padding: 25px 20px;
+
+    /* ✅ Mobile Typography overrides inside .card */
+    h3 {
+      font-size: 1.8rem;
+    }
+
+    ul li {
+      font-size: 1.1rem;
+    }
   }
 
-  h3 {
-    font-size: 1.5rem;
-  }
-
-  ul li {
-    font-size: 1rem;
-  }
-
-  .arrow_left {
-    left: 5px;
-  }
-
+  /* ✅ VERBERG PIJLEN OP MOBIEL */
+  .arrow_left,
   .arrow_right {
-    right: 5px;
+    display: none;
+  }
+
+  /* ✅ RUIMTE VOOR DOTS OP MOBIEL */
+  .slider_container {
+    padding-bottom: 80px;
+
+    :global(.slick-dots) {
+      bottom: -37px;
+    }
   }
 }
-
-
-
-
-
