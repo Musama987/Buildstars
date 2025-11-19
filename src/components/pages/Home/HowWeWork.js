@@ -1,20 +1,31 @@
+// 
+
+
+
+
 import React, { Fragment } from 'react';
 import styles from './HowWeWork.module.scss';
+import THEME from "../../../state/theme"; // Importing theme if needed for colors
+
+// --- Import Portfolio Images (First 8 only) ---
+import portfolio1 from "../../../assets/placeholders/portfolio1 (1).jpeg";
+import portfolio2 from "../../../assets/placeholders/portfolio1 (2).jpeg";
+import portfolio3 from "../../../assets/placeholders/portfolio1 (3).jpeg";
+import portfolio4 from "../../../assets/placeholders/portfolio1 (4).jpeg";
+import portfolio5 from "../../../assets/placeholders/portfolio1 (5).jpeg";
+import portfolio6 from "../../../assets/placeholders/portfolio1 (6).jpeg";
+import portfolio7 from "../../../assets/placeholders/portfolio1 (7).jpeg";
+import portfolio8 from "../../../assets/placeholders/portfolio1 (8).jpeg";
+
+const portfolioImages = [
+  portfolio1, portfolio2, portfolio3, portfolio4,
+  portfolio5, portfolio6, portfolio7, portfolio8
+];
 
 // --- Icons for the steps ---
 
 const IconStep1 = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="48"
-    height="48"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
     <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
     <path d="M9 9h6"></path>
@@ -24,17 +35,7 @@ const IconStep1 = () => (
 );
 
 const IconStep2 = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="48"
-    height="48"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
     <circle cx="9" cy="7" r="4"></circle>
     <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -43,17 +44,7 @@ const IconStep2 = () => (
 );
 
 const IconStep3 = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="48"
-    height="48"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M4 16.899A2 2 0 0 1 2 15V7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-6l-4 4zM12 11h.01"></path>
     <path d="M8 11h.01"></path>
     <path d="M16 11h.01"></path>
@@ -97,6 +88,7 @@ const HowWeWork = () => {
   return (
     <Fragment>
       <div className={styles.how_we_work_page}>
+        {/* --- PROCESS SECTION --- */}
         <div className={styles.container}>
           <h1 className={styles.main_heading}>
             Ons Proces in 3 Eenvoudige Stappen:
@@ -116,6 +108,29 @@ const HowWeWork = () => {
             ))}
           </div>
         </div>
+
+        {/* --- NEW PORTFOLIO SECTION --- */}
+        <div className={styles.portfolio_section}>
+           <div className={styles.container}>
+              {/* Header/Description nearest to images */}
+              <div className={styles.portfolio_header}>
+                 {/* Dynamic color using theme if desired, or scss class */}
+                 <span className={styles.subtitle} style={{ color: THEME.color }}>Onze Projecten</span>
+                 <h2>Een selectie van ons werk</h2>
+                 <p>Bekijk hieronder 8 van onze recente succesvolle projecten in de bouwsector.</p>
+              </div>
+
+              {/* Grid of 8 Images */}
+              <div className={styles.image_grid}>
+                 {portfolioImages.map((img, index) => (
+                    <div key={index} className={styles.image_item}>
+                       <img src={img} alt={`Project ${index + 1}`} />
+                    </div>
+                 ))}
+              </div>
+           </div>
+        </div>
+
       </div>
     </Fragment>
   );

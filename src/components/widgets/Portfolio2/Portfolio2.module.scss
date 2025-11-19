@@ -135,7 +135,17 @@
   & p {
     margin-bottom: 0;
   }
+  .subtitle {
+    font-weight: 700; // Made bold
+    font-size: 1.5rem; // Increased from 1.1rem
+    display: block;
+    margin-bottom: 10px;
+    // color is handled inline by THEME.color in JSX
+  }
 }
+.subtitle{
+    font-size: 1.6rem;;
+  }
 
 .portfolio {
   display: flex;
@@ -194,5 +204,11 @@
 
   .portfolio {
     width: 100%; // Ensure the container takes full width
+  }
+  h2{
+    font-size: 2.1rem;
+  }
+  p{
+    font-size: 1.4rem;
   }
 }

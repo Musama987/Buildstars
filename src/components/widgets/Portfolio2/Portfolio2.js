@@ -388,9 +388,49 @@ import portfolio19 from "../../../assets/placeholders/portfolio1 (19).jpeg";
 import portfolio20 from "../../../assets/placeholders/portfolio1 (20).jpeg";
 import portfolio21 from "../../../assets/placeholders/portfolio1 (21).jpeg";
 import portfolio22 from "../../../assets/placeholders/portfolio1 (22).jpeg";
-// import portfolio23 from "../../../assets/placeholders/portfolio1 (23).jpeg";
-// import portfolio24 from "../../../assets/placeholders/portfolio1 (24).jpeg";
-// import portfolio25 from "../../../assets/placeholders/portfolio1 (25).jpeg";
+import portfolio23 from "../../../assets/placeholders/portfolio1 (23).jpeg";
+import portfolio24 from "../../../assets/placeholders/portfolio1 (24).jpeg";
+import portfolio25 from "../../../assets/placeholders/portfolio1 (25).jpeg";
+import portfolio26 from "../../../assets/placeholders/portfolio1 (26).jpeg";
+import portfolio27 from "../../../assets/placeholders/portfolio1 (27).jpeg";
+import portfolio28 from "../../../assets/placeholders/portfolio1 (28).jpeg";
+import portfolio29 from "../../../assets/placeholders/portfolio1 (29).jpeg";
+import portfolio30 from "../../../assets/placeholders/portfolio1 (30).jpeg";
+import portfolio31 from "../../../assets/placeholders/portfolio1 (31).jpeg";
+import portfolio32 from "../../../assets/placeholders/portfolio1 (32).jpeg";
+import portfolio33 from "../../../assets/placeholders/portfolio1 (33).jpeg";
+import portfolio34 from "../../../assets/placeholders/portfolio1 (34).jpeg";
+import portfolio35 from "../../../assets/placeholders/portfolio1 (35).jpeg";
+import portfolio36 from "../../../assets/placeholders/portfolio1 (36).jpeg";
+import portfolio37 from "../../../assets/placeholders/portfolio1 (37).jpeg";
+import portfolio38 from "../../../assets/placeholders/portfolio1 (38).jpeg";
+import portfolio39 from "../../../assets/placeholders/portfolio1 (39).jpeg";
+import portfolio40 from "../../../assets/placeholders/portfolio1 (40).jpeg";
+import portfolio41 from "../../../assets/placeholders/portfolio1 (41).jpeg";
+import portfolio42 from "../../../assets/placeholders/portfolio1 (42).jpeg";
+import portfolio43 from "../../../assets/placeholders/portfolio1 (43).jpeg";
+import portfolio44 from "../../../assets/placeholders/portfolio1 (44).jpeg";
+import portfolio45 from "../../../assets/placeholders/portfolio1 (45).jpeg";
+import portfolio46 from "../../../assets/placeholders/portfolio1 (46).jpeg";
+import portfolio47 from "../../../assets/placeholders/portfolio1 (47).jpeg";
+import portfolio48 from "../../../assets/placeholders/portfolio1 (48).jpeg";
+import portfolio49 from "../../../assets/placeholders/portfolio1 (49).jpeg";
+import portfolio50 from "../../../assets/placeholders/portfolio1 (50).jpeg";
+import portfolio51 from "../../../assets/placeholders/portfolio1 (51).jpeg";
+import portfolio52 from "../../../assets/placeholders/portfolio1 (52).jpeg";
+import portfolio53 from "../../../assets/placeholders/portfolio1 (53).jpeg";
+import portfolio54 from "../../../assets/placeholders/portfolio1 (54).jpeg";
+import portfolio55 from "../../../assets/placeholders/portfolio1 (55).jpeg";
+import portfolio56 from "../../../assets/placeholders/portfolio1 (56).jpeg";
+import portfolio57 from "../../../assets/placeholders/portfolio1 (57).jpeg";
+import portfolio58 from "../../../assets/placeholders/portfolio1 (58).jpeg";
+import portfolio59 from "../../../assets/placeholders/portfolio1 (59).jpeg";
+import portfolio60 from "../../../assets/placeholders/portfolio1 (60).jpeg";
+import portfolio61 from "../../../assets/placeholders/portfolio1 (61).jpeg";
+import portfolio62 from "../../../assets/placeholders/portfolio1 (62).jpeg";
+import portfolio63 from "../../../assets/placeholders/portfolio1 (63).jpeg";
+import portfolio64 from "../../../assets/placeholders/portfolio1 (64).jpeg";
+
 
 // Create an array of the imported images.
 const images = [
@@ -416,6 +456,48 @@ const images = [
   portfolio20,
   portfolio21,
   portfolio22,
+  portfolio23,
+  portfolio24,
+  portfolio25,
+  portfolio26,
+  portfolio27,
+  portfolio28,
+  portfolio29,
+  portfolio30,
+  portfolio31,
+  portfolio32,
+  portfolio33,
+  portfolio34,
+  portfolio35,
+  portfolio36,
+  portfolio37,
+  portfolio38,
+  portfolio39,
+  portfolio40,
+  portfolio41,
+  portfolio42,
+  portfolio43,
+  portfolio44,
+  portfolio45,
+  portfolio46,
+  portfolio47,
+  portfolio48,
+  portfolio49,
+  portfolio50,
+  portfolio51,
+  portfolio52,
+  portfolio53,
+  portfolio54,
+  portfolio55,
+  portfolio56,
+  portfolio57,
+  portfolio58,
+  portfolio59,
+  portfolio60,
+  portfolio61,
+  portfolio62,
+  portfolio63,
+  portfolio64,
 ];
 // ------------------------------------
 

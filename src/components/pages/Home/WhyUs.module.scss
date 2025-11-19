@@ -73,14 +73,14 @@
 }
 
 .card_title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   color: #222;
   margin-bottom: 15px;
 }
 
 .card_description {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #555;
   line-height: 1.6;
 }
@@ -92,7 +92,7 @@
 }
 
 .secondary_heading {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 50px;
   color: #333;
@@ -120,7 +120,7 @@
 }
 
 .why_card_title {
-  font-size: 1.6rem; // Increased font size
+  font-size: 2rem; // Increased font size
   font-weight: 600;
   color: var(--orange, #f57c00);
   display: flex;
@@ -135,16 +135,16 @@
 }
 
 .why_card_description {
-  font-size: 1.1rem; // Increased font size
+  font-size: 1.2rem; // Increased font size
   color: #555;
   line-height: 1.6;
   padding-left: 32px; // Align with title text
 }
 
 .why_card_list {
-  font-size: 1.1rem; // Increased font size
+  font-size: 1.2rem; // Increased font size
   color: #555;
-  line-height: 1.7;
+  line-height: 1.6;
   list-style-type: none;
   padding-left: 32px; // Align with title text
   margin: 0;
@@ -205,7 +205,7 @@
 }
 
 .team_card_title {
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 600;
   color: #333;
   margin-bottom: 15px;
@@ -213,7 +213,7 @@
 }
 
 .team_card_description {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #555;
   line-height: 1.6;
 }

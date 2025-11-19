@@ -1,10 +1,135 @@
-// Assuming --orange: #F57C00; is defined in a global file like index.scss
+// // Assuming --orange: #F57C00; is defined in a global file like index.scss
+
+// .how_we_work_page {
+//   padding: 120px 20px 80px 20px; // Top padding for navbar
+//   background-color: #f9f9f9;
+//   min-height: 80vh;
+//   display: block; // Ensure content is visible
+// }
+
+// .container {
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   text-align: center;
+// }
+
+// .main_heading {
+//   font-size: 2.5rem;
+//   font-weight: 700;
+//   margin-bottom: 50px;
+//   color: #333;
+// }
+
+// // Grid layout for the cards
+// .card_container {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+//   gap: 30px;
+//   justify-content: center;
+// }
+
+// // Card styles (similar to WhyUs section 1)
+// .step_card {
+//   background: #ffffff;
+//   border: 1px solid rgba(245, 124, 0, 0.3); // Default orange border
+//   border-radius: 10px;
+//   padding: 35px 30px;
+//   text-align: center; // Center icon and title
+//   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+//   transition: transform 0.3s ease, border-color 0.3s ease,
+//     box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
+//   // Child elements also need transition
+//   & * {
+//     transition: color 0.3s ease;
+//   }
+
+//   &:hover {
+//     transform: translateY(-10px);
+//     border-color: var(--orange, #f57c00); // Use theme color for border
+//     background-color: var(--orange, #f57c00); // Apply theme background color on hover
+//     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+//     // Change text and icon colors to white for contrast
+//     .card_icon {
+//       color: #ffffff;
+//     }
+//     .card_title {
+//       color: #ffffff;
+//     }
+//     .card_list {
+//       color: #ffffff;
+
+//       // Make checkmarks white too
+//       li::before {
+//         color: #ffffff;
+//       }
+//       li{
+//         color: #ffffff;
+//       }
+//     }
+//   }
+// }
+
+// .card_icon {
+//   color: var(--orange, #f57c00); // Use theme color
+//   margin-bottom: 25px;
+
+//   svg {
+//     width: 50px;
+//     height: 50px;
+//   }
+// }
+
+// .card_title {
+//   font-size: 1.9rem; // Consistent font size
+//   font-weight: 600;
+//   color: #222;
+//   margin-bottom: 20px;
+// }
+
+// // List styles inside the card
+// .card_list {
+//   list-style-type: none;
+//   padding-left: 0;
+//   margin: 0;
+//   text-align: left; // Align list items to the left
+//   color: #555; // Default text color for list items
+
+//   li {
+//     font-size: 1.5rem; // Consistent font size
+//     line-height: 1.6;
+//     position: relative;
+//     padding-left: 25px; // Space for the checkmark
+//     margin-bottom: 10px;
+
+//     &::before {
+//       content: '✓'; // Checkmark
+//       position: absolute;
+//       left: 0;
+//       top: 2px;
+//       color: var(--orange, #f57c00); // Theme color checkmark
+//       font-weight: 700;
+//       transition: color 0.3s ease; // Add transition for hover
+//     }
+//   }
+// }
+
+// // Responsive styles
+// @media (max-width: 768px) {
+//   .card_container {
+//     // Stack cards on smaller screens
+//     grid-template-columns: 1fr;
+//   }
+// }
+
+
 
 .how_we_work_page {
-  padding: 120px 20px 80px 20px; // Top padding for navbar
+  padding: 120px 20px 80px 20px;
   background-color: #f9f9f9;
   min-height: 80vh;
-  display: block; // Ensure content is visible
+  display: block;
 }
 
 .container {
@@ -20,7 +145,7 @@
   color: #333;
 }
 
-// Grid layout for the cards
+// --- Process Cards Grid ---
 .card_container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -28,51 +153,33 @@
   justify-content: center;
 }
 
-// Card styles (similar to WhyUs section 1)
 .step_card {
   background: #ffffff;
-  border: 1px solid rgba(245, 124, 0, 0.3); // Default orange border
+  border: 1px solid rgba(245, 124, 0, 0.3);
   border-radius: 10px;
   padding: 35px 30px;
-  text-align: center; // Center icon and title
+  text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, border-color 0.3s ease,
-    box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
 
-  // Child elements also need transition
   & * {
     transition: color 0.3s ease;
   }
 
   &:hover {
     transform: translateY(-10px);
-    border-color: var(--orange, #f57c00); // Use theme color for border
-    background-color: var(--orange, #f57c00); // Apply theme background color on hover
+    border-color: var(--orange, #f57c00);
+    background-color: var(--orange, #f57c00);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 
-    // Change text and icon colors to white for contrast
-    .card_icon {
+    .card_icon, .card_title, .card_list, .card_list li, .card_list li::before {
       color: #ffffff;
-    }
-    .card_title {
-      color: #ffffff;
-    }
-    .card_list {
-      color: #ffffff;
-
-      // Make checkmarks white too
-      li::before {
-        color: #ffffff;
-      }
-      li{
-        color: #ffffff;
-      }
     }
   }
 }
 
 .card_icon {
-  color: var(--orange, #f57c00); // Use theme color
+  color: var(--orange, #f57c00);
   margin-bottom: 25px;
 
   svg {
@@ -82,43 +189,139 @@
 }
 
 .card_title {
-  font-size: 1.7rem; // Consistent font size
+  font-size: 1.9rem;
   font-weight: 600;
   color: #222;
   margin-bottom: 20px;
 }
 
-// List styles inside the card
 .card_list {
   list-style-type: none;
   padding-left: 0;
   margin: 0;
-  text-align: left; // Align list items to the left
-  color: #555; // Default text color for list items
+  text-align: left;
+  color: #555;
 
   li {
-    font-size: 1.2rem; // Consistent font size
-    line-height: 1.7;
+    font-size: 1.5rem;
+    line-height: 1.6;
     position: relative;
-    padding-left: 25px; // Space for the checkmark
+    padding-left: 25px;
     margin-bottom: 10px;
 
     &::before {
-      content: '✓'; // Checkmark
+      content: '✓';
       position: absolute;
       left: 0;
       top: 2px;
-      color: var(--orange, #f57c00); // Theme color checkmark
+      color: var(--orange, #f57c00);
       font-weight: 700;
-      transition: color 0.3s ease; // Add transition for hover
+      transition: color 0.3s ease;
     }
   }
 }
 
-// Responsive styles
+// --- NEW PORTFOLIO STYLES ---
+
+.portfolio_section {
+  margin-top: 100px; // Space from the steps above
+}
+
+.portfolio_header {
+  margin-bottom: 40px;
+  text-align: center;
+
+  .subtitle {
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 10px;
+    // color handled inline
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 1.3rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.image_grid {
+  display: grid;
+  // Desktop: 4 columns
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  
+  // Force consistent row heights
+  grid-auto-rows: 250px; 
+}
+
+.image_item {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // Ensures image fills the square without distortion
+    display: block;
+  }
+}
+
+
+// --- RESPONSIVE STYLES ---
+@media (max-width: 992px) {
+  // Tablet: 3 columns
+  .image_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .card_container {
-    // Stack cards on smaller screens
     grid-template-columns: 1fr;
+  }
+
+  // Tablet/Mobile: 2 columns
+  .image_grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px; // Slightly smaller rows
+  }
+
+  .portfolio_header {
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  // Mobile: 1 column for images
+  .image_grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 300px; // Taller rows for mobile visibility
+  }
+
+  .portfolio_section {
+    margin-top: 60px;
   }
 }
