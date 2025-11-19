@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import {
   Features,
   Features2,
-  Subscribe,
+  // Subscribe,
   Services,
   // Team,
   Services3,
@@ -26,7 +26,7 @@ export default () => {
           <Facts data={state.data.facts} />
           <Services data={state.data.services} />
           <Features data={state.data.features} />
-          <Subscribe />
+          {/* <Subscribe /> */}
           <Reviews data={state.data.reviews} />
           <Contacts /> 
     </Fragment>

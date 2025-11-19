@@ -62,7 +62,7 @@
 
 import React, { useState } from "react";
 import styles from "./Reviews.module.scss";
-import Layout from "../../layouts/Layout/Layout";
+// import Layout from "../../layouts/Layout/Layout";
 import { Button } from "../../elements";
 import THEME from "../../../state/theme";
 
@@ -100,7 +100,7 @@ export default ({ data = [] }) => {
 
   return (
     <>
-    <Layout
+    {/* <Layout
       style={{
         background: "rgb(240,240,240)",
       }}
@@ -121,7 +121,7 @@ export default ({ data = [] }) => {
           {amount === data.length ? "Less reviews" : "More reviews"}
         </Button>
       </div>
-       </Layout>
+       </Layout> */}
 
            {/* 🔸 New Section Starts Here */}
       {/* 🔸 New Section Starts Here */}

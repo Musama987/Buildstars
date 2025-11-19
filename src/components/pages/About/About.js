@@ -4,7 +4,7 @@ import {
   TextBlock,
   Process,
   Facts2,
-  Portfolio,
+  // Portfolio,
   // Partners,
 } from "../../widgets";
 import { useCustomState } from "../../../state/state";
@@ -18,7 +18,7 @@ export default () => {
       <TextBlock />
       <Process data={state.data.process} />
       <Facts2 data={state.data.facts2} />
-      <Portfolio data={state.data.portfolio} />
+      {/* <Portfolio data={state.data.portfolio} /> */}
       {/* <Partners data={state.data.partners} /> */}
     </Fragment>
   );
