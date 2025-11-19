@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import styles from "./Contacts2.module.scss";
 import Layout from "../../layouts/Layout/Layout";
 import { ContactForm } from "../../ui";
-import { AddressBox, Button } from "../../elements";
+import { AddressBox } from "../../elements";
 import THEME from "../../../state/theme";
 import { useCustomState } from "../../../state/state";
 
@@ -62,7 +62,7 @@ export default () => {
             paradigms. Intrinsicly productize proactive catalysts for change via
             economically sound relationships.
           </p>
-          <Button
+          {/* <Button
             click={() =>
               actions.toogleRequest(
                 "I'm ready to start making business with you!"
@@ -73,7 +73,7 @@ export default () => {
             after="&#xf107;"
           >
             Get quote
-          </Button>
+          </Button> */}
         </div>
       </Layout>
     </Fragment>

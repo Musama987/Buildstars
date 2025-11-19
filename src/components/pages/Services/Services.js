@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import {ListBlock, Services2, Pricing } from "../../widgets";
+import { Services2, Pricing } from "../../widgets";
 import { useCustomState } from "../../../state/state";
 
 export default () => {

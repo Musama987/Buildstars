@@ -15,26 +15,29 @@ export default ({ data = [] }) => {
       name: "Home page",
       url: "/",
       children: [
-        { name: "Slider Header", url: "/" },
+        // { name: "Slider Header", url: "/" },
         // { name: "Parallax Image", url: "/home-paralax" },
-        { name: "About us", url: "/about-us" },
-        { name: "Video Background", url: "/home-video" },
+        // { name: "About us", url: "/about-us" },
+        // { name: "Video Background", url: "/home-video" },
+        { name: "Why us", url: "/why-us" },
+        { name: "How we work", url: "/how-we-work" },
+        { name: "Start working", url: "/working-us" },
       ],
     },
     { name: "About us", url: "/about-us" },
     { name: "Services", url: "/services" },
     { name: "Portfolio", url: "/portfolio" },
-    {
-      name: "Blogging",
-      url: "/blog-grid-left-sidebar",
-      children: [
-        { name: "Grid Left Sidebar", url: "/blog-grid-left-sidebar" },
-        { name: "List Links Sidebar", url: "/blog-list-left-sidebar" },
-        { name: "Grid Right Sidebar", url: "/blog-grid-right-sidebar" },
-        { name: "List Right Sidebar", url: "/blog-list-right-sidebar" },
-        { name: "Grid No Sidebar", url: "blog-grid-without-sidebar" },
-      ],
-    },
+    // {
+    //   name: "Blogging",
+    //   url: "/blog-grid-left-sidebar",
+    //   children: [
+    //     { name: "Grid Left Sidebar", url: "/blog-grid-left-sidebar" },
+    //     { name: "List Links Sidebar", url: "/blog-list-left-sidebar" },
+    //     { name: "Grid Right Sidebar", url: "/blog-grid-right-sidebar" },
+    //     { name: "List Right Sidebar", url: "/blog-list-right-sidebar" },
+    //     { name: "Grid No Sidebar", url: "blog-grid-without-sidebar" },
+    //   ],
+    // },
     {
       name: "Contacts", url: "/contacts",
       children:

@@ -203,20 +203,20 @@ const stepsData = [
 
 
 // Data for the new "Team" section
-const teamData = [
-  {
-    name: 'Andrzej',
-    title: 'Oprichter & Partner',
-    description:
-      'Gespecialiseerd in het verbinden van Poolse professionals met Nederlandse bouwbedrijven. Zorgt voor naadloze integratie en operationele efficiëntie.',
-  },
-  {
-    name: 'Maria',
-    title: 'HR & Administratie',
-    description:
-      'Verantwoordelijk voor alle administratieve processen, inclusief contracten, BSN-nummers en huisvesting. Zorgt ervoor dat alles soepel verloopt voor zowel werknemers als klanten.',
-  },
-];
+// const teamData = [
+//   {
+//     name: 'Andrzej',
+//     title: 'Oprichter & Partner',
+//     description:
+//       'Gespecialiseerd in het verbinden van Poolse professionals met Nederlandse bouwbedrijven. Zorgt voor naadloze integratie en operationele efficiëntie.',
+//   },
+//   {
+//     name: 'Maria',
+//     title: 'HR & Administratie',
+//     description:
+//       'Verantwoordelijk voor alle administratieve processen, inclusief contracten, BSN-nummers en huisvesting. Zorgt ervoor dat alles soepel verloopt voor zowel werknemers als klanten.',
+//   },
+// ];
 
 // Checkmark Icon
 const CheckIcon = () => (

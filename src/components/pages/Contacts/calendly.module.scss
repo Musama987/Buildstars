@@ -1,8 +1,65 @@
+// /* src/components/pages/Contacts/calendly.module.scss */
+
+// /* This class pushes the whole page down from under the navbar */
+// .calendlyPageWrapper {
+//   padding-top: 120px; /* You can adjust this value to perfectly match your navbar height */
+// }
+
+// .header {
+//   padding: 4rem 2rem;
+//   text-align: center;
+//   background-color: #f7f7f7;
+// }
+
+// .header h2 {
+//   font-size: 2.5rem;
+//   margin-bottom: 0.5rem;
+// }
+
+// .header .subtitle {
+//   font-size: 1rem;
+//   font-weight: bold;
+//   text-transform: uppercase;
+//   letter-spacing: 1px;
+// }
+
+// .header p {
+//   font-size: 1.1rem;
+//   color: #666;
+//   max-width: 600px;
+//   margin: 1rem auto 0;
+// }
+
+
+// /* --- Responsiveness for Mobile Devices --- */
+// @media (max-width: 768px) {
+//   .calendlyPageWrapper {
+//     /* Use a smaller padding for the mobile navbar */
+//     padding-top: 90px;
+//   }
+
+//   .header {
+//     padding: 2.5rem 1rem;
+//   }
+
+//   .header h2 {
+//     font-size: 2rem;
+//   }
+
+//   .header p {
+//     font-size: 1rem;
+//   }
+// }
+
+
+
 /* src/components/pages/Contacts/calendly.module.scss */
 
 /* This class pushes the whole page down from under the navbar */
 .calendlyPageWrapper {
-  padding-top: 120px; /* You can adjust this value to perfectly match your navbar height */
+  padding-top: 120px; 
+  width: 100%;
+  overflow-x: hidden; /* ✅ FIX: Prevents horizontal scroll/cut-off */
 }
 
 .header {
@@ -30,11 +87,18 @@
   margin: 1rem auto 0;
 }
 
+/* ✅ New Container for the widget */
+.widgetContainer {
+  padding: 3rem 0;
+  min-height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
 /* --- Responsiveness for Mobile Devices --- */
 @media (max-width: 768px) {
   .calendlyPageWrapper {
-    /* Use a smaller padding for the mobile navbar */
     padding-top: 90px;
   }
 
@@ -48,5 +112,11 @@
 
   .header p {
     font-size: 1rem;
+  }
+
+  /* ✅ FIX: Reduce padding on mobile so the widget fits on screen */
+  .widgetContainer {
+    padding: 1rem 0;
+    overflow: hidden; /* Double safety */
   }
 }

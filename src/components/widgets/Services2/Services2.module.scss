@@ -87,6 +87,7 @@
   box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
   transition: all 0.4s ease;
   margin-top: 2rem;
+  margin-bottom: 10px;
 
   &:hover {
     transform: translateY(-6px);
@@ -138,6 +139,7 @@
 @media (max-width: 768px) {
   .singleCard {
     padding: 3rem 2rem;
+    margin-bottom: 10px;
   }
 
   .serviceRow {
@@ -157,5 +159,13 @@
     p {
       font-size: 1.3rem;
     }
+  }
+}
+.mobileFixWrapper {
+  width: 100%;
+  
+  @media (max-width: 768px) {
+    /* Push content down on mobile to prevent "Our services" from being cut off */
+    padding-top: 54px; 
   }
 }

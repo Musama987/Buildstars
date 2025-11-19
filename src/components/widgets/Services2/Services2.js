@@ -169,6 +169,8 @@ const stepsData = [
         marginTop: "30px",
       }}
     >
+      {/* ✅ Wrapper added for Mobile Spacing Fix */}
+      <div className={styles.mobileFixWrapper}>
       <div className="layout-header">
         <span className="subtitle" style={{ color: THEME.color }}>
           Our services
@@ -198,6 +200,7 @@ const stepsData = [
         ))}
       </div>
       <HowWeWork steps={stepsData} />
+      </div>
     </Layout>
     
   );

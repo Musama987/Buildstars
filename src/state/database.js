@@ -98,7 +98,7 @@ const database = {
   fast_links: [
     {
       title: "Homepage",
-      url: "/home",
+      url: "/",
     },
     {
       title: "About company",
@@ -110,7 +110,7 @@ const database = {
     },
     {
       title: "Become a partner",
-      url: "/blog/post_3",
+      url: "/working-us",
     },
     {
       title: "Contact us",
@@ -199,7 +199,7 @@ const database = {
         // },
         {
           name: "Start Working With Us",
-          url: "/services",
+          url: "/working-us",
         },
         {
           name: "Why Us",
@@ -221,7 +221,7 @@ const database = {
         },
          {
           name: "Start Working With Us",
-          url: "/services",
+          url: "/working-us",
         },
         {
           name: "Why Us",
@@ -243,32 +243,32 @@ const database = {
       name: "Portfolio projects",
       url: "/portfolio",
     },
-    {
-      children: [
-        {
-          name: "Grid Left Sidebar",
-          url: "/blog-grid-left-sidebar",
-        },
-        {
-          name: "List Links Sidebar",
-          url: "/blog-list-left-sidebar",
-        },
-        {
-          name: "Grid Right Sidebar",
-          url: "/blog-grid-right-sidebar",
-        },
-        {
-          name: "List Right Sidebar",
-          url: "/blog-list-right-sidebar",
-        },
-        {
-          name: "Grid No Sidebar",
-          url: "blog-grid-without-sidebar",
-        },
-      ],
-      name: "Blog & news",
-      url: "/blog-grid-left-sidebar",
-    },
+    // {
+    //   children: [
+    //     {
+    //       name: "Grid Left Sidebar",
+    //       url: "/blog-grid-left-sidebar",
+    //     },
+    //     {
+    //       name: "List Links Sidebar",
+    //       url: "/blog-list-left-sidebar",
+    //     },
+    //     {
+    //       name: "Grid Right Sidebar",
+    //       url: "/blog-grid-right-sidebar",
+    //     },
+    //     {
+    //       name: "List Right Sidebar",
+    //       url: "/blog-list-right-sidebar",
+    //     },
+    //     {
+    //       name: "Grid No Sidebar",
+    //       url: "blog-grid-without-sidebar",
+    //     },
+    //   ],
+    //   name: "Blog & news",
+    //   url: "/blog-grid-left-sidebar",
+    // },
     {
        children: [
         {

@@ -1,0 +1,85 @@
+// e.g. :root { --orange: #F57C00; }
+
+.start_working_page {
+  padding: 120px 20px 80px 20px; // Top padding for navbar
+  background-color: #f9f9f9;
+  min-height: 50vh; // Adjusted height since it's only one section now
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main_heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.feature_card {
+  background: #ffffff;
+  // Added a light orange border for the "relax" mode
+  border: 1px solid rgba(245, 124, 0, 0.3);
+  border-radius: 10px;
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, border-color 0.3s ease,
+    box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
+  // Child elements also need transition
+  & * {
+    transition: color 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    border-color: #f57c00; // Use theme color for border
+    background-color: #f57c00; // Apply theme background color on hover
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+    // Change text and icon colors to white for contrast
+    .card_icon {
+      color: #ffffff;
+    }
+    .card_title {
+      color: #ffffff;
+    }
+    .card_description {
+      color: #ffffff;
+    }
+  }
+}
+
+.card_icon {
+  color: var(--orange, #f57c00); // Use user-specified color as fallback
+  margin-bottom: 20px;
+
+  svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.card_title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.card_description {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}

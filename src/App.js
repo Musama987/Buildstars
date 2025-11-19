@@ -5,6 +5,7 @@ import {
   Home,
   WhyUs,
   HowWeWork,
+  StartWorking,
   // HomeParalax,
   HomeVideo,
   About,
@@ -12,17 +13,18 @@ import {
   Portfolio,
   Contacts,
   Calendly,
-  Blog,
-  PostSingle,
-  ServiceSingle,
-  MemberCard,
-  PortfolioSingle
+  // Blog,
+  // PostSingle,
+  // ServiceSingle,
+  // MemberCard,
+  // PortfolioSingle
 } from "./components/pages";
 // import Calendly from "./components/pages/Contacts/Calendly";
 import { Header, Sidebar, Footer } from "./components/layouts";
 import { ModalForm, ModalVideo, RequestForm } from "./components/ui";
 import { Spinner } from "./components/elements";
 import { useCustomState } from "./state/state";
+// import StartWorking from "./components/pages/Home/StartWorking";
 
 export default () => {
   const [state, actions] = useCustomState();
@@ -44,6 +46,7 @@ export default () => {
           <Switch>
             <Route path="/" exact component={Home} />
              <Route path="/why-us" exact component={WhyUs} /> {/* Added this route */}
+             <Route path="/working-us" exact component={StartWorking} />
               <Route path="/how-we-work" exact component={HowWeWork} /> 
              <Route path="/about-us" exact component={About} />
             {/* <Route path="/home-paralax" exact component={HomeParalax} /> */}
@@ -53,70 +56,70 @@ export default () => {
             <Route path="/portfolio" exact component={Portfolio} />
             <Route path="/contacts" exact component={Contacts} />
             <Route path="/consultation" exact component={Calendly}/>
-            <Route path="/blog/:post_id" exact component={PostSingle} />
-            <Route
+            {/* <Route path="/blog/:post_id" exact component={PostSingle} /> */}
+            {/* <Route
               path="/services/:service_id"
               exact
               component={ServiceSingle}
-            />
-            <Route path="/team/:member_id" exact component={MemberCard} />
+            /> */}
+            {/* <Route path="/team/:member_id" exact component={MemberCard} />
             <Route
               path="/portfolio/:project_id"
               exact
               component={PortfolioSingle}
-            />
+            /> */}
 
-            <Route path="/blog/cats/:category" exact>
+            {/* <Route path="/blog/cats/:category" exact>
               <Blog sidebar="left" layout="grid" />
             </Route>
 
             <Route path="/blog/user/:author" exact>
               <Blog sidebar="left" layout="grid" />
-            </Route>
+            </Route> */}
 
-            <Route path="/blog/date/:posting_date" exact>
+            {/* <Route path="/blog/date/:posting_date" exact>
               <Blog sidebar="left" layout="grid" />
             </Route>
 
             <Route path="/blog/search/:query" exact>
               <Blog sidebar="left" layout="grid" />
-            </Route>
+            </Route> */}
 
-            <Route path="/blog-grid-left-sidebar" exact>
+            {/* <Route path="/blog-grid-left-sidebar" exact>
               <Blog
                 sidebar="left"
                 layout="grid"
                 title="Blog grid left sidebar"
               />
-            </Route>
+            </Route> */}
 
-            <Route path="/blog-grid-right-sidebar" exact>
+            {/* <Route path="/blog-grid-right-sidebar" exact>
               <Blog
                 sidebar="right"
                 layout="grid"
                 title="Blog grid right sidebar"
               />
-            </Route>
+            </Route> */}
 
-            <Route path="/blog-grid-without-sidebar" exact>
+            {/* <Route path="/blog-grid-without-sidebar" exact>
               <Blog sidebar="none" layout="grid" title="Blog grid no sidebar" />
-            </Route>
+            </Route> */}
 
-            <Route path="/blog-list-left-sidebar" exact>
+            {/* <Route path="/blog-list-left-sidebar" exact>
               <Blog
                 sidebar="left"
                 layout="list"
                 title="Blog list left sidebar"
               />
-            </Route>
+            </Route> */}
 
-            <Route path="/blog-list-right-sidebar" exact>
+            {/* <Route path="/blog-list-right-sidebar" exact>
               <Blog
                 sidebar="right"
                 layout="list"
                 title="Blog list right sidebar"
               />
-            </Route>
+            </Route> */}
           </Switch>
           <Footer />
         </Fragment>
