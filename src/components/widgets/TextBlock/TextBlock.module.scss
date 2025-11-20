@@ -1,4 +1,395 @@
+// .wrapper {
+//   margin-top: 5rem;
+//   margin-bottom: 5rem;
+// }
+
+// .info {
+//   display: flex;
+//   flex-direction: column;
+//   text-align: left;
+//   align-items: flex-start;
+//   margin-right: 2.5rem;
+
+//   & .subtitle {
+//     text-transform: uppercase;
+//     font-size: 1.2rem;
+//     font-weight: 600;
+//     margin-bottom: 2rem;
+//     letter-spacing: 1px;
+//   }
+
+//   & h2 {
+//     width: 70%;
+//   }
+
+//   & .paragraph {
+//     margin-bottom: 2rem;
+//     width: 100%;
+
+//     &:last-of-type {
+//       margin-bottom: 4rem;
+//     }
+//   }
+
+//   & .btn_box {
+//     display: flex;
+
+//     &>*:last-child {
+//       margin-left: 1rem;
+//     }
+//   }
+// }
+
+// .image {
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   height: 100%;
+
+//   & .rectangle {
+//     position: absolute;
+//     height: calc(100% + 10rem);
+//     width: 60%;
+//     border: 1.5rem solid;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     right: 0;
+//   }
+
+//   & .photo {
+//     overflow: hidden;
+//     position: relative;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 100%;
+//     height: 100%;
+//     margin: 0 5rem;
+
+//     & span {
+//       position: absolute;
+//       width: 100%;
+//       height: 100%;
+//       top: 0;
+//       left: 0;
+//       transition: all 3s linear;
+//     }
+
+//     & span:before {
+//       content: "";
+//       width: 100%;
+//       height: 100%;
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       background: rgb(40, 40, 50);
+//       opacity: .6;
+//     }
+
+//     & i {
+//       width: 7.5rem;
+//       height: 7.5rem;
+//       font-size: 3.5rem;
+//       border-radius: 50%;
+//       border: 3px solid;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       cursor: pointer;
+//       transition: all .5s ease;
+//       z-index: 1;
+
+//       &:hover {
+//         border-color: #fff !important;
+//         color: #fff !important;
+//       }
+//     }
+
+//     & i:hover+span {
+//       transform: scale(1.2) translateX(-50px);
+//     }
+
+//   }
+// }
+
+// @media (max-width: 1200px) {
+//   .wrapper {
+//     margin-top: 0;
+//     margin-bottom: 0;
+//   }
+
+//   .image {
+//     & .rectangle {
+//       height: 100%;
+//     }
+
+//     & .photo {
+//       height: calc(100% - 10rem);
+//     }
+//   }
+// }
+
+// @media (max-width: 992px) {
+//   .info {
+//     margin-right: 0;
+//   }
+
+//   .image {
+//     & .rectangle {
+//       width: 80%;
+//       height: 80%;
+//     }
+
+//     & .photo {
+//       margin-left: 0;
+//       height: calc(80% - 10rem);
+//     }
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   .info {
+//     margin-bottom: 5rem;
+//   }
+
+//   .image {
+//     margin-bottom: 5rem;
+
+//     & .rectangle {
+//       width: 100%;
+//       height: 100%;
+//       top: 0;
+//       transform: translateY(0);
+//     }
+
+//     & .photo {
+//       height: 300px;
+//       margin: 0 5rem;
+//       transform: translateY(5rem);
+//     }
+//   }
+// }
+
+// @media (max-width: 576px) {
+//   .info {
+//     margin-bottom: 0;
+
+//     & .subtitle {
+//       margin-bottom: 1.5rem;
+//     }
+
+//     & .title {
+//       margin-bottom: 2rem;
+//     }
+
+//     & .paragraph {
+//       margin-bottom: 2rem;
+
+//       &:last-of-type {
+//         margin-bottom: 3rem;
+//       }
+//     }
+//   }
+
+//   .image {
+//     display: none;
+//   }
+// }
+
+
+
+
+// .wrapper {
+//   margin-top: 5rem;
+//   margin-bottom: 5rem;
+// }
+
+// .info {
+//   display: flex;
+//   flex-direction: column;
+//   text-align: left;
+//   align-items: flex-start;
+//   margin-right: 2.5rem;
+
+//   & .subtitle {
+//     text-transform: uppercase;
+//     font-size: 1.2rem;
+//     font-weight: 600;
+//     margin-bottom: 2rem;
+//     letter-spacing: 1px;
+//   }
+
+//   & h2 {
+//     width: 70%;
+//   }
+
+//   & .paragraph {
+//     margin-bottom: 2rem;
+//     width: 100%;
+
+//     &:last-of-type {
+//       margin-bottom: 4rem;
+//     }
+//   }
+
+//   & .btn_box {
+//     display: flex;
+//     &>*:last-child {
+//       margin-left: 1rem;
+//     }
+//   }
+// }
+
+// .image {
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   height: 100%;
+
+//   & .rectangle {
+//     position: absolute;
+//     height: calc(100% + 6rem); /* Reduced from 10rem to 6rem for less vertical space */
+//     width: 70%; /* Increased width slightly to look tighter */
+//     border: 1.5rem solid;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     right: 0;
+//     z-index: 0;
+//   }
+
+//   & .photo {
+//     overflow: hidden;
+//     position: relative;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 100%;
+//     height: 100%;
+//     /* FIX: Reduced margin from 5rem to 2rem so image is bigger & less empty space */
+//     margin: 0 2rem; 
+//     z-index: 1;
+
+//     & img.static_image {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//       display: block;
+//       border-radius: 4px; /* Optional: Slight rounded corners look nice */
+//     }
+//   }
+// }
+
+// /* === MEDIA QUERIES === */
+
+// @media (max-width: 1200px) {
+//   .wrapper {
+//     margin-top: 2rem;
+//     margin-bottom: 2rem;
+//   }
+//   .image {
+//     & .rectangle {
+//       height: 100%;
+//     }
+//     & .photo {
+//       height: 100%;
+//     }
+//   }
+// }
+
+// @media (max-width: 992px) {
+//   .info {
+//     margin-right: 0;
+//     & h2 { width: 100%; }
+//   }
+
+//   .image {
+//     & .rectangle {
+//       width: 90%;
+//       height: 90%;
+//     }
+//     & .photo {
+//       margin-left: 1rem;
+//       margin-right: 1rem;
+//     }
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   .info {
+//     margin-bottom: 3rem;
+//   }
+
+//   .image {
+//     margin-bottom: 3rem;
+//     height: 400px; /* Fixed height for tablet */
+
+//     & .rectangle {
+//       width: 100%;
+//       height: 100%;
+//       top: 0;
+//       transform: translateY(0);
+//       right: auto;
+//       left: 0;
+//     }
+
+//     & .photo {
+//       margin: 0; /* No margin on tablet */
+//       height: 100%;
+//       /* Optional: subtle move to offset form rectangle */
+//       transform: translate(1rem, 1rem); 
+//       width: calc(100% - 2rem);
+//     }
+//   }
+// }
+
+// /* FIX: MOBILE MODE IS NOW VISIBLE AND STYLED */
+// @media (max-width: 576px) {
+//   .info {
+//     margin-bottom: 2rem;
+
+//     & .subtitle { margin-bottom: 1rem; }
+//     & .title { margin-bottom: 1.5rem; }
+//     & .paragraph { margin-bottom: 1.5rem; }
+//   }
+
+//   /* Previous code had 'display: none' here. I removed it. */
+//   .image {
+//     display: block; /* Show the image block */
+//     height: 250px;  /* Smaller height for mobile */
+//     width: 100%;
+//     margin-top: 2rem;
+
+//     & .rectangle {
+//       /* Simplify the border on mobile (too heavy otherwise) */
+//       border-width: 0.5rem; 
+//       width: 90%;
+//       height: 90%;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//     }
+
+//     & .photo {
+//       height: 100%;
+//       width: 100%;
+//       margin: 0;
+//       transform: none;
+//     }
+//   }
+// }
+
+
+
+
+
 .wrapper {
+  /* Ensures the wrapper fills the Layout column height */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  /* Spacing handled by Layout usually, but keeping your margins */
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
@@ -9,6 +400,7 @@
   text-align: left;
   align-items: flex-start;
   margin-right: 2.5rem;
+  height: 100%; /* Helps alignment */
 
   & .subtitle {
     text-transform: uppercase;
@@ -30,30 +422,27 @@
       margin-bottom: 4rem;
     }
   }
-
-  & .btn_box {
-    display: flex;
-
-    &>*:last-child {
-      margin-left: 1rem;
-    }
-  }
 }
 
 .image {
   position: relative;
   display: flex;
   align-items: center;
-  height: 100%;
+  /* IMPORTANT: This makes the image area take the full height of the text neighbor */
+  height: 100%; 
+  width: 100%;
+  min-height: 400px; /* Safety minimum for desktop */
 
   & .rectangle {
     position: absolute;
-    height: calc(100% + 10rem);
-    width: 60%;
-    border: 1.5rem solid;
+    /* Makes the border taller than the image */
+    height: calc(100% + 4rem); 
+    width: 70%; 
+    border: 1.5rem solid; /* Thick border preserved */
     top: 50%;
     transform: translateY(-50%);
     right: 0;
+    z-index: 0;
   }
 
   & .photo {
@@ -63,135 +452,119 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
-    margin: 0 5rem;
+    /* Takes full height of the flexible container */
+    height: 100%; 
+    margin: 0 2rem; 
+    z-index: 1;
 
-    & span {
-      position: absolute;
+    & img.static_image {
       width: 100%;
       height: 100%;
-      top: 0;
-      left: 0;
-      transition: all 3s linear;
+      /* This ensures the image covers the area without stretching/distortion */
+      object-fit: cover; 
+      display: block;
     }
-
-    & span:before {
-      content: "";
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: rgb(40, 40, 50);
-      opacity: .6;
-    }
-
-    & i {
-      width: 7.5rem;
-      height: 7.5rem;
-      font-size: 3.5rem;
-      border-radius: 50%;
-      border: 3px solid;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      transition: all .5s ease;
-      z-index: 1;
-
-      &:hover {
-        border-color: #fff !important;
-        color: #fff !important;
-      }
-    }
-
-    & i:hover+span {
-      transform: scale(1.2) translateX(-50px);
-    }
-
   }
 }
 
+/* === MEDIA QUERIES === */
+
 @media (max-width: 1200px) {
   .wrapper {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .image {
-    & .rectangle {
-      height: 100%;
-    }
-
-    & .photo {
-      height: calc(100% - 10rem);
-    }
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 }
 
 @media (max-width: 992px) {
   .info {
     margin-right: 0;
+    & h2 { width: 100%; }
   }
 
   .image {
     & .rectangle {
-      width: 80%;
-      height: 80%;
+      width: 85%;
     }
-
     & .photo {
-      margin-left: 0;
-      height: calc(80% - 10rem);
+      margin: 0 1rem;
     }
   }
 }
 
+/* TABLET & MOBILE */
 @media (max-width: 768px) {
+  .wrapper {
+    /* Reset height on mobile so they stack naturally */
+    height: auto; 
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
   .info {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
 
   .image {
-    margin-bottom: 5rem;
+    /* On mobile/tablet, we need a fixed height because we don't have a text neighbor to stretch against */
+    height: 450px; 
+    margin-bottom: 3rem;
 
     & .rectangle {
-      width: 100%;
+      /* Resetting position for smaller screens */
+      width: 90%;
       height: 100%;
-      top: 0;
-      transform: translateY(0);
+      top: 2rem; /* Push down slightly */
+      transform: none;
+      right: 0;
+      left: auto;
     }
 
     & .photo {
-      height: 300px;
-      margin: 0 5rem;
-      transform: translateY(5rem);
+      margin: 0; 
+      height: 90%; /* Leave space for the border effect */
+      width: 90%;
+      /* Move photo left so border appears on right */
+      margin-right: auto; 
     }
   }
 }
 
+/* MOBILE SPECIFIC */
 @media (max-width: 576px) {
   .info {
-    margin-bottom: 0;
+    margin-bottom: 0rem;
+     & .paragraph {
+    margin-bottom: 0rem;
+    width: 100%;
 
-    & .subtitle {
-      margin-bottom: 1.5rem;
+    &:last-of-type {
+      margin-bottom: 0rem;
     }
-
-    & .title {
-      margin-bottom: 2rem;
-    }
-
-    & .paragraph {
-      margin-bottom: 2rem;
-
-      &:last-of-type {
-        margin-bottom: 3rem;
-      }
-    }
+  }
   }
 
   .image {
-    display: none;
+    height: 350px; /* Smaller fixed height for phone */
+    // margin-top: 1rem;
+
+    & .rectangle {
+      /* KEEPING THE THICK BORDER AS REQUESTED */
+      border-width: 1rem; 
+      width: 100%;
+      height: 100%;
+      top: 0rem;
+      left: 0rem; /* Offset effect */
+      transform: none;
+    }
+
+    & .photo {
+      width: 90%;
+      height: 90%;
+      margin: 0;
+      /* Ensure image is on top of part of the border if they overlap */
+      position: relative; 
+      z-index: 2;
+    }
   }
 }

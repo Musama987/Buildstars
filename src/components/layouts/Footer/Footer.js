@@ -156,8 +156,7 @@ export default () => {
         <div className={styles.logo_area}>
           <Logo dark />
           <p>
-            Efficiently productivate adaptive testing after strategic
-            experiences dramatically through client-centric potentialities.
+            Contact met mensen vormt de basis van ons werk, daarom bouwen we al jaren relaties op die ons in staat stellen om klanten effectief te bedienen en aan hun verwachtingen te voldoen
           </p>
           <div className={styles.social}>
             {/* --- Social Images (40x40) --- */}

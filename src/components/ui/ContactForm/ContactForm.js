@@ -584,15 +584,566 @@
 
 // new test
 
+// import React, { useState, useEffect } from "react";
+
+// // ===============================================
+// // STANDALONE PREVIEW VERSION
+// // The 'Spinner' and 'CardButton' components and all necessary styles
+// // are included in this file to make it runnable in the preview.
+// // ===============================================
+
+// // A simple Spinner component to replace the import from "../../elements"
+// const Spinner = () => (
+//     <div className="preview-spinner">
+//         <div className="preview-bounce1"></div>
+//         <div className="preview-bounce2"></div>
+//         <div className="preview-bounce3"></div>
+//     </div>
+// );
+
+// // A simple CardButton component to replace the import from "../../ui"
+// // It uses a real <button type="submit"> to work with the form.
+// const CardButton = ({ children, btn_text, btn_after }) => (
+//     <div className="preview-card-button">
+//         {children}
+//         <button type="submit" className="preview-submit-button">
+//             {btn_text}
+//             {btn_after && <span dangerouslySetInnerHTML={{ __html: ` ${btn_after}` }} />}
+//         </button>
+//     </div>
+// );
+
+// // =================================================================
+// // YOUR UPDATED CONTACT FORM COMPONENT STARTS HERE
+// // (This is the part to copy into your actual project file)
+// // =================================================================
+// const ContactForm = ({ style }) => {
+//   const [sending, setSending] = useState(false);
+//   const [status, setStatus] = useState("");
+//   const [error, setError] = useState(false);
+
+//   // Form state
+//   const [name, setName] = useState("");
+//   const [phone, setPhone] = useState("");
+//   const [vakmensen, setVakmensen] = useState("");
+//   const [aantal, setAantal] = useState("");
+//   const [startdatum, setStartdatum] = useState("");
+
+//   // FIX: Dynamically load the EmailJS script
+//   useEffect(() => {
+//     const script = document.createElement('script');
+//     script.src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js";
+//     script.async = true;
+//     document.body.appendChild(script);
+
+//     return () => {
+//       // Cleanup the script when the component is unmounted
+//       if (document.body.contains(script)) {
+//         document.body.removeChild(script);
+//       }
+//     }
+//   }, []);
+
+//   const templateParams = {
+//     name,
+//     phone,
+//     vakmensen,
+//     aantal,
+//     startdatum,
+//   };
+//   // console.log("templateParams being sent:", templateParams);
+
+//   const resetForm = () => {
+//     setName("");
+//     setPhone("");
+//     setVakmensen("");
+//     setAantal("");
+//     setStartdatum("");
+//   };
+  
+//   // FIX: Updated onSubmit function to handle form submission
+//   const onSubmit = (e) => {
+//     // Prevent page reload
+//     e.preventDefault();
+
+//     if (name === "" || phone === "" || vakmensen === "") {
+//       setStatus("Please fill in all required fields.");
+//       setError(true);
+//       return;
+//     }
+    
+//     // Check if the script has loaded
+//     if (!window.emailjs) {
+//         setError(true);
+//         setStatus("Could not send email. Please refresh and try again.");
+//         return;
+//     }
+
+//     setSending(true);
+//     setStatus("Sending...");
+//     setError(false);
+
+//     // Your EmailJS keys
+//     // const SERVICE_ID = "service_eudtp8u";
+//     // const TEMPLATE_ID = "template_kg4aalp";
+//     // const PUBLIC_KEY = "QOxRYmFaF-whMKN5j";
+
+//     //eryk
+
+//     const SERVICE_ID = "service_8zmylhl";
+//     const TEMPLATE_ID = "template_ka3zesf";
+//     const PUBLIC_KEY = "a0_JbMQqzTqqtoFg9";
+
+//     // FIX: Use window.emailjs and move resetForm() to success block
+//     window.emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
+//       .then(
+//         (response) => {
+//           //  console.log("✅ Email sent successfully:", response);
+//           setSending(false);
+//           setError(false);
+//           setStatus("Je aanvraag is verzonden!");
+//           resetForm();
+//         },
+//         (err) => {
+//           // console.error("❌ Email send failed:", err);
+//           setSending(false);
+//           setError(true);
+//           setStatus("Sorry, er ging iets mis: " + err.text);
+//         }
+//       );
+//   };
+
+//   const loading = sending && (
+//     // Note: className uses 'styles.loading' in your file, but is generic here for the preview
+//     <div className="preview-loading">
+//       <Spinner />
+//     </div>
+//   );
+
+//   return (
+//     // Note: classNames use 'styles.x' in your file, but are generic here for the preview
+//     <form style={style} className="preview-wrapper" onSubmit={onSubmit}>
+//       {loading}
+//       <CardButton
+//         btn_after="&#xf107;"
+//         btn_text="Verstuur aanvraag"
+//       >
+//         <div className="preview-contact-form">
+//           <span className={`preview-status ${error ? 'error' : ''}`.trim()}>
+//             {status}
+//           </span>
+//           <h4>Vul het formulier in:</h4>
+
+//           <input
+//             value={name}
+//             onChange={(e) => setName(e.target.value)}
+//             type="text"
+//             placeholder="Naam / Bedrijfsnaam *"
+//             required
+//           />
+//           <input
+//             value={phone}
+//             onChange={(e) => setPhone(e.target.value)}
+//             type="tel"
+//             placeholder="Telefoonnummer *"
+//             required
+//           />
+//           <input
+//             value={vakmensen}
+//             onChange={(e) => setVakmensen(e.target.value)}
+//             type="text"
+//             placeholder="Welke vakmensen zoek je? *"
+//             required
+//           />
+//           <input
+//             value={aantal}
+//             onChange={(e) => setAantal(e.target.value)}
+//             type="number"
+//             placeholder="Hoeveel mensen?"
+//           />
+//           <input
+//             value={startdatum}
+//             onChange={(e) => setStartdatum(e.target.value)}
+//             type="text"
+//             placeholder="Wanneer moeten ze starten?"
+//           />
+//         </div>
+//       </CardButton>
+//     </form>
+//   );
+// };
+// // =================================================================
+// // YOUR UPDATED CONTACT FORM COMPONENT ENDS HERE
+// // =================================================================
+
+// // Simple App wrapper to render everything for the preview
+// export default function App() {
+//   return (
+//     <>
+//       <style>{`
+//         /* Minimal styles to make the form look correct in preview */
+//         .preview-wrapper {
+//             position: relative;
+//             background: #fff;
+//             padding: 2rem;
+//             border-radius: 5px;
+//             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+//         }
+//         .preview-loading {
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             width: 100%;
+//             height: 100%;
+//             background: rgba(255, 255, 255, 0.8);
+//             z-index: 10;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             border-radius: 5px;
+//         }
+//         .preview-status {
+//             text-align: center;
+//             display: block;
+//             margin-bottom: 1.5rem;
+//             font-weight: 500;
+//             color: rgb(92, 228, 114);
+//             font-size: 1.2rem;
+//         }
+//         .preview-status.error {
+//             color: red;
+//         }
+//         .preview-contact-form h4 {
+//             font-size: 2rem;
+//             font-weight: 400;
+//             margin-top: 1rem;
+//             margin-bottom: 2rem;
+//         }
+//         .preview-contact-form input {
+//             padding: 1.5rem 1rem;
+//             background-color: rgb(245, 245, 245);
+//             border: 1px solid #eee;
+//             margin-bottom: 1.5rem;
+//             width: 100%;
+//             box-sizing: border-box;
+//             border-radius: 4px;
+//         }
+//         .preview-card-button {
+//             display: flex;
+//             flex-direction: column;
+//         }
+//         .preview-submit-button {
+//             margin-top: 1rem;
+//             padding: 1rem;
+//             background-color: #F57C00;
+//             color: white;
+//             border: none;
+//             cursor: pointer;
+//             font-size: 1rem;
+//         }
+//         .preview-spinner { margin: 20px auto; width: 70px; text-align: center; }
+//         .preview-spinner > div {
+//           width: 18px; height: 18px; background-color: #333;
+//           border-radius: 100%; display: inline-block;
+//           animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+//         }
+//         .preview-spinner .preview-bounce1 { animation-delay: -0.32s; }
+//         .preview-spinner .preview-bounce2 { animation-delay: -0.16s; }
+//         @keyframes sk-bouncedelay { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1.0); } }
+//       `}</style>
+//       <ContactForm />
+//     </>
+//   )
+// }
+
+
+
+
+
+
+//email add
+
+// import React, { useState, useEffect } from "react";
+
+// // ===============================================
+// // STANDALONE PREVIEW VERSION
+// // ===============================================
+
+// // A simple Spinner component
+// const Spinner = () => (
+//     <div className="preview-spinner">
+//         <div className="preview-bounce1"></div>
+//         <div className="preview-bounce2"></div>
+//         <div className="preview-bounce3"></div>
+//     </div>
+// );
+
+// // A simple CardButton component
+// const CardButton = ({ children, btn_text, btn_after }) => (
+//     <div className="preview-card-button">
+//         {children}
+//         <button type="submit" className="preview-submit-button">
+//             {btn_text}
+//             {btn_after && <span dangerouslySetInnerHTML={{ __html: ` ${btn_after}` }} />}
+//         </button>
+//     </div>
+// );
+
+// // =================================================================
+// // YOUR UPDATED CONTACT FORM COMPONENT
+// // =================================================================
+// const ContactForm = ({ style }) => {
+//   const [sending, setSending] = useState(false);
+//   const [status, setStatus] = useState("");
+//   const [error, setError] = useState(false);
+
+//   // Form state
+//   const [name, setName] = useState("");
+//   const [email, setEmail] = useState(""); // <--- ONLY NEW FIELD ADDED
+//   const [phone, setPhone] = useState("");
+//   const [vakmensen, setVakmensen] = useState("");
+//   const [aantal, setAantal] = useState("");
+//   const [startdatum, setStartdatum] = useState("");
+
+//   useEffect(() => {
+//     const script = document.createElement('script');
+//     script.src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js";
+//     script.async = true;
+//     document.body.appendChild(script);
+
+//     return () => {
+//       if (document.body.contains(script)) {
+//         document.body.removeChild(script);
+//       }
+//     }
+//   }, []);
+
+//   const templateParams = {
+//     title: "Nieuwe Aanvraag",
+//     name,
+//     email, // <--- Added to params
+//     phone,
+//     vakmensen,
+//     aantal,
+//     startdatum,
+//   };
+
+//   const resetForm = () => {
+//     setName("");
+//     setEmail(""); // <--- Reset email
+//     setPhone("");
+//     setVakmensen("");
+//     setAantal("");
+//     setStartdatum("");
+//   };
+  
+//   const onSubmit = (e) => {
+//     e.preventDefault();
+
+//     // Added check for email
+//     if (name === "" || email === "" || phone === "" || vakmensen === "") {
+//       setStatus("Please fill in all required fields.");
+//       setError(true);
+//       return;
+//     }
+    
+//     if (!window.emailjs) {
+//         setError(true);
+//         setStatus("Could not send email. Please refresh and try again.");
+//         return;
+//     }
+
+//     setSending(true);
+//     setStatus("Sending...");
+//     setError(false);
+
+//      // Your EmailJS keys
+//     const SERVICE_ID = "service_eudtp8u";
+//     const TEMPLATE_ID = "template_kg4aalp";
+//     const PUBLIC_KEY = "QOxRYmFaF-whMKN5j";
+
+// //erky
+//     // const SERVICE_ID = "service_8zmylhl";
+//     // const TEMPLATE_ID = "template_ka3zesf";
+//     // const PUBLIC_KEY = "a0_JbMQqzTqqtoFg9";
+
+//     window.emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
+//       .then(
+//         (response) => {
+//           setSending(false);
+//           setError(false);
+//           setStatus("Je aanvraag is verzonden!");
+//           resetForm();
+//         },
+//         (err) => {
+//           setSending(false);
+//           setError(true);
+//           setStatus("Sorry, er ging iets mis: " + err.text);
+//         }
+//       );
+//   };
+
+//   const loading = sending && (
+//     <div className="preview-loading">
+//       <Spinner />
+//     </div>
+//   );
+
+//   return (
+//     <form style={style} className="preview-wrapper" onSubmit={onSubmit}>
+//       {loading}
+//       <CardButton
+//         btn_after="&#xf107;"
+//         btn_text="Verstuur aanvraag"
+//       >
+//         <div className="preview-contact-form">
+//           <span className={`preview-status ${error ? 'error' : ''}`.trim()}>
+//             {status}
+//           </span>
+//           <h4>Vul het formulier in:</h4>
+
+//           <input
+//             value={name}
+//             onChange={(e) => setName(e.target.value)}
+//             type="text"
+//             placeholder="Naam / Bedrijfsnaam *"
+//             required
+//           />
+          
+//           {/* THIS IS THE ONLY UI CHANGE: EMAIL INPUT */}
+//           <input
+//             value={email}
+//             onChange={(e) => setEmail(e.target.value)}
+//             type="email"
+//             placeholder="Emailadres *"
+//             required
+//           />
+
+//           <input
+//             value={phone}
+//             onChange={(e) => setPhone(e.target.value)}
+//             type="tel"
+//             placeholder="Telefoonnummer *"
+//             required
+//           />
+//           <input
+//             value={vakmensen}
+//             onChange={(e) => setVakmensen(e.target.value)}
+//             type="text"
+//             placeholder="Welke vakmensen zoek je? *"
+//             required
+//           />
+//           <input
+//             value={aantal}
+//             onChange={(e) => setAantal(e.target.value)}
+//             type="number"
+//             placeholder="Hoeveel mensen?"
+//           />
+//           <input
+//             value={startdatum}
+//             onChange={(e) => setStartdatum(e.target.value)}
+//             type="text"
+//             placeholder="Wanneer moeten ze starten?"
+//           />
+//         </div>
+//       </CardButton>
+//     </form>
+//   );
+// };
+
+// // =================================================================
+// // APP WRAPPER (Original Styles)
+// // =================================================================
+// export default function App() {
+//   return (
+//     <>
+//       <style>{`
+//         /* Original Styles from your first message */
+//         .preview-wrapper {
+//             position: relative;
+//             background: #fff;
+//             padding: 2rem;
+//             border-radius: 5px;
+//             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+//         }
+//         .preview-loading {
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             width: 100%;
+//             height: 100%;
+//             background: rgba(255, 255, 255, 0.8);
+//             z-index: 10;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             border-radius: 5px;
+//         }
+//         .preview-status {
+//             text-align: center;
+//             display: block;
+//             margin-bottom: 1.5rem;
+//             font-weight: 500;
+//             color: rgb(92, 228, 114);
+//             font-size: 1.2rem;
+//         }
+//         .preview-status.error {
+//             color: red;
+//         }
+//         .preview-contact-form h4 {
+//             font-size: 2rem;
+//             font-weight: 400;
+//             margin-top: 1rem;
+//             margin-bottom: 2rem;
+//         }
+//         .preview-contact-form input {
+//             padding: 1.5rem 1rem;
+//             background-color: rgb(245, 245, 245);
+//             border: 1px solid #eee;
+//             margin-bottom: 1.5rem;
+//             width: 100%;
+//             box-sizing: border-box;
+//             border-radius: 4px;
+//         }
+//         .preview-card-button {
+//             display: flex;
+//             flex-direction: column;
+//         }
+//         .preview-submit-button {
+//             margin-top: 1rem;
+//             padding: 1rem;
+//             background-color: #F57C00;
+//             color: white;
+//             border: none;
+//             cursor: pointer;
+//             font-size: 1rem;
+//         }
+//         .preview-spinner { margin: 20px auto; width: 70px; text-align: center; }
+//         .preview-spinner > div {
+//           width: 18px; height: 18px; background-color: #333;
+//           border-radius: 100%; display: inline-block;
+//           animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+//         }
+//         .preview-spinner .preview-bounce1 { animation-delay: -0.32s; }
+//         .preview-spinner .preview-bounce2 { animation-delay: -0.16s; }
+//         @keyframes sk-bouncedelay { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1.0); } }
+//       `}</style>
+//       <ContactForm />
+//     </>
+//   )
+// }
+
+
+
+//mobile mode fix then this
+
 import React, { useState, useEffect } from "react";
 
 // ===============================================
 // STANDALONE PREVIEW VERSION
-// The 'Spinner' and 'CardButton' components and all necessary styles
-// are included in this file to make it runnable in the preview.
 // ===============================================
 
-// A simple Spinner component to replace the import from "../../elements"
+// A simple Spinner component
 const Spinner = () => (
     <div className="preview-spinner">
         <div className="preview-bounce1"></div>
@@ -601,8 +1152,7 @@ const Spinner = () => (
     </div>
 );
 
-// A simple CardButton component to replace the import from "../../ui"
-// It uses a real <button type="submit"> to work with the form.
+// A simple CardButton component
 const CardButton = ({ children, btn_text, btn_after }) => (
     <div className="preview-card-button">
         {children}
@@ -614,8 +1164,7 @@ const CardButton = ({ children, btn_text, btn_after }) => (
 );
 
 // =================================================================
-// YOUR UPDATED CONTACT FORM COMPONENT STARTS HERE
-// (This is the part to copy into your actual project file)
+// YOUR UPDATED CONTACT FORM COMPONENT
 // =================================================================
 const ContactForm = ({ style }) => {
   const [sending, setSending] = useState(false);
@@ -624,12 +1173,12 @@ const ContactForm = ({ style }) => {
 
   // Form state
   const [name, setName] = useState("");
+  const [email, setEmail] = useState(""); 
   const [phone, setPhone] = useState("");
   const [vakmensen, setVakmensen] = useState("");
   const [aantal, setAantal] = useState("");
   const [startdatum, setStartdatum] = useState("");
 
-  // FIX: Dynamically load the EmailJS script
   useEffect(() => {
     const script = document.createElement('script');
     script.src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js";
@@ -637,7 +1186,6 @@ const ContactForm = ({ style }) => {
     document.body.appendChild(script);
 
     return () => {
-      // Cleanup the script when the component is unmounted
       if (document.body.contains(script)) {
         document.body.removeChild(script);
       }
@@ -645,37 +1193,36 @@ const ContactForm = ({ style }) => {
   }, []);
 
   const templateParams = {
+    title: "Nieuwe Aanvraag",
     name,
+    email,
     phone,
     vakmensen,
     aantal,
     startdatum,
   };
-  // console.log("templateParams being sent:", templateParams);
 
   const resetForm = () => {
     setName("");
+    setEmail("");
     setPhone("");
     setVakmensen("");
     setAantal("");
     setStartdatum("");
   };
   
-  // FIX: Updated onSubmit function to handle form submission
   const onSubmit = (e) => {
-    // Prevent page reload
     e.preventDefault();
 
-    if (name === "" || phone === "" || vakmensen === "") {
-      setStatus("Please fill in all required fields.");
+    if (name === "" || email === "" || phone === "" || vakmensen === "") {
+      setStatus("Vul alstublieft alle verplichte velden in.");
       setError(true);
       return;
     }
     
-    // Check if the script has loaded
     if (!window.emailjs) {
         setError(true);
-        setStatus("Could not send email. Please refresh and try again.");
+        setStatus("Email services niet geladen. Refresh pagina.");
         return;
     }
 
@@ -683,29 +1230,26 @@ const ContactForm = ({ style }) => {
     setStatus("Sending...");
     setError(false);
 
-    // Your EmailJS keys
-    // const SERVICE_ID = "service_eudtp8u";
-    // const TEMPLATE_ID = "template_kg4aalp";
-    // const PUBLIC_KEY = "QOxRYmFaF-whMKN5j";
+      // Your EmailJS keys
+      // usama
+//     const SERVICE_ID = "service_eudtp8u";
+//     const TEMPLATE_ID = "template_kg4aalp";
+//     const PUBLIC_KEY = "QOxRYmFaF-whMKN5j";
 
-    //eryk
-
+//erky
     const SERVICE_ID = "service_8zmylhl";
     const TEMPLATE_ID = "template_ka3zesf";
     const PUBLIC_KEY = "a0_JbMQqzTqqtoFg9";
 
-    // FIX: Use window.emailjs and move resetForm() to success block
     window.emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
       .then(
         (response) => {
-          //  console.log("✅ Email sent successfully:", response);
           setSending(false);
           setError(false);
           setStatus("Je aanvraag is verzonden!");
           resetForm();
         },
         (err) => {
-          // console.error("❌ Email send failed:", err);
           setSending(false);
           setError(true);
           setStatus("Sorry, er ging iets mis: " + err.text);
@@ -714,14 +1258,12 @@ const ContactForm = ({ style }) => {
   };
 
   const loading = sending && (
-    // Note: className uses 'styles.loading' in your file, but is generic here for the preview
     <div className="preview-loading">
       <Spinner />
     </div>
   );
 
   return (
-    // Note: classNames use 'styles.x' in your file, but are generic here for the preview
     <form style={style} className="preview-wrapper" onSubmit={onSubmit}>
       {loading}
       <CardButton
@@ -741,6 +1283,15 @@ const ContactForm = ({ style }) => {
             placeholder="Naam / Bedrijfsnaam *"
             required
           />
+          
+          <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            type="email"
+            placeholder="Emailadres *"
+            required
+          />
+
           <input
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
@@ -772,75 +1323,55 @@ const ContactForm = ({ style }) => {
     </form>
   );
 };
-// =================================================================
-// YOUR UPDATED CONTACT FORM COMPONENT ENDS HERE
-// =================================================================
 
-// Simple App wrapper to render everything for the preview
+// =================================================================
+// APP WRAPPER (Updated with scroll fixes)
+// =================================================================
 export default function App() {
   return (
     <>
       <style>{`
-        /* Minimal styles to make the form look correct in preview */
         .preview-wrapper {
             position: relative;
             background: #fff;
             padding: 2rem;
             border-radius: 5px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            /* FIX: Ensure max height and scrolling on small screens */
+            max-height: 90vh;
+            overflow-y: auto;
+            scrollbar-width: thin;
         }
         .preview-loading {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.8);
-            z-index: 10;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 5px;
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(255, 255, 255, 0.8); z-index: 10;
+            display: flex; align-items: center; justify-content: center; border-radius: 5px;
         }
         .preview-status {
-            text-align: center;
-            display: block;
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-            color: rgb(92, 228, 114);
-            font-size: 1.2rem;
+            text-align: center; display: block; margin-bottom: 1.5rem;
+            font-weight: 500; color: rgb(92, 228, 114); font-size: 1.2rem;
         }
-        .preview-status.error {
-            color: red;
-        }
+        .preview-status.error { color: red; }
+        
         .preview-contact-form h4 {
-            font-size: 2rem;
-            font-weight: 400;
-            margin-top: 1rem;
-            margin-bottom: 2rem;
+            font-size: 2rem; font-weight: 400; margin-top: 1rem; margin-bottom: 2rem;
         }
+        
         .preview-contact-form input {
-            padding: 1.5rem 1rem;
-            background-color: rgb(245, 245, 245);
-            border: 1px solid #eee;
-            margin-bottom: 1.5rem;
-            width: 100%;
-            box-sizing: border-box;
-            border-radius: 4px;
+            padding: 1.5rem 1rem; background-color: rgb(245, 245, 245);
+            border: 1px solid #eee; margin-bottom: 1.5rem; width: 100%;
+            box-sizing: border-box; border-radius: 4px;
         }
-        .preview-card-button {
-            display: flex;
-            flex-direction: column;
-        }
+        
+        .preview-card-button { display: flex; flex-direction: column; }
+        
         .preview-submit-button {
-            margin-top: 1rem;
-            padding: 1rem;
-            background-color: #F57C00;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 1rem;
+            margin-top: 1rem; padding: 1rem; background-color: #F57C00;
+            color: white; border: none; cursor: pointer; font-size: 1rem;
+            /* FIX: Ensure button has space at bottom */
+            margin-bottom: 1rem;
         }
+        
         .preview-spinner { margin: 20px auto; width: 70px; text-align: center; }
         .preview-spinner > div {
           width: 18px; height: 18px; background-color: #333;
@@ -850,9 +1381,27 @@ export default function App() {
         .preview-spinner .preview-bounce1 { animation-delay: -0.32s; }
         .preview-spinner .preview-bounce2 { animation-delay: -0.16s; }
         @keyframes sk-bouncedelay { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1.0); } }
+
+        /* === MOBILE OPTIMIZATIONS === */
+        @media (max-width: 576px) {
+           .preview-wrapper {
+              padding: 1.5rem; /* Reduce wrapper padding */
+              max-height: 85vh; /* Ensure it fits within mobile viewport */
+           }
+           .preview-contact-form h4 {
+              font-size: 1.5rem; /* Smaller Title */
+              margin-bottom: 1rem;
+           }
+           .preview-contact-form input {
+              padding: 1rem 0.8rem; /* Smaller input padding for mobile */
+              margin-bottom: 1rem; /* Smaller gap between inputs */
+           }
+           .preview-submit-button {
+              padding: 0.8rem;
+           }
+        }
       `}</style>
       <ContactForm />
     </>
   )
 }
-
