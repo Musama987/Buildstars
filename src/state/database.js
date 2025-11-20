@@ -97,7 +97,7 @@ const database = {
   ],
   fast_links: [
     {
-      title: "Homepage",
+      title: "Home page",
       url: "/",
     },
     {
@@ -214,24 +214,25 @@ const database = {
       url: "/",
     },
     {
-      children: [
-        {
-          name: "How We Work",
-          url: "/how-we-work",
-        },
-         {
-          name: "Start Working With Us",
-          url: "/working-us",
-        },
-        {
-          name: "Why Us",
-          url: "/why-us",
-        },
-        {
-          name: "Get Consultation",
-          url: "/consultation",
-        },
-      ],
+      // children: [
+      //   {
+      //     name: "How We Work",
+      //     url: "/how-we-work",
+      //   },
+      //    {
+      //     name: "Start Working With Us",
+      //     url: "/working-us",
+      //   },
+      //   {
+      //     name: "Why Us",
+      //     url: "/why-us",
+      //   },
+      //   {
+      //     name: "Get Consultation",
+      //     url: "/consultation",
+      //   },
+      // ],
+      // {
       name: "About us",
       url: "/about-us",
     },

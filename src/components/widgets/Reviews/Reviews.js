@@ -63,7 +63,7 @@
 import React, { useState } from "react";
 import styles from "./Reviews.module.scss";
 // import Layout from "../../layouts/Layout/Layout";
-import { Button } from "../../elements";
+// import { Button } from "../../elements";
 import THEME from "../../../state/theme";
 
 import nbbu from "../../../assets/placeholders/footer2.jpeg";

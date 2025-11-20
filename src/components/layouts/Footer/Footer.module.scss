@@ -77,7 +77,13 @@
   padding-left: 5rem;
 
   & p {
-    margin-top: 3rem;
+    font-size: 1.4rem;
+    margin-top: 0.2rem;
+  }
+  .emailLink{
+    color: white;
+    font-size: 1.4rem;
+    margin-top: 0.2rem;
   }
 }
 
@@ -185,7 +191,7 @@ screen and (-ms-high-contrast: none) {
   display: flex;
   align-items: center;
   gap: 1.2rem;
-  margin-top: 2.5rem;
+  margin-top: 3rem;
 
   & a {
     width: 40px;
