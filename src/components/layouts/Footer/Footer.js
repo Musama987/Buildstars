@@ -170,16 +170,16 @@ export default () => {
         <div className={styles.link_area}>
           {/* ✅ SERVICES SECTION: Updated with your specific links */}
           <div className={styles.links}>
-            <h4>Services</h4>
+            <h4>Diensten</h4>
             
             <Link url="/working-us" hoverStyle={{ color: THEME.color }}>
               <i className="las la-angle-right" />
-              Working Us
+             Werken met ons
             </Link>
 
             <Link url="/consultation" hoverStyle={{ color: THEME.color }}>
               <i className="las la-angle-right" />
-              Get Consultation
+             Vraag een consult aan
             </Link>
 
             {/* ✅ BUTTON ACTION: Opens the Modal (Get a Quote) */}
@@ -189,24 +189,24 @@ export default () => {
               hoverStyle={{ color: THEME.color }}
             >
               <i className="las la-angle-right" />
-              Get a Quote
+              Vraag een offerte aan
             </Link>
 
             <Link url="/why-us" hoverStyle={{ color: THEME.color }}>
               <i className="las la-angle-right" />
-              Why Us
+             Waarom wij
             </Link>
           </div>
 
           {/* ✅ FAST LINKS: Restored to use {linkList} */}
           <div className={styles.links}>
-            <h4>Fast Links</h4>
+            <h4>Snelle links</h4>
             {linkList}
           </div>
         </div>
 
         <div className={styles.subscribe}>
-          <h4>Contact Us</h4>
+          <h4>Neem contact</h4>
           <p>
             +31 6 20 57 68 94
           </p>

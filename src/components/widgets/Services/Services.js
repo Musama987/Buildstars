@@ -121,15 +121,14 @@ export default ({ data = [] }) => {
     >
       <div className="layout-header">
         <span className="subtitle" style={{ color: THEME.color }}>
-          Our services
+          Onze diensten
         </span>
         <h2 style={{ color: "#fff" }}>
-          Check featured products for your benefits.
+          Bekijk de aanbevolen producten voor uw voordelen.
         </h2>
         <p style={{ color: "#fff" }}>
-          Energistically predominate high-payoff alignments whereas maintainable
-          materials timely deliverables. Synergistically leverage other's
-          holistic mindshare via high-payoff expertise.
+          Dwing energiek af op uitlijningen met een hoge opbrengst, terwijl u onderhoudbare
+materialen levert op tijd. Maak synergetisch gebruik van de holistische visie van anderen via expertise met een hoge opbrengst.
         </p>
       </div>
 
@@ -137,9 +136,9 @@ export default ({ data = [] }) => {
 
       <div className={["layout-footer", styles.footer].join(" ")}>
         <span>
-          <b>Make it personal.</b>
+          <b>Maak het persoonlijk.</b>
         </span>
-        <span>Call us and get special conditions.</span>
+        <span>Bel ons voor speciale voorwaarden. <b>+31 6 20 57 68 94</b></span>
       </div>
     </Layout>
   );

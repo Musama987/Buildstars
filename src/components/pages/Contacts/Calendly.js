@@ -12,12 +12,12 @@ const Calendly = () => {
     <div className={styles.calendlyPageWrapper}>
       <div className={styles.header}>
         <span className="subtitle" style={{ color: THEME.color }}>
-          Book a Meeting
+          Maak een afspraak
         </span>
-        <h2>Schedule a Consultation</h2>
+        <h2>Plan een consult</h2>
         <p>
-          Choose a date and time below that works for you. We look forward to
-          speaking with you!
+          Kies hieronder een datum en tijd die u schikt. We kijken ernaar uit om
+met u te spreken!
         </p>
       </div>
 

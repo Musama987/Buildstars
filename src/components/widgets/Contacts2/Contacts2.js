@@ -13,34 +13,33 @@ export default () => {
     <Fragment>
       <div className={styles.header}>
         <span className="subtitle" style={{ color: THEME.color }}>
-          Send message
+          Stuur een bericht
         </span>
-        <h2>Feel free to contact us.</h2>
+        <h2>Neem gerust contact met ons op.</h2>
         <p>
-          Energistically predominate high-payoff alignments whereas maintainable
-          materials timely deliverables. Synergistically leverage other's
-          holistic mindshare via high-payoff expertise.
+          Dwing energiek afstemmingen met een hoge opbrengst, terwijl onderhoudbare
+          materialen tijdige leveringen opleveren. Maak synergetisch gebruik van de holistische visie van anderen via expertise met een hoge opbrengst.
         </p>
       </div>
       <Layout col="4">
         <AddressBox
           icon="las la-phone"
-          title="Call Us"
+          title="Bel ons"
           text="+31 6 20 57 68 94"
         />
         <AddressBox
           icon="la la-envelope-open"
-          title="Mail Us"
+          title="Mail ons"
           text="info@araratbureau.nl"
         />
         <AddressBox
           icon="las la-comments"
-          title="Free Consultation"
+          title="Gratis consult"
           text="Small Haven 54,Eidhoven 5611 EJ"
         />
         <AddressBox
           icon="las la-comment"
-          title="SFree "
+          title="Gratis"
           text="Live chart 24/7"
         />
         <span className={styles.divider} style={{ borderColor: THEME.color }} />
@@ -56,11 +55,11 @@ export default () => {
             className="las la-long-arrow-alt-right"
             style={{ color: THEME.color }}
           />
-          <h2>Ready to start making busines with us?</h2>
+          <h2>Klaar om met ons zaken te doen?</h2>
           <p>
-            Rapidiously transform integrated processes via frictionless
-            paradigms. Intrinsicly productize proactive catalysts for change via
-            economically sound relationships.
+            Transformeer snel geïntegreerde processen via wrijvingsloze
+            paradigma's. Productiveer intrinsiek proactieve katalysatoren voor verandering via
+            economisch gezonde relaties.
           </p>
           {/* <Button
             click={() =>

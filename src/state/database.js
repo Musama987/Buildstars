@@ -97,23 +97,23 @@ const database = {
   ],
   fast_links: [
     {
-      title: "Home page",
+      title: "Homepage",
       url: "/",
     },
     {
-      title: "About company",
+      title: "Over ons",
       url: "/about-us",
     },
     {
-      title: "Our services",
+      title: "Onze diensten",
       url: "/services",
     },
     {
-      title: "Become a partner",
+      title: "Word partner",
       url: "/working-us",
     },
     {
-      title: "Contact us",
+      title: "Neem contact",
       url: "/contacts",
     },
   ],
@@ -186,7 +186,7 @@ const database = {
         //   url: "/about-us",
         // },
         {
-          name: "How We Work",
+          name: "Hoe wij werken",
           url: "/how-we-work",
         },
         // {
@@ -198,19 +198,19 @@ const database = {
         //   url: "/home-video",
         // },
         {
-          name: "Start Working With Us",
+          name: "Ga met ons samenwerken",
           url: "/working-us",
         },
         {
-          name: "Why Us",
+          name: "Waarom wij",
           url: "/why-us",
         },
         {
-          name: "Get Consultation",
+          name: "Vraag advies",
           url: "/consultation",
         },
       ],
-      name: "Home page",
+      name: "Homepage",
       url: "/",
     },
     {
@@ -233,15 +233,15 @@ const database = {
       //   },
       // ],
       // {
-      name: "About us",
+      name: "Over ons",
       url: "/about-us",
     },
     {
-      name: "Services",
+      name: "Diensten",
       url: "/services",
     },
     {
-      name: "Portfolio projects",
+      name: "Portfolioprojecten",
       url: "/portfolio",
     },
     // {
@@ -273,12 +273,12 @@ const database = {
     {
        children: [
         {
-          name: "Schedule a Consultation",
+          name: "Plan een consult",
           url: "/consultation",
         },
       ],
 
-      name: "Contacts",
+      name: "Contactgegevens",
       url: "/contacts",
     },
   ],

@@ -103,7 +103,7 @@ export default () => {
       <article className={styles.wrapper}>
         <div className={styles.info}>
           <span className={styles.subtitle} style={{ color: THEME.color }}>
-            Company info
+           Bedrijfsinformatie
           </span>
           <h2>Wij creëren kansen voor groei en &amp; vakmanschap </h2>
           <p className={styles.paragraph}>

@@ -127,7 +127,7 @@ export default ({ data = [] }) => {
       {/* 🔸 New Section Starts Here */}
  {/* ✅ ADD BELOW, still inside return */}
     <section className={styles.standardsSection}>
-      <h2 className={styles.standardsTitle}>We Ensure Standards</h2>
+      <h2 className={styles.standardsTitle}>Wij garanderen normen</h2>
 
       <div className={styles.standardsGrid}>
         <div className={styles.standardCard}>
@@ -141,7 +141,7 @@ export default ({ data = [] }) => {
         </div>
 
         <div className={styles.standardCard}>
-          <img src={sna} alt="SNA" className={styles.standardImg} />
+          <img src={sna} alt="VCU" className={styles.standardImg} />
           <h4>VCU-certificering</h4>
           <p>
             Richt zich op veiligheid en gezondheid op de werkvloer. Wij voldoen
@@ -151,7 +151,7 @@ export default ({ data = [] }) => {
         </div>
 
         <div className={styles.standardCard}>
-          <img src={vcu} alt="VCU" className={styles.standardImg} />
+          <img src={vcu} alt="SNA" className={styles.standardImg} />
           <h4>SNA-certificering (NEN 4400)</h4>
           <p>
             Controle op loonadministratie, afdrachten en identiteit van

@@ -563,13 +563,12 @@ const showLoadMore = visibleItems < images.length;
     <Fragment>
       <div className={["layout-header", styles.header].join(" ")}>
         <span className="subtitle" style={{ color: THEME.color }}>
-          Our Portfolio
+         Ons portfolio
         </span>
-        <h2>We proud to show you some famous projects.</h2>
+        <h2>We zijn er trots op u een aantal gerenommeerde projecten te laten zien.</h2>
         <p>
-          Energistically predominate high-payoff alignments whereas maintainable
-          materials timely deliverables. Synergistically leverage other's
-          holistic mindshare via high-payoff expertise.
+        Overheers energiek hoogwaardige afstemmingen, terwijl onderhoudbare
+tijdige leveringen waarborgt. Maak synergetisch gebruik van de holistische mindset van anderen via hoogwaardige expertise.
         </p>
       </div>
       <div className={styles.portfolio}>
@@ -588,7 +587,7 @@ const showLoadMore = visibleItems < images.length;
 
         {showLoadMore && (
   <button className={styles.load_more_btn} onClick={loadMore}>
-    Load More
+    Meer laden
   </button>
 )}
       </div>
