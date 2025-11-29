@@ -245,6 +245,105 @@
 
 
 
+// // Slider.module.scss
+// $navbar-height: 100px;
+
+// .slider_container {
+//   position: relative;
+//   width: 100%;
+//   margin-top: $navbar-height;
+//   overflow: hidden;
+//   margin-bottom: 20px;
+//   background-color: #fff; // Optional: changes background from black to white
+// }
+
+// /* --- MOBILE DEFAULT STYLES (0px to 767px) --- */
+
+// .slide_wrapper {
+//   width: 100%;
+//   // 1. Fix Extra Space: Use auto height so container shrinks to fit image
+//   height: auto; 
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background: transparent;
+// }
+
+// .slide_img {
+//   width: 100%;
+//   // 2. Mobile Image Mode: standard flow, no forcing height
+//   height: auto; 
+//   // 3. Ensure full image is seen
+//   object-fit: contain; 
+//   display: block;
+// }
+
+// /* 4. Hide Arrows on Mobile */
+// .arrow {
+//   display: none; 
+// }
+
+
+// /* --- TABLET & DESKTOP STYLES (768px and up) --- */
+// @media (min-width: 768px) {
+
+//   /* Restore Arrows */
+//   .arrow {
+//     display: block; // Bring arrows back
+//     position: absolute;
+//     z-index: 10;
+//     cursor: pointer;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     background-color: rgba(255, 255, 255, 0.6);
+//     border-radius: 50%;
+//     transition: background-color 0.3s ease;
+
+//     i {
+//       font-size: 2.2rem;
+//       color: #000;
+//       padding: 12px;
+//     }
+
+//     &:hover {
+//       background-color: rgba(255, 255, 255, 0.9);
+//     }
+//   }
+
+//   .prev_arrow { left: 20px; }
+//   .next_arrow { right: 20px; }
+
+//   /* Restore Fixed Height & Cover logic for Tablet */
+//   .slide_wrapper {
+//     height: 80vh; // Fixed height
+//     background: #000;
+//   }
+
+//   .slide_img {
+//     height: 100%; // Fill the fixed height
+//     object-fit: cover; // Crop to fill
+//   }
+// }
+
+// /* --- LARGE DESKTOP (1200px and up) --- */
+// @media (min-width: 1200px) {
+//   .slide_wrapper {
+//     height: 90vh; // Taller hero section
+//   }
+
+//   .arrow i {
+//     font-size: 2.6rem;
+//   }
+// }
+
+
+
+
+
+
+
+
+
 // Slider.module.scss
 $navbar-height: 100px;
 
@@ -254,26 +353,25 @@ $navbar-height: 100px;
   margin-top: $navbar-height;
   overflow: hidden;
   margin-bottom: 20px;
-  background-color: #fff; // Optional: changes background from black to white
+  background-color: #fff; 
 }
 
 /* --- MOBILE DEFAULT STYLES (0px to 767px) --- */
 
 .slide_wrapper {
   width: 100%;
-  // 1. Fix Extra Space: Use auto height so container shrinks to fit image
   height: auto; 
   display: flex;
   justify-content: center;
   align-items: center;
   background: transparent;
+  position: relative; 
+  outline: none;
 }
 
 .slide_img {
   width: 100%;
-  // 2. Mobile Image Mode: standard flow, no forcing height
   height: auto; 
-  // 3. Ensure full image is seen
   object-fit: contain; 
   display: block;
 }
@@ -283,13 +381,57 @@ $navbar-height: 100px;
   display: none; 
 }
 
+/* --- NEW BUTTON POSITIONS (Bottom Left) --- */
+.overlay {
+  position: absolute;
+  
+  /* POSITIONING: Bottom Left */
+  bottom: 6%;  /* 10% from the bottom edge */
+  left: 5%;     /* 5% from the left edge */
+  top: auto;    /* Remove top positioning */
+  transform: none; /* Remove centering transform */
+  
+  z-index: 5; 
+  width: auto;  /* Don't span full width */
+  text-align: left; /* Align text left */
+  pointer-events: none; 
+}
+
+.cta_button {
+  pointer-events: auto; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; 
+  
+  /* Mobile Size */
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  
+  font-weight: 700;
+  color: #fff !important; 
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, filter 0.3s ease;
+
+  i {
+    font-size: 1.1rem;
+  }
+
+  &:hover {
+    /* REMOVED translate, just scale now */
+    transform: scale(1.05); 
+    filter: brightness(110%);
+  }
+}
 
 /* --- TABLET & DESKTOP STYLES (768px and up) --- */
 @media (min-width: 768px) {
 
   /* Restore Arrows */
   .arrow {
-    display: block; // Bring arrows back
+    display: block; 
     position: absolute;
     z-index: 10;
     cursor: pointer;
@@ -315,20 +457,36 @@ $navbar-height: 100px;
 
   /* Restore Fixed Height & Cover logic for Tablet */
   .slide_wrapper {
-    height: 80vh; // Fixed height
+    height: 80vh; 
     background: #000;
   }
 
   .slide_img {
-    height: 100%; // Fill the fixed height
-    object-fit: cover; // Crop to fill
+    height: 100%; 
+    object-fit: cover; 
+  }
+
+  /* Adjust Position for Desktop (Give it more space) */
+  .overlay {
+    bottom: 13%; /* A bit higher on large screens */
+    left: 8%;    /* A bit more to the right */
+  }
+
+  /* Make Button BIGGER on Desktop/Laptop */
+  .cta_button {
+    padding: 1.4rem 3rem; 
+    font-size: 1.5rem;    
+    
+    i {
+      font-size: 1.5rem; 
+    }
   }
 }
 
 /* --- LARGE DESKTOP (1200px and up) --- */
 @media (min-width: 1200px) {
   .slide_wrapper {
-    height: 90vh; // Taller hero section
+    height: 90vh; 
   }
 
   .arrow i {

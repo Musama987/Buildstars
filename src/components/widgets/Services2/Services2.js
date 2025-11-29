@@ -175,10 +175,9 @@ export default function Services2() {
           <span className="subtitle" style={{ color: THEME.color }}>
             Onze diensten
           </span>
-          <h2>Wij bieden u een professioneel pakket aan diensten.</h2>
+          <h2>Wij bieden complete personeelsoplossingen voor de bouwsector</h2>
           <p className="parargraph">
-            Draag energiek hoogwaardige afstemmingen, terwijl onderhoudbare
-            tijdige leveringen opleveren. Maak synergetisch gebruik van de holistische kennis van anderen via waardevolle expertise.
+            Van snelle inzet van werknemers, via gecontroleerde vakbekwaamheid, tot volledige logistieke en administratieve ondersteuning. Dankzij ons krijgt u een stabiel, voorspelbaar en volledig georganiseerd wervingsproces.
           </p>
         </div>
 

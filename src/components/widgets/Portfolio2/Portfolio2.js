@@ -566,10 +566,10 @@ const showLoadMore = visibleItems < images.length;
          Ons portfolio
         </span>
         <h2>We zijn er trots op u een aantal gerenommeerde projecten te laten zien.</h2>
-        <p>
+        {/* <p>
         Overheers energiek hoogwaardige afstemmingen, terwijl onderhoudbare
 tijdige leveringen waarborgt. Maak synergetisch gebruik van de holistische mindset van anderen via hoogwaardige expertise.
-        </p>
+        </p> */}
       </div>
       <div className={styles.portfolio}>
         <SpringGrid

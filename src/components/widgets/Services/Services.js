@@ -74,6 +74,7 @@ import styles from "./Services.module.scss";
 import Layout from "../../layouts/Layout/Layout";
 import { CardButton } from "../../ui";
 import THEME from "../../../state/theme";
+import { Link } from "react-router-dom";
 
 export default ({ data = [] }) => {
   const servicesList = data
@@ -126,18 +127,23 @@ export default ({ data = [] }) => {
         <h2 style={{ color: "#fff" }}>
           Bekijk de aanbevolen producten voor uw voordelen.
         </h2>
-        <p style={{ color: "#fff" }}>
+        {/* <p style={{ color: "#fff" }}>
           Dwing energiek af op uitlijningen met een hoge opbrengst, terwijl u onderhoudbare
 materialen levert op tijd. Maak synergetisch gebruik van de holistische visie van anderen via expertise met een hoge opbrengst.
-        </p>
+        </p> */}
       </div>
 
       {servicesList}
 
       <div className={["layout-footer", styles.footer].join(" ")}>
         <span>
-          <b>Maak het persoonlijk.</b>
-        </span>
+    <b>
+      {/* Updated Link */}
+      <Link to="/consultation" style={{ color: 'inherit', textDecoration: 'none' }}>
+        Plan een consult
+      </Link>
+    </b>
+  </span>
         <span>Bel ons voor speciale voorwaarden. <b>+31 6 20 57 68 94</b></span>
       </div>
     </Layout>

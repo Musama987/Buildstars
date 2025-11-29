@@ -114,7 +114,7 @@ const database = {
     },
     {
       title: "Neem contact",
-      url: "/contacts",
+      url: "/consultation",
     },
   ],
   features: [
@@ -273,13 +273,13 @@ const database = {
     {
        children: [
         {
-          name: "Plan een consult",
-          url: "/consultation",
+          name: "Contactgegevens",
+          url: "/contacts",
         },
       ],
 
-      name: "Contactgegevens",
-      url: "/contacts",
+      name: "Plan een consult",
+      url: "/consultation",
     },
   ],
   partners: [logotype, logotype, logotype, logotype, logotype, logotype],

@@ -214,7 +214,7 @@ const Features = () => {
       title: "Snelle mobilisatie (3-7 dagen)",
       text: [
         "Wij regelen alle formaliteiten",
-        "Wij organiseren transport naar Nederland",
+        // "Wij organiseren transport naar Nederland",
         "Wij zorgen voor huisvesting in de buurt van de bouwplaats",
       ],
     },

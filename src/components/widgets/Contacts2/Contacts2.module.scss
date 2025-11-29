@@ -91,3 +91,14 @@
     }
   }
 }
+// Add this at the bottom of Contacts2.module.scss
+.textHeightFix {
+  // display: flex;
+  align-items: center;     /* Centers text vertically */
+  min-height: 3rem;        /* Forces all cards to be tall enough for 2 lines of text */
+  line-height: 1.4;        /* Good spacing for wrapping text */
+  
+  @media (max-width: 992px) {
+    font-size: 0.9rem;     /* Slightly smaller text on laptops to help fit */
+  }
+}
