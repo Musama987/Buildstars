@@ -271,15 +271,15 @@ const database = {
     //   url: "/blog-grid-left-sidebar",
     // },
     {
-       children: [
-        {
-          name: "Contactgegevens",
-          url: "/contacts",
-        },
-      ],
+      //  children: [
+      //   {
+      //     name: "Contactgegevens",
+      //     url: "/contacts",
+      //   },
+      // ],
 
-      name: "Plan een consult",
-      url: "/consultation",
+      name: "Contacten",
+      url: "/contacts",
     },
   ],
   partners: [logotype, logotype, logotype, logotype, logotype, logotype],

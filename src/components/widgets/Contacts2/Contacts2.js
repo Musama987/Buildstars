@@ -101,10 +101,10 @@ export default () => {
           Stuur een bericht
         </span>
         <h2>Neem gerust contact met ons op.</h2>
-        <p>
+        {/* <p>
           Dwing energiek afstemmingen met een hoge opbrengst, terwijl onderhoudbare
           materialen tijdige leveringen opleveren. Maak synergetisch gebruik van de holistische visie van anderen via expertise met een hoge opbrengst.
-        </p>
+        </p> */}
       </div>
       
       <Layout col="4">
