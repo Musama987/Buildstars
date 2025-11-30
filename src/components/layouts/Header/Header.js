@@ -248,7 +248,7 @@ export default ({ data = [] }) => {
         <ul className={styles.menu}>{menu}</ul>
 
         {/* --- BUTTON 1: Plan een consult (Goes to Page) --- */}
-        <div className={styles.btn_desktop} style={{ marginRight: '15px' }}>
+        <div className={styles.btn_desktop} style={{ marginRight: '0px' }}>
           {/* Removed Link wrapper, added click prop directly to Button */}
           <Button
             after="&#xf107;"
