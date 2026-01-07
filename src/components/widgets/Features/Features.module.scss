@@ -204,31 +204,493 @@
 
 
 
+// .features_section {
+//   padding: 80px 0;
+//   max-width: 1250px;
+//   margin: 0 auto;
+//   padding-left: 40px;
+//   padding-right: 40px;
+//   position: relative; // Needed for positioning dots
+
+//   /* ✅ Styling for the Dots (matches your other files) */
+//   :global(.slick-dots) {
+//     bottom: -30px; // Adjust vertical position
+
+//     li {
+//       margin: 0 5px;
+      
+//       button:before {
+//         font-size: 12px; // Dot size
+//         color: #ccc;
+//         opacity: 1;
+//       }
+
+//       &.slick-active button:before {
+//         color: #f57c00; // Orange active color
+//       }
+//     }
+//   }
+// }
+
+// .wrapper {
+//   padding: 10px;
+// }
+
+// /* === CARD STYLE === */
+// .card {
+//   background: #ffffff;
+//   padding: 30px 20px;
+//   border-radius: 12px;
+//   text-align: center;
+//   transition: all 0.3s ease-in-out;
+//   color: #333;
+//   border: 1px solid #e0e0e0;
+//   min-height: 300px;
+//   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   align-items: center;
+
+//   &:hover {
+//     background: #f57c00;
+//     color: #fff;
+//     cursor: pointer;
+//     transform: translateY(-5px);
+//     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+
+//     ul li {
+//       color: #fff;
+//     }
+    
+//     // Keep step number white on orange background
+//     .stepNumber {
+//        background: #fff;
+//        color: #f57c00;
+//     }
+//   }
+// }
+
+// /* === STEP NUMBER CIRCLE === */
+// .stepNumber {
+//   width: 55px;
+//   height: 55px;
+//   border-radius: 50%;
+//   background: #f57c00;
+//   color: #fff;
+//   font-weight: 700;
+//   font-size: 1.5rem;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin-bottom: 18px;
+//   transition: all 0.3s ease;
+// }
+
+// h3 {
+//   font-size: 1.5rem;
+//   margin-bottom: 15px;
+//   font-weight: 700;
+// }
+
+// ul {
+//   padding: 0;
+//   margin: 0;
+//   list-style: none;
+
+//   li {
+//     font-size: 1.2rem;
+//     margin-bottom: 8px;
+//     line-height: 1.5;
+//     color: #333;
+//   }
+// }
+
+// /* === HEADER === */
+// .header {
+//   margin-bottom: 50px;
+//   text-align: center;
+
+//   .subtitle {
+//     font-weight: 600;
+//     font-size: 1.1rem;
+//     display: block;
+//     margin-bottom: 10px;
+//     color: #f57c00;
+//   }
+
+//   h2 {
+//     font-size: 2.4rem;
+//     font-weight: 700;
+//     margin-bottom: 15px;
+//     color: #333;
+//   }
+
+//   p {
+//     max-width: 700px;
+//     margin: 0 auto;
+//     font-size: 1.15rem;
+//     color: #333;
+//     line-height: 1.6;
+//   }
+// }
+
+// /* === RESPONSIVE === */
+// @media (max-width: 1200px) {
+//   .features_section {
+//     padding-left: 30px;
+//     padding-right: 30px;
+//   }
+
+//   .card {
+//     min-height: 280px;
+//     padding: 25px 18px;
+//   }
+
+//   h3 {
+//     font-size: 1.4rem;
+//   }
+
+//   ul li {
+//     font-size: 1.1rem;
+//   }
+// }
+
+// @media (max-width: 900px) {
+//   .card {
+//     min-height: 270px;
+//   }
+// }
+
+// @media (max-width: 600px) {
+//   .features_section {
+//     padding-left: 20px;
+//     padding-right: 20px;
+//     padding-bottom: 60px; // Extra space for dots at bottom
+//   }
+  
+//   // Position dots nicely on mobile
+//   .features_section :global(.slick-dots) {
+//     bottom: -34px; 
+//   }
+
+//   .card {
+//     min-height: 250px;
+//     padding: 22px 16px;
+//   }
+
+//   h3 {
+//     font-size: 1.3rem;
+//   }
+
+//   ul li {
+//     font-size: 1.2rem;
+//   }
+// }
+
+
+
+
+
+
+/* =========================================
+   1. ORIGINAL CODE (DO NOT CHANGE)
+//    ========================================= */
+// .features_section {
+//   padding: 80px 0;
+//   max-width: 1250px;
+//   margin: 0 auto;
+//   padding-left: 40px;
+//   padding-right: 40px;
+//   position: relative;
+
+//   :global(.slick-dots) {
+//     bottom: -30px;
+//     li {
+//       margin: 0 5px;
+//       button:before {
+//         font-size: 12px;
+//         color: #ccc;
+//         opacity: 1;
+//       }
+//       &.slick-active button:before {
+//         color: #f57c00;
+//       }
+//     }
+//   }
+// }
+
+// .wrapper {
+//   padding: 10px;
+// }
+
+// .card {
+//   background: #ffffff;
+//   padding: 30px 20px;
+//   border-radius: 12px;
+//   text-align: center;
+//   transition: all 0.3s ease-in-out;
+//   color: #333;
+//   border: 1px solid #e0e0e0;
+//   min-height: 300px;
+//   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   align-items: center;
+
+//   &:hover {
+//     background: #f57c00;
+//     color: #fff;
+//     cursor: pointer;
+//     transform: translateY(-5px);
+//     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+
+//     ul li { color: #fff; }
+//     .stepNumber { background: #fff; color: #f57c00; }
+//   }
+// }
+
+// .stepNumber {
+//   width: 55px;
+//   height: 55px;
+//   border-radius: 50%;
+//   background: #f57c00;
+//   color: #fff;
+//   font-weight: 700;
+//   font-size: 1.5rem;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin-bottom: 18px;
+//   transition: all 0.3s ease;
+// }
+
+// h3 {
+//   font-size: 1.5rem;
+//   margin-bottom: 15px;
+//   font-weight: 700;
+// }
+
+// ul {
+//   padding: 0;
+//   margin: 0;
+//   list-style: none;
+//   li {
+//     font-size: 1.2rem;
+//     margin-bottom: 8px;
+//     line-height: 1.5;
+//     color: #333;
+//   }
+// }
+
+// .header {
+//   margin-bottom: 50px;
+//   text-align: center;
+//   .subtitle {
+//     font-weight: 600;
+//     font-size: 1.1rem;
+//     display: block;
+//     margin-bottom: 10px;
+//     color: #f57c00;
+//   }
+//   h2 {
+//     font-size: 2.4rem;
+//     font-weight: 700;
+//     margin-bottom: 15px;
+//     color: #333;
+//   }
+//   p {
+//     max-width: 700px;
+//     margin: 0 auto;
+//     font-size: 1.15rem;
+//     color: #333;
+//     line-height: 1.6;
+//   }
+// }
+
+// /* =========================================
+//    2. NEW CODE FOR REVIEW CARD (BOTTOM)
+//    ========================================= */
+
+// .reviewContainer {
+//   margin-top: 80px; /* Space between slider and review */
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
+// .reviewCard {
+//   background: #fff;
+//   border: 1px solid #ddd;
+//   border-radius: 8px; /* Slightly sharper corners like image */
+//   padding: 24px;
+//   max-width: 700px;
+//   width: 100%;
+//   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+//   text-align: left;
+// }
+
+// .reviewHeader {
+//   display: flex;
+//   align-items: flex-start;
+//   margin-bottom: 15px;
+  
+//   .avatar {
+//     width: 48px;
+//     height: 48px;
+//     border-radius: 50%;
+//     margin-right: 12px;
+//     object-fit: cover;
+//   }
+
+//   .userInfo {
+//     display: flex;
+//     flex-direction: column;
+    
+//     .nameRow {
+//       display: flex;
+//       align-items: center;
+//       margin-bottom: 2px;
+      
+//       .name {
+//         font-weight: 700;
+//         font-size: 1rem;
+//         color: #000;
+//         margin-right: 4px;
+//       }
+      
+//       .verifiedIcon {
+//         color: #7b1fa2; /* Purple verification color */
+//         margin-right: 4px;
+//       }
+      
+//       .years {
+//         font-size: 0.85rem;
+//         color: #666;
+//       }
+//     }
+    
+//     .role {
+//       font-size: 0.9rem;
+//       color: #333;
+//       margin-bottom: 2px;
+//     }
+    
+//     .meta {
+//       font-size: 0.8rem;
+//       color: #777;
+//     }
+//   }
+// }
+
+// .reviewBody {
+//   p {
+//     font-size: 1rem;
+//     line-height: 1.5;
+//     color: #222;
+//     margin: 0;
+//   }
+// }
+
+// /* =========================================
+//    3. RESPONSIVE QUERIES
+//    ========================================= */
+// @media (max-width: 1200px) {
+//   .features_section { padding-left: 30px; padding-right: 30px; }
+//   .card { min-height: 280px; padding: 25px 18px; }
+//   h3 { font-size: 1.4rem; }
+//   ul li { font-size: 1.1rem; }
+// }
+
+// @media (max-width: 900px) {
+//   .card { min-height: 270px; }
+// }
+
+// @media (max-width: 600px) {
+//   .features_section {
+//     padding-left: 20px;
+//     padding-right: 20px;
+//     padding-bottom: 60px;
+//   }
+//   .features_section :global(.slick-dots) { bottom: -34px; }
+  
+//   .card { min-height: 250px; padding: 22px 16px; }
+//   h3 { font-size: 1.3rem; }
+//   ul li { font-size: 1.2rem; }
+  
+//   /* Mobile tweak for review card */
+//   .reviewCard {
+//     padding: 16px;
+//   }
+//   .reviewHeader .avatar {
+//     width: 40px;
+//     height: 40px;
+//   }
+// }
+
+
+
+
+
+/* =========================================
+   1. SHARED STYLES
+   ========================================= */
 .features_section {
-  padding: 80px 0;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  padding-left: 0px;
+  padding-right: 0px;
   max-width: 1250px;
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
-  position: relative; // Needed for positioning dots
+  position: relative;
 
-  /* ✅ Styling for the Dots (matches your other files) */
   :global(.slick-dots) {
-    bottom: -30px; // Adjust vertical position
-
+    bottom: -30px;
     li {
       margin: 0 5px;
-      
       button:before {
-        font-size: 12px; // Dot size
+        font-size: 12px;
         color: #ccc;
         opacity: 1;
       }
-
       &.slick-active button:before {
-        color: #f57c00; // Orange active color
+        color: #f57c00;
       }
     }
+  }
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 1.5rem;
+  display: block;
+  color: #f57c00;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* =========================================
+   2. TOP STEPS SECTION
+   ========================================= */
+.header {
+  margin-bottom: 50px;
+  text-align: center;
+
+  h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    color: #333;
+    line-height: 1.6;
   }
 }
 
@@ -236,7 +698,6 @@
   padding: 10px;
 }
 
-/* === CARD STYLE === */
 .card {
   background: #ffffff;
   padding: 30px 20px;
@@ -259,19 +720,11 @@
     transform: translateY(-5px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 
-    ul li {
-      color: #fff;
-    }
-    
-    // Keep step number white on orange background
-    .stepNumber {
-       background: #fff;
-       color: #f57c00;
-    }
+    ul li { color: #fff; }
+    .stepNumber { background: #fff; color: #f57c00; }
   }
 }
 
-/* === STEP NUMBER CIRCLE === */
 .stepNumber {
   width: 55px;
   height: 55px;
@@ -297,7 +750,6 @@ ul {
   padding: 0;
   margin: 0;
   list-style: none;
-
   li {
     font-size: 1.2rem;
     margin-bottom: 8px;
@@ -306,59 +758,116 @@ ul {
   }
 }
 
-/* === HEADER === */
-.header {
-  margin-bottom: 50px;
+/* =========================================
+   3. BOTTOM REVIEWS SECTION (2 Cards)
+   ========================================= */
+
+.reviewContainer {
+  margin-top: 80px; 
+  width: 100%;
+  padding: 0 10px; /* Aligns with slider padding */
+}
+
+.reviewHeaderTitle {
   text-align: center;
+  margin-bottom: 20px;
+}
 
-  .subtitle {
-    font-weight: 600;
-    font-size: 1.1rem;
-    display: block;
-    margin-bottom: 10px;
-    color: #f57c00;
+/* Grid Wrapper for the 2 cards */
+.reviewsGrid {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px; /* Space between the two cards */
+  width: 100%;
+}
+
+.reviewCard {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 30px;
+  flex: 1; /* Makes both cards take equal width */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewUserSection {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  
+  .avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
   }
 
-  h2 {
-    font-size: 2.4rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-    color: #333;
-  }
-
-  p {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 1.15rem;
-    color: #333;
-    line-height: 1.6;
+  .userInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    .nameRow {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4px;
+      
+      .name {
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: #000;
+        margin-right: 6px;
+      }
+      
+      .verifiedIcon {
+        color: #7b1fa2; 
+        margin-right: 6px;
+      }
+      
+      .years {
+        font-size: 0.9rem;
+        color: #666;
+      }
+    }
+    
+    .role {
+      font-size: 0.95rem;
+      color: #333;
+      margin-bottom: 2px;
+    }
+    
+    .meta {
+      font-size: 0.85rem;
+      color: #777;
+    }
   }
 }
 
-/* === RESPONSIVE === */
+.reviewBody {
+  p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #222;
+    margin: 0;
+  }
+}
+
+/* =========================================
+   4. RESPONSIVE
+   ========================================= */
 @media (max-width: 1200px) {
-  .features_section {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .card {
-    min-height: 280px;
-    padding: 25px 18px;
-  }
-
-  h3 {
-    font-size: 1.4rem;
-  }
-
-  ul li {
-    font-size: 1.1rem;
-  }
+  .features_section { padding-left: 30px; padding-right: 30px; }
+  .card { min-height: 280px; padding: 25px 18px; }
 }
 
 @media (max-width: 900px) {
-  .card {
-    min-height: 270px;
+  /* Stack review cards on tablet/mobile */
+  .reviewsGrid {
+    flex-direction: column;
   }
 }
 
@@ -366,24 +875,20 @@ ul {
   .features_section {
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 60px; // Extra space for dots at bottom
+    padding-bottom: 20px;
   }
+  .features_section :global(.slick-dots) { bottom: -34px; }
   
-  // Position dots nicely on mobile
-  .features_section :global(.slick-dots) {
-    bottom: -34px; 
+  .card { min-height: 250px; padding: 22px 16px; }
+  
+  .reviewCard {
+    padding: 20px;
   }
-
-  .card {
-    min-height: 250px;
-    padding: 22px 16px;
+  .reviewUserSection .avatar {
+    width: 48px;
+    height: 48px;
   }
-
-  h3 {
-    font-size: 1.3rem;
-  }
-
-  ul li {
-    font-size: 1.2rem;
+  .reviewBody p {
+    font-size: 1rem;
   }
 }
