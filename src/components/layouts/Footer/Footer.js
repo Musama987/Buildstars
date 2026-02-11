@@ -214,7 +214,7 @@ export default () => {
           <a href="mailto:info@araratbureau.nl" className={styles.emailLink}>
             info@araratbureau.nl
           </a>
-          <p> Small Haven 54, Eidhoven 5611 EJ
+          <p> Smalle Haven 54, Eindhoven 5611 EJ
           </p>
           
           <div className={styles.socialMedia}>

@@ -278,6 +278,8 @@
 import React from "react";
 import Slider from "react-slick";
 import styles from "./Features.module.scss";
+import man from "../../../assets/placeholders/man.jpg";
+import man1 from "../../../assets/placeholders/man1.jpeg";
 
 // Import slick carousel styles
 import "slick-carousel/slick/slick.css";
@@ -376,19 +378,21 @@ const Features = () => {
       {/* 3. NEW REVIEW SECTION (2 Cards) */}
       <div className={styles.reviewContainer}>
         <div className={styles.reviewHeaderTitle}>
-            <span className={styles.subtitle}>
-              Aanbevelingen
-            </span>
+          <span className={styles.subtitle}>
+            Aanbevelingen
+          </span>
         </div>
-        
+
         {/* Grid for 2 Cards */}
         <div className={styles.reviewsGrid}>
-          
+
+
           {/* Card 1 (Robbert) */}
           <div className={styles.reviewCard}>
             <div className={styles.reviewUserSection}>
               <img
-                src="https://i.pravatar.cc/150?img=11"
+                // src="https://i.pravatar.cc/150?img=11"
+                src={man}
                 alt="Robbert Vliet"
                 className={styles.avatar}
               />
@@ -417,26 +421,26 @@ const Features = () => {
           <div className={styles.reviewCard}>
             <div className={styles.reviewUserSection}>
               <img
-                src="https://i.pravatar.cc/150?img=68"
-                alt="Jeroen de Vries"
+                // src="https://i.pravatar.cc/150?img=11"
+                src={man1}
+                alt="Rick Schraven"
                 className={styles.avatar}
               />
               <div className={styles.userInfo}>
                 <div className={styles.nameRow}>
-                  <span className={styles.name}>Jeroen de Vries</span>
+                  <span className={styles.name}>Rick Schraven</span>
                   <svg className={styles.verifiedIcon} width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                   </svg>
-                  <span className={styles.years}>• 3rd</span>
+                  <span className={styles.years}>• 1st</span>
                 </div>
-                <span className={styles.role}>Projectleider at BouwGroep Oost</span>
-                <span className={styles.meta}>12 august 2025, Jeroen was klant van Eryk</span>
+                <span className={styles.role}>Mogelijkmaker van circulariteit in de techniek Project-en procesbegeleiding STEKERBAAS</span>
+                <span className={styles.meta}>23 january 2026, Eryk was klant van Rick</span>
               </div>
             </div>
             <div className={styles.reviewBody}>
               <p>
-                Wij hadden met spoed extra vakmensen nodig voor een groot renovatieproject. Eryk schakelde direct en 
-                binnen 48 uur stonden de jongens op de steiger. Top service en harde werkers!
+                Wat een fijne partij en persoon om mee samen te werken! Eryk schakelt snel mee als de situatie daar om vraagt. Contact verloopt soepel en het werk wordt professioneel uitgevoerd.
               </p>
             </div>
           </div>
