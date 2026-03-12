@@ -1,0 +1,39 @@
+.privacyPageWrapper {
+  padding-top: 120px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+
+  h2 {
+    font-size: 3rem;
+    margin-top: 1rem;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 1.5rem auto;
+    color: #666;
+    font-size: 1.5rem;
+    line-height: 1.7;
+  }
+}
+
+.content {
+  max-width: 900px;
+  margin: auto;
+  padding-bottom: 5rem;
+
+  h3 {
+    margin-top: 2.5rem;
+    font-size: 1.9rem;
+  }
+
+  p {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #555;
+  }
+}

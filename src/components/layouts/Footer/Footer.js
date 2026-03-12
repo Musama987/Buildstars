@@ -214,9 +214,15 @@ export default () => {
           <a href="mailto:info@araratbureau.nl" className={styles.emailLink}>
             info@araratbureau.nl
           </a>
-          <p> Small Haven 54, Eidhoven 5611 EJ
+          <p> Smalle Haven 54, Eindhoven 5611 EJ
           </p>
-          
+
+          {/* privacy policy */}
+          {/* <div className={styles.links}>
+          <Link url="/privacypolicy" hoverStyle={{ color: THEME.color }}>
+             Privacybeleid
+          </Link>
+          </div> */}
           <div className={styles.socialMedia}>
             <a
               href="https://www.linkedin.com/in/eryk-arojan-6a9728224?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"

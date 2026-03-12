@@ -13,6 +13,7 @@ import {
   Portfolio,
   Contacts,
   Calendly,
+  Privacybeleid,
   // Blog,
   // PostSingle,
   // ServiceSingle,
@@ -56,6 +57,7 @@ export default () => {
             <Route path="/portfolio" exact component={Portfolio} />
             <Route path="/contacts" exact component={Contacts} />
             <Route path="/consultation" exact component={Calendly}/>
+            <Route path="/privacypolicy" exact component={Privacybeleid} />
             {/* <Route path="/blog/:post_id" exact component={PostSingle} /> */}
             {/* <Route
               path="/services/:service_id"

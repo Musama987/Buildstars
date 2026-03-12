@@ -116,6 +116,10 @@ const database = {
       title: "Neem contact",
       url: "/consultation",
     },
+    {
+      title: "Privacy beleid",
+      url: "/privacypolicy",
+    },
   ],
   features: [
     {

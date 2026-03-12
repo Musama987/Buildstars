@@ -149,7 +149,7 @@ export default () => {
                   Plan een consult
                 </Link>
                 {/* Address might wrap to 2nd line, which is fine now */}
-                <span style={{ fontSize: '0.9em' }}> (Small Haven 54, Eidhoven 5611 EJ)</span>
+                <span style={{ fontSize: '0.9em' }}> (Smalle Haven 54, Eindhoven 5611 EJ)</span>
               </span>
             </div>
           }

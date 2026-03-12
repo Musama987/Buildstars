@@ -45,3 +45,4 @@ export { default as PostSingle } from "./PostSingle/PostSingle";
 export { default as ServiceSingle } from "./ServiceSingle/ServiceSingle";
 export { default as MemberCard } from "./MemberCard/MemberCard";
 export { default as PortfolioSingle } from "./PortfolioSingle/PortfolioSingle";
+export { default as Privacybeleid } from "./Privacypolicy/Privacypolicy"; // Added this line
