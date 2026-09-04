@@ -759,44 +759,94 @@ ul {
 }
 
 /* =========================================
-   3. BOTTOM REVIEWS SECTION (2 Cards)
+   3. BOTTOM REVIEWS SECTION (3 Cards Slider)
    ========================================= */
 
 .reviewContainer {
   margin-top: 80px; 
   width: 100%;
   padding: 0 10px; /* Aligns with slider padding */
+  position: relative;
 }
 
 .reviewHeaderTitle {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-/* Grid Wrapper for the 2 cards */
-.reviewsGrid {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px; /* Space between the two cards */
+.reviewsSliderWrapper {
   width: 100%;
+  position: relative;
+}
+
+.reviewsSlider {
+  position: relative;
+
+  :global(.slick-track) {
+    display: flex !important;
+  }
+
+  :global(.slick-slide) {
+    height: inherit !important;
+    display: flex !important;
+
+    > div {
+      width: 100%;
+      display: flex;
+      height: 100%;
+    }
+  }
+
+  :global(.slick-dots) {
+    bottom: -32px;
+
+    li {
+      margin: 0 5px;
+
+      button:before {
+        font-size: 12px;
+        color: #ccc;
+        opacity: 1;
+      }
+
+      &.slick-active button:before {
+        color: #f57c00;
+      }
+    }
+  }
+}
+
+.reviewSlide {
+  padding: 10px;
+  height: 100%;
+  display: flex;
+  width: 100%;
+  outline: none;
 }
 
 .reviewCard {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 30px;
-  flex: 1; /* Makes both cards take equal width */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  padding: 28px 24px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   text-align: left;
   display: flex;
   flex-direction: column;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+  }
 }
 
 .reviewUserSection {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   
   .avatar {
     width: 56px;
@@ -804,6 +854,7 @@ ul {
     border-radius: 50%;
     margin-right: 15px;
     object-fit: cover;
+    flex-shrink: 0;
   }
 
   .userInfo {
@@ -826,6 +877,7 @@ ul {
       .verifiedIcon {
         color: #7b1fa2; 
         margin-right: 6px;
+        flex-shrink: 0;
       }
       
       .years {
@@ -838,6 +890,7 @@ ul {
       font-size: 0.95rem;
       color: #333;
       margin-bottom: 2px;
+      line-height: 1.35;
     }
     
     .meta {
@@ -847,12 +900,28 @@ ul {
   }
 }
 
+.reviewHeadline {
+  font-weight: 700;
+  font-size: 1.08rem;
+  color: #222;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
 .reviewBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
   p {
-    font-size: 1.05rem;
+    font-size: 1.02rem;
     line-height: 1.6;
     color: #222;
-    margin: 0;
+    margin: 0 0 12px 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -865,9 +934,8 @@ ul {
 }
 
 @media (max-width: 900px) {
-  /* Stack review cards on tablet/mobile */
-  .reviewsGrid {
-    flex-direction: column;
+  .reviewCard {
+    padding: 22px 20px;
   }
 }
 
@@ -875,20 +943,24 @@ ul {
   .features_section {
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
   }
   .features_section :global(.slick-dots) { bottom: -34px; }
   
   .card { min-height: 250px; padding: 22px 16px; }
   
   .reviewCard {
-    padding: 20px;
+    padding: 18px 16px;
   }
   .reviewUserSection .avatar {
     width: 48px;
     height: 48px;
+    margin-right: 12px;
+  }
+  .reviewUserSection .userInfo .nameRow .name {
+    font-size: 1rem;
   }
   .reviewBody p {
-    font-size: 1rem;
+    font-size: 0.96rem;
   }
 }

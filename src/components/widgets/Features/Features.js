@@ -280,6 +280,7 @@ import Slider from "react-slick";
 import styles from "./Features.module.scss";
 import man from "../../../assets/placeholders/man.jpg";
 import man1 from "../../../assets/placeholders/man1.jpeg";
+import man2 from "../../../assets/placeholders/man2.jpg";
 
 // Import slick carousel styles
 import "slick-carousel/slick/slick.css";
@@ -305,6 +306,34 @@ const Features = () => {
       {
         breakpoint: 600,
         settings: { slidesToShow: 1, dots: true },
+      },
+    ],
+  };
+
+  const reviewSettings = {
+    dots: true,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 4500,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          dots: true,
+        },
       },
     ],
   };
@@ -344,6 +373,43 @@ const Features = () => {
     },
   ];
 
+  const reviews = [
+    {
+      avatar: man,
+      name: "Robbert Vliet",
+      badge: "• 1st",
+      role: "Directeur at Dry Coating Company",
+      meta: "6 july 2025, Robbert was klant van Eryk",
+      paragraphs: [
+        "De samenwerking met Ararat Bouw verliep prettig en soepel. Ze communiceren duidelijk, schakelen snel en komen afspraken na. Ik heb het contact als prettig ervaren en zou in de toekomst zeker opnieuw met hen samenwerken.",
+      ],
+    },
+    {
+      avatar: man1,
+      name: "Rick Schraven",
+      badge: "• 1st",
+      role: "Mogelijkmaker van circulariteit in de techniek Project-en procesbegeleiding STEKERBAAS",
+      meta: "23 january 2026, Eryk was klant van Rick",
+      paragraphs: [
+        "Wat een fijne partij en persoon om mee samen te werken! Eryk schakelt snel mee als de situatie daar om vraagt. Contact verloopt soepel en het werk wordt professioneel uitgevoerd.",
+      ],
+    },
+    {
+      avatar: man2,
+      name: "Raymond Van de Steenoven",
+      badge: "• 1ste",
+      role: "Eigenaar Steenoven Group B.V. Eigenaar Steenoven Prefab B.V",
+      meta: "3 september 2026, Raymond was klant van Eryk",
+      // headline: "⭐ Fijne samenwerking met Eryk",
+      paragraphs: [
+        "Wij werken inmiddels met veel plezier samen met onze externe recruiter Eryk. Recent heeft hij ons geholpen aan twee zeer goede nieuwe medewerkers, waar we ontzettend tevreden mee zijn.",
+        // "Wat wij vooral waarderen in de samenwerking met Eryk, is dat hij goed luistert naar wat wij als organisatie nodig hebben. Hij neemt de tijd om onze wensen en verwachtingen te begrijpen en gaat vervolgens heel gericht op zoek naar kandidaten die daar daadwerkelijk bij passen.",
+        // "Zijn persoonlijke aanpak, betrokkenheid en het vermogen om de juiste mensen aan de juiste organisatie te koppelen, maken de samenwerking erg prettig en effectief.",
+        // "Bedankt voor je inzet, Eryk! We kijken uit naar het vervolg van onze samenwerking. 🥂",
+      ],
+    },
+  ];
+
   return (
     <section className={styles.features_section}>
       {/* 1. ORIGINAL HEADER */}
@@ -375,7 +441,7 @@ const Features = () => {
         ))}
       </Slider>
 
-      {/* 3. NEW REVIEW SECTION (2 Cards) */}
+      {/* 3. NEW REVIEW SECTION (3 Cards Slider) */}
       <div className={styles.reviewContainer}>
         <div className={styles.reviewHeaderTitle}>
           <span className={styles.subtitle}>
@@ -383,68 +449,42 @@ const Features = () => {
           </span>
         </div>
 
-        {/* Grid for 2 Cards */}
-        <div className={styles.reviewsGrid}>
-
-
-          {/* Card 1 (Robbert) */}
-          <div className={styles.reviewCard}>
-            <div className={styles.reviewUserSection}>
-              <img
-                // src="https://i.pravatar.cc/150?img=11"
-                src={man}
-                alt="Robbert Vliet"
-                className={styles.avatar}
-              />
-              <div className={styles.userInfo}>
-                <div className={styles.nameRow}>
-                  <span className={styles.name}>Robbert Vliet</span>
-                  <svg className={styles.verifiedIcon} width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                  </svg>
-                  <span className={styles.years}>• 1st</span>
+        {/* Swipe / Auto Slider for 3 Cards */}
+        <div className={styles.reviewsSliderWrapper}>
+          <Slider {...reviewSettings} className={styles.reviewsSlider}>
+            {reviews.map((item, index) => (
+              <div key={index} className={styles.reviewSlide}>
+                <div className={styles.reviewCard}>
+                  <div className={styles.reviewUserSection}>
+                    <img
+                      src={item.avatar}
+                      alt={item.name}
+                      className={styles.avatar}
+                    />
+                    <div className={styles.userInfo}>
+                      <div className={styles.nameRow}>
+                        <span className={styles.name}>{item.name}</span>
+                        <svg className={styles.verifiedIcon} width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                        </svg>
+                        <span className={styles.years}>{item.badge}</span>
+                      </div>
+                      <span className={styles.role}>{item.role}</span>
+                      <span className={styles.meta}>{item.meta}</span>
+                    </div>
+                  </div>
+                  <div className={styles.reviewBody}>
+                    {item.headline && (
+                      <p className={styles.reviewHeadline}>{item.headline}</p>
+                    )}
+                    {item.paragraphs.map((p, pIndex) => (
+                      <p key={pIndex}>{p}</p>
+                    ))}
+                  </div>
                 </div>
-                <span className={styles.role}>Directeur at Dry Coating Company</span>
-                <span className={styles.meta}>6 july 2025, Robbert was klant van Eryk</span>
               </div>
-            </div>
-            <div className={styles.reviewBody}>
-              <p>
-                De samenwerking met Ararat Bouw verliep prettig en soepel. Ze communiceren duidelijk, schakelen snel en
-                komen afspraken na. Ik heb het contact als prettig ervaren en zou in de toekomst zeker opnieuw met hen
-                samenwerken.
-              </p>
-            </div>
-          </div>
-
-          {/* Card 2 (New Random) */}
-          <div className={styles.reviewCard}>
-            <div className={styles.reviewUserSection}>
-              <img
-                // src="https://i.pravatar.cc/150?img=11"
-                src={man1}
-                alt="Rick Schraven"
-                className={styles.avatar}
-              />
-              <div className={styles.userInfo}>
-                <div className={styles.nameRow}>
-                  <span className={styles.name}>Rick Schraven</span>
-                  <svg className={styles.verifiedIcon} width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                  </svg>
-                  <span className={styles.years}>• 1st</span>
-                </div>
-                <span className={styles.role}>Mogelijkmaker van circulariteit in de techniek Project-en procesbegeleiding STEKERBAAS</span>
-                <span className={styles.meta}>23 january 2026, Eryk was klant van Rick</span>
-              </div>
-            </div>
-            <div className={styles.reviewBody}>
-              <p>
-                Wat een fijne partij en persoon om mee samen te werken! Eryk schakelt snel mee als de situatie daar om vraagt. Contact verloopt soepel en het werk wordt professioneel uitgevoerd.
-              </p>
-            </div>
-          </div>
-
+            ))}
+          </Slider>
         </div>
       </div>
     </section>
