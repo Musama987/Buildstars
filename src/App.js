@@ -38,40 +38,40 @@ export default () => {
 
   if (state.data) {
     app = (
-        <Fragment>
-          <Sidebar data={state.data.menu} />
-          <ModalForm />
-          <ModalVideo />
-          <RequestForm />
-          <Header data={state.data.menu} />
-          <Switch>
-            <Route path="/" exact component={Home} />
-             <Route path="/why-us" exact component={WhyUs} /> {/* Added this route */}
-             <Route path="/working-us" exact component={StartWorking} />
-              <Route path="/how-we-work" exact component={HowWeWork} /> 
-             <Route path="/about-us" exact component={About} />
-            {/* <Route path="/home-paralax" exact component={HomeParalax} /> */}
-            <Route path="/home-video" exact component={HomeVideo} />
-            <Route path="/about-us" exact component={About} />
-            <Route path="/services" exact component={Services} />
-            <Route path="/portfolio" exact component={Portfolio} />
-            <Route path="/contacts" exact component={Contacts} />
-            <Route path="/consultation" exact component={Calendly}/>
-            <Route path="/privacypolicy" exact component={Privacybeleid} />
-            {/* <Route path="/blog/:post_id" exact component={PostSingle} /> */}
-            {/* <Route
+      <Fragment>
+        <Sidebar data={state.data.menu} />
+        <ModalForm />
+        <ModalVideo />
+        <RequestForm />
+        <Header data={state.data.menu} />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/why-us" exact component={WhyUs} /> {/* Added this route */}
+          <Route path="/working-us" exact component={StartWorking} />
+          <Route path="/how-we-work" exact component={HowWeWork} />
+          <Route path="/about-us" exact component={About} />
+          {/* <Route path="/home-paralax" exact component={HomeParalax} /> */}
+          <Route path="/home-video" exact component={HomeVideo} />
+          <Route path="/about-us" exact component={About} />
+          <Route path="/services" exact component={Services} />
+          <Route path="/portfolio" exact component={Portfolio} />
+          <Route path="/contacts" exact component={Contacts} />
+          <Route path="/consultation" exact component={Calendly} />
+          <Route path="/privacypolicy" exact component={Privacybeleid} />
+          {/* <Route path="/blog/:post_id" exact component={PostSingle} /> */}
+          {/* <Route
               path="/services/:service_id"
               exact
               component={ServiceSingle}
             /> */}
-            {/* <Route path="/team/:member_id" exact component={MemberCard} />
+          {/* <Route path="/team/:member_id" exact component={MemberCard} />
             <Route
               path="/portfolio/:project_id"
               exact
               component={PortfolioSingle}
             /> */}
 
-            {/* <Route path="/blog/cats/:category" exact>
+          {/* <Route path="/blog/cats/:category" exact>
               <Blog sidebar="left" layout="grid" />
             </Route>
 
@@ -79,7 +79,7 @@ export default () => {
               <Blog sidebar="left" layout="grid" />
             </Route> */}
 
-            {/* <Route path="/blog/date/:posting_date" exact>
+          {/* <Route path="/blog/date/:posting_date" exact>
               <Blog sidebar="left" layout="grid" />
             </Route>
 
@@ -87,7 +87,7 @@ export default () => {
               <Blog sidebar="left" layout="grid" />
             </Route> */}
 
-            {/* <Route path="/blog-grid-left-sidebar" exact>
+          {/* <Route path="/blog-grid-left-sidebar" exact>
               <Blog
                 sidebar="left"
                 layout="grid"
@@ -95,7 +95,7 @@ export default () => {
               />
             </Route> */}
 
-            {/* <Route path="/blog-grid-right-sidebar" exact>
+          {/* <Route path="/blog-grid-right-sidebar" exact>
               <Blog
                 sidebar="right"
                 layout="grid"
@@ -103,11 +103,11 @@ export default () => {
               />
             </Route> */}
 
-            {/* <Route path="/blog-grid-without-sidebar" exact>
+          {/* <Route path="/blog-grid-without-sidebar" exact>
               <Blog sidebar="none" layout="grid" title="Blog grid no sidebar" />
             </Route> */}
 
-            {/* <Route path="/blog-list-left-sidebar" exact>
+          {/* <Route path="/blog-list-left-sidebar" exact>
               <Blog
                 sidebar="left"
                 layout="list"
@@ -115,16 +115,16 @@ export default () => {
               />
             </Route> */}
 
-            {/* <Route path="/blog-list-right-sidebar" exact>
+          {/* <Route path="/blog-list-right-sidebar" exact>
               <Blog
                 sidebar="right"
                 layout="list"
                 title="Blog list right sidebar"
               />
             </Route> */}
-          </Switch>
-          <Footer />
-        </Fragment>
+        </Switch>
+        <Footer />
+      </Fragment>
     );
   }
 
