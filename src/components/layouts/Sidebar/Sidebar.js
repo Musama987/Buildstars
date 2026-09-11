@@ -73,7 +73,7 @@ export default ({ data = [] }) => {
           <ul
             style={{
               height:
-                submenu === index ? 30 * item.children.length + "px" : "0",
+                submenu === index ? 38 * item.children.length + "px" : "0",
             }}
           >
             {item.children.map((subitem, subindex) => (

@@ -20,6 +20,7 @@ export default ({ data = [] }) => {
         // { name: "Parallax Image", url: "/home-paralax" },
         // { name: "About us", url: "/about-us" },
         // { name: "Video Background", url: "/home-video" },
+        { name: "Recommendations", url: "/recommendations" },
         { name: "Why us", url: "/why-us" },
         { name: "How we work", url: "/how-we-work" },
         { name: "Start working", url: "/working-us" },

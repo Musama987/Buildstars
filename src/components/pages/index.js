@@ -2,6 +2,7 @@
 export { default as Home } from "./Home/Home";
 export { default as HomeParalax } from "./Home/HomeParalax";
 export { default as HomeVideo } from "./Home/HomeVideo";
+export { default as Recommendations } from "./Home/Recommendations";
 export { default as WhyUs } from './Home/Whyus'; // Added this line
 export { default as HowWeWork } from './Home/HowWeWork'; // <-- ADDED THIS LINE
 export { default as StartWorking } from './Home/StartWorking'; // Added this line

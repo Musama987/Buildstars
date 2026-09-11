@@ -113,6 +113,10 @@ const database = {
       url: "/working-us",
     },
     {
+      title: "Aanbevelingen",
+      url: "/recommendations",
+    },
+    {
       title: "Neem contact",
       url: "/consultation",
     },
@@ -133,14 +137,14 @@ const database = {
       icon: icon,
       id: "post_1",
       text:
-      "De juiste vakman op uw bouwplaats binnen 72 uur. We analyseren uw eisen, selecteren uit ons gescreende netwerk en zorgen voor een probleemloze integratie.",
+        "De juiste vakman op uw bouwplaats binnen 72 uur. We analyseren uw eisen, selecteren uit ons gescreende netwerk en zorgen voor een probleemloze integratie.",
       title: "HET GETESTE PROCES (3 STAPPEN)",
     },
     {
       icon: icon,
       id: "post_2",
       text:
-      "Wij vormen de brug tussen Poolse specialisten en Nederlandse bedrijven. Wij zorgen voor eigen huisvesting, transport, loonbeheer en lossen onverwachte situaties snel op.",
+        "Wij vormen de brug tussen Poolse specialisten en Nederlandse bedrijven. Wij zorgen voor eigen huisvesting, transport, loonbeheer en lossen onverwachte situaties snel op.",
       title: "VOLLEDIGE LOGISTIEKE ZORG",
     },
   ],
@@ -189,6 +193,10 @@ const database = {
         //   name: "About us",
         //   url: "/about-us",
         // },
+        {
+          name: "Aanbevelingen",
+          url: "/recommendations",
+        },
         {
           name: "Hoe wij werken",
           url: "/how-we-work",
@@ -1121,7 +1129,7 @@ const database = {
       ],
       subtitle: "Handling of construction materials",
       text:
-      "Ararat Bouw levert snel, flexibel en met kwaliteitsgarantie gekwalificeerd bouwpersoneel. Wij nemen alle administratie uit handen, zodat u zich volledig op de bouw kunt richten.",
+        "Ararat Bouw levert snel, flexibel en met kwaliteitsgarantie gekwalificeerd bouwpersoneel. Wij nemen alle administratie uit handen, zodat u zich volledig op de bouw kunt richten.",
       title: "DE SNELLE DIENSTVERLENING",
     },
     {
@@ -1150,7 +1158,7 @@ const database = {
       ],
       subtitle: "Making planning for ptoject",
       text:
-      "De juiste vakman op uw bouwplaats binnen 72 uur. We analyseren uw eisen, selecteren uit ons ges",
+        "De juiste vakman op uw bouwplaats binnen 72 uur. We analyseren uw eisen, selecteren uit ons ges",
       title: "HET GETESTE PROCES (3 STAPPEN)",
     },
     {
@@ -1178,7 +1186,7 @@ const database = {
       ],
       subtitle: "Create value for future product",
       text:
-      "Wij vormen de brug tussen Poolse specialisten en Nederlandse bedrijven. Wij zorgen voor eigen huisvesting, transport, loonbeheer en lossen onverwachte situaties snel op.",
+        "Wij vormen de brug tussen Poolse specialisten en Nederlandse bedrijven. Wij zorgen voor eigen huisvesting, transport, loonbeheer en lossen onverwachte situaties snel op.",
       title: "VOLLEDIGE LOGISTIEKE ZORG",
     },
     {

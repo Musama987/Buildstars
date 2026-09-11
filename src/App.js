@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 
 import {
   Home,
+  Recommendations,
   WhyUs,
   HowWeWork,
   StartWorking,
@@ -46,6 +47,7 @@ export default () => {
         <Header data={state.data.menu} />
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/recommendations" exact component={Recommendations} />
           <Route path="/why-us" exact component={WhyUs} /> {/* Added this route */}
           <Route path="/working-us" exact component={StartWorking} />
           <Route path="/how-we-work" exact component={HowWeWork} />

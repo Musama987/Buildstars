@@ -196,6 +196,11 @@ export default () => {
               <i className="las la-angle-right" />
              Waarom wij
             </Link>
+
+            <Link url="/recommendations" hoverStyle={{ color: THEME.color }}>
+              <i className="las la-angle-right" />
+             Aanbevelingen
+            </Link>
           </div>
 
           {/* ✅ FAST LINKS: Restored to use {linkList} */}
